@@ -1,0 +1,1264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66D993952095544100300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
+		66D9939A2095544100300AF4 /* BrineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D993992095544100300AF4 /* BrineTests.swift */; };
+		66D9939C2095544100300AF4 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66D994482095565B00300AF4 /* GHAstBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CE209555BB00300AF4 /* GHAstBuilder.m */; };
+		66D9944A2095565B00300AF4 /* GHAstNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C8209555BB00300AF4 /* GHAstNode.m */; };
+		66D9944C2095565B00300AF4 /* GHBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C0209555BA00300AF4 /* GHBackground.m */; };
+		66D9944E2095565B00300AF4 /* GHComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AD209555B900300AF4 /* GHComment.m */; };
+		66D994502095565B00300AF4 /* GHDataTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D9209555BC00300AF4 /* GHDataTable.m */; };
+		66D994522095565B00300AF4 /* GHDocString.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E8209555BD00300AF4 /* GHDocString.m */; };
+		66D994552095565B00300AF4 /* GHExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993A8209555B800300AF4 /* GHExamples.m */; };
+		66D994572095565B00300AF4 /* GHFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E9209555BD00300AF4 /* GHFeature.m */; };
+		66D994592095565B00300AF4 /* GHGherkinDialect.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AB209555B900300AF4 /* GHGherkinDialect.m */; };
+		66D9945B2095565B00300AF4 /* GHGherkinDialectProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D7209555BC00300AF4 /* GHGherkinDialectProvider.m */; };
+		66D9945E2095565B00300AF4 /* GHGherkinDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BC209555BA00300AF4 /* GHGherkinDocument.m */; };
+		66D994602095565B00300AF4 /* GHGherkinLanguageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E3209555BC00300AF4 /* GHGherkinLanguageConstants.m */; };
+		66D994622095565B00300AF4 /* GHGherkinLanguageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CB209555BB00300AF4 /* GHGherkinLanguageSetting.m */; };
+		66D994642095565B00300AF4 /* GHGherkinLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E6209555BD00300AF4 /* GHGherkinLine.m */; };
+		66D994672095565B00300AF4 /* GHGherkinLineSpan.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D5209555BB00300AF4 /* GHGherkinLineSpan.m */; };
+		66D9946E2095565B00300AF4 /* GHLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DD209555BC00300AF4 /* GHLocation.m */; };
+		66D994702095565B00300AF4 /* GHNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CF209555BB00300AF4 /* GHNode.m */; };
+		66D994722095565B00300AF4 /* GHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DB209555BC00300AF4 /* GHParser.m */; };
+		66D994742095565B00300AF4 /* GHParser+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BA209555BA00300AF4 /* GHParser+Extensions.m */; };
+		66D994762095565B00300AF4 /* GHParserException.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C4209555BA00300AF4 /* GHParserException.m */; };
+		66D994782095565B00300AF4 /* GHScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AE209555B900300AF4 /* GHScenario.m */; };
+		66D9947B2095565B00300AF4 /* GHScenarioDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E1209555BC00300AF4 /* GHScenarioDefinition.m */; };
+		66D9947D2095565B00300AF4 /* GHScenarioOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993EE209555BD00300AF4 /* GHScenarioOutline.m */; };
+		66D9947F2095565B00300AF4 /* GHStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C6209555BA00300AF4 /* GHStep.m */; };
+		66D994812095565B00300AF4 /* GHStepArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BD209555BA00300AF4 /* GHStepArgument.m */; };
+		66D994832095565B00300AF4 /* GHTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B5209555B900300AF4 /* GHTableCell.m */; };
+		66D994852095565B00300AF4 /* GHTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D1209555BB00300AF4 /* GHTableRow.m */; };
+		66D994872095565B00300AF4 /* GHTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B2209555B900300AF4 /* GHTag.m */; };
+		66D994892095565B00300AF4 /* GHToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E4209555BC00300AF4 /* GHToken.m */; };
+		66D9948B2095565B00300AF4 /* GHTokenMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DE209555BC00300AF4 /* GHTokenMatcher.m */; };
+		66D9948D2095565B00300AF4 /* GHTokenScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AF209555B900300AF4 /* GHTokenScanner.m */; };
+		66D9948F2095565B00300AF4 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B3209555B900300AF4 /* NSString+Trim.m */; };
+		66D9949A2095603300300AF4 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994992095603300300AF4 /* DSL.swift */; };
+		66D9949C209560D700300AF4 /* DSL+World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949B209560D700300AF4 /* DSL+World.swift */; };
+		66D9949E209560E100300AF4 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949D209560E100300AF4 /* World.swift */; };
+		66D994A1209560FE00300AF4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A0209560FE00300AF4 /* Configuration.swift */; };
+		66D994A52095627C00300AF4 /* StepDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A42095627C00300AF4 /* StepDefinition.swift */; };
+		66D994A72095642C00300AF4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A62095642C00300AF4 /* Regex.swift */; };
+		66D994AC20956E5300300AF4 /* Enum+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */; };
+		66D994AD20956E5300300AF4 /* Bundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */; };
+		66D994AE20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */; };
+		66D994AF20956E5300300AF4 /* URL+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AB20956E5300300AF4 /* URL+Brine.swift */; };
+		66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */; };
+		66D9950D2095F27400300AF4 /* Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950C2095F27400300AF4 /* Brine.swift */; };
+		66D9950F2095F2F400300AF4 /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
+		66D9956C2096060900300AF4 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956A209605ED00300AF4 /* module.modulemap */; };
+		66D9956E209606B500300AF4 /* Gherkin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956D2096065800300AF4 /* Gherkin.h */; };
+		66D9957620960B9500300AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9957520960B9500300AF4 /* AppDelegate.swift */; };
+		66D9957820960B9500300AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9957720960B9500300AF4 /* ViewController.swift */; };
+		66D9957B20960B9500300AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D9957920960B9500300AF4 /* Main.storyboard */; };
+		66D9957D20960B9500300AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D9957C20960B9500300AF4 /* Assets.xcassets */; };
+		66D9958020960B9600300AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66D9957E20960B9600300AF4 /* LaunchScreen.storyboard */; };
+		66D9958B20960B9600300AF4 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9958A20960B9600300AF4 /* Steps.swift */; };
+		66D9959720960C1300300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
+		66D9959B2096148200300AF4 /* BrineLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D9959A2096148200300AF4 /* BrineLoader.m */; };
+		66D995A22096951100300AF4 /* Features in Resources */ = {isa = PBXBuildFile; fileRef = 66D995A12096951100300AF4 /* Features */; };
+		66D995A42096965100300AF4 /* TestDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995A32096965100300AF4 /* TestDriver.swift */; };
+		66D995A52096B74100300AF4 /* gherkin-languages.json in Resources */ = {isa = PBXBuildFile; fileRef = 66D99439209555EC00300AF4 /* gherkin-languages.json */; };
+		66D995A7209721ED00300AF4 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995A6209721ED00300AF4 /* Feature.swift */; };
+		66D995AD2097486E00300AF4 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995AC2097486E00300AF4 /* Scenario.swift */; };
+		66FA61932098C19200290E07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61922098C19200290E07 /* Tag.swift */; };
+		66FA61952098D25900290E07 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61942098D25900290E07 /* Step.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66D993962095544100300AF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D9938A2095544100300AF4;
+			remoteInfo = Brine;
+		};
+		66D994902095567F00300AF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D9943E2095563900300AF4;
+			remoteInfo = Gherkin;
+		};
+		66D9958720960B9600300AF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D9957220960B9500300AF4;
+			remoteInfo = BrineExample;
+		};
+		66D9959520960C0C00300AF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D9938A2095544100300AF4;
+			remoteInfo = Brine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66D9956B2096060300300AF4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/Gherkin;
+			dstSubfolderSpec = 16;
+			files = (
+				66D9956E209606B500300AF4 /* Gherkin.h in CopyFiles */,
+				66D9956C2096060900300AF4 /* module.modulemap in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		66D9938B2095544100300AF4 /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D9938E2095544100300AF4 /* Brine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brine.h; sourceTree = "<group>"; };
+		66D9938F2095544100300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D993942095544100300AF4 /* BrineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D993992095544100300AF4 /* BrineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrineTests.swift; sourceTree = "<group>"; };
+		66D9939B2095544100300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D993A7209555B800300AF4 /* GHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHParser.h; sourceTree = "<group>"; };
+		66D993A8209555B800300AF4 /* GHExamples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHExamples.m; sourceTree = "<group>"; };
+		66D993A9209555B900300AF4 /* GHAstBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHAstBuilder.h; sourceTree = "<group>"; };
+		66D993AA209555B900300AF4 /* GHParserException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHParserException.h; sourceTree = "<group>"; };
+		66D993AB209555B900300AF4 /* GHGherkinDialect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinDialect.m; sourceTree = "<group>"; };
+		66D993AC209555B900300AF4 /* GHTableRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTableRow.h; sourceTree = "<group>"; };
+		66D993AD209555B900300AF4 /* GHComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHComment.m; sourceTree = "<group>"; };
+		66D993AE209555B900300AF4 /* GHScenario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHScenario.m; sourceTree = "<group>"; };
+		66D993AF209555B900300AF4 /* GHTokenScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTokenScanner.m; sourceTree = "<group>"; };
+		66D993B0209555B900300AF4 /* GHHasTagsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHasTagsProtocol.h; sourceTree = "<group>"; };
+		66D993B1209555B900300AF4 /* GHParser+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHParser+Extensions.h"; sourceTree = "<group>"; };
+		66D993B2209555B900300AF4 /* GHTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTag.m; sourceTree = "<group>"; };
+		66D993B3209555B900300AF4 /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		66D993B5209555B900300AF4 /* GHTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTableCell.m; sourceTree = "<group>"; };
+		66D993B6209555B900300AF4 /* GHNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHNode.h; sourceTree = "<group>"; };
+		66D993B7209555B900300AF4 /* GHScenarioDefinition_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHScenarioDefinition_Private.h; sourceTree = "<group>"; };
+		66D993B8209555B900300AF4 /* GHTokenMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTokenMatcher.h; sourceTree = "<group>"; };
+		66D993B9209555B900300AF4 /* GHGherkinDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinDocument.h; sourceTree = "<group>"; };
+		66D993BA209555BA00300AF4 /* GHParser+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHParser+Extensions.m"; sourceTree = "<group>"; };
+		66D993BB209555BA00300AF4 /* GHGherkinLanguageSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinLanguageSetting.h; sourceTree = "<group>"; };
+		66D993BC209555BA00300AF4 /* GHGherkinDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinDocument.m; sourceTree = "<group>"; };
+		66D993BD209555BA00300AF4 /* GHStepArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHStepArgument.m; sourceTree = "<group>"; };
+		66D993BE209555BA00300AF4 /* GHBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHBackground.h; sourceTree = "<group>"; };
+		66D993BF209555BA00300AF4 /* GHGherkinDialectProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinDialectProviderProtocol.h; sourceTree = "<group>"; };
+		66D993C0209555BA00300AF4 /* GHBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHBackground.m; sourceTree = "<group>"; };
+		66D993C1209555BA00300AF4 /* GHGherkinLineSpan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinLineSpan.h; sourceTree = "<group>"; };
+		66D993C2209555BA00300AF4 /* GHGherkinDialect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinDialect.h; sourceTree = "<group>"; };
+		66D993C3209555BA00300AF4 /* GHGherkinLineProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinLineProtocol.h; sourceTree = "<group>"; };
+		66D993C4209555BA00300AF4 /* GHParserException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHParserException.m; sourceTree = "<group>"; };
+		66D993C5209555BA00300AF4 /* GHScenarioDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHScenarioDefinition.h; sourceTree = "<group>"; };
+		66D993C6209555BA00300AF4 /* GHStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHStep.m; sourceTree = "<group>"; };
+		66D993C7209555BA00300AF4 /* GHStepArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHStepArgument.h; sourceTree = "<group>"; };
+		66D993C8209555BB00300AF4 /* GHAstNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHAstNode.m; sourceTree = "<group>"; };
+		66D993C9209555BB00300AF4 /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		66D993CA209555BB00300AF4 /* GHAstNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHAstNode.h; sourceTree = "<group>"; };
+		66D993CB209555BB00300AF4 /* GHGherkinLanguageSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinLanguageSetting.m; sourceTree = "<group>"; };
+		66D993CC209555BB00300AF4 /* GHHasStepsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHasStepsProtocol.h; sourceTree = "<group>"; };
+		66D993CD209555BB00300AF4 /* GHDataTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHDataTable.h; sourceTree = "<group>"; };
+		66D993CE209555BB00300AF4 /* GHAstBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHAstBuilder.m; sourceTree = "<group>"; };
+		66D993CF209555BB00300AF4 /* GHNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHNode.m; sourceTree = "<group>"; };
+		66D993D0209555BB00300AF4 /* GHDocString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHDocString.h; sourceTree = "<group>"; };
+		66D993D1209555BB00300AF4 /* GHTableRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTableRow.m; sourceTree = "<group>"; };
+		66D993D2209555BB00300AF4 /* GHGherkinDialectProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinDialectProvider.h; sourceTree = "<group>"; };
+		66D993D3209555BB00300AF4 /* GHHasLocationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHasLocationProtocol.h; sourceTree = "<group>"; };
+		66D993D4209555BB00300AF4 /* GHExamples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHExamples.h; sourceTree = "<group>"; };
+		66D993D5209555BB00300AF4 /* GHGherkinLineSpan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinLineSpan.m; sourceTree = "<group>"; };
+		66D993D6209555BC00300AF4 /* GHComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHComment.h; sourceTree = "<group>"; };
+		66D993D7209555BC00300AF4 /* GHGherkinDialectProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinDialectProvider.m; sourceTree = "<group>"; };
+		66D993D8209555BC00300AF4 /* GHTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTableCell.h; sourceTree = "<group>"; };
+		66D993D9209555BC00300AF4 /* GHDataTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHDataTable.m; sourceTree = "<group>"; };
+		66D993DA209555BC00300AF4 /* GHTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTag.h; sourceTree = "<group>"; };
+		66D993DB209555BC00300AF4 /* GHParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHParser.m; sourceTree = "<group>"; };
+		66D993DC209555BC00300AF4 /* GHToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHToken.h; sourceTree = "<group>"; };
+		66D993DD209555BC00300AF4 /* GHLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHLocation.m; sourceTree = "<group>"; };
+		66D993DE209555BC00300AF4 /* GHTokenMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTokenMatcher.m; sourceTree = "<group>"; };
+		66D993DF209555BC00300AF4 /* GHHasDescriptionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHasDescriptionProtocol.h; sourceTree = "<group>"; };
+		66D993E0209555BC00300AF4 /* GHStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHStep.h; sourceTree = "<group>"; };
+		66D993E1209555BC00300AF4 /* GHScenarioDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHScenarioDefinition.m; sourceTree = "<group>"; };
+		66D993E2209555BC00300AF4 /* GHTokenScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTokenScanner.h; sourceTree = "<group>"; };
+		66D993E3209555BC00300AF4 /* GHGherkinLanguageConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinLanguageConstants.m; sourceTree = "<group>"; };
+		66D993E4209555BC00300AF4 /* GHToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHToken.m; sourceTree = "<group>"; };
+		66D993E5209555BD00300AF4 /* GHGherkinLanguageConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinLanguageConstants.h; sourceTree = "<group>"; };
+		66D993E6209555BD00300AF4 /* GHGherkinLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGherkinLine.m; sourceTree = "<group>"; };
+		66D993E7209555BD00300AF4 /* GHHasRowsProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHHasRowsProtocol.h; sourceTree = "<group>"; };
+		66D993E8209555BD00300AF4 /* GHDocString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHDocString.m; sourceTree = "<group>"; };
+		66D993E9209555BD00300AF4 /* GHFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHFeature.m; sourceTree = "<group>"; };
+		66D993EA209555BD00300AF4 /* GHLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHLocation.h; sourceTree = "<group>"; };
+		66D993EB209555BD00300AF4 /* GHScenario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHScenario.h; sourceTree = "<group>"; };
+		66D993EC209555BD00300AF4 /* GHFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHFeature.h; sourceTree = "<group>"; };
+		66D993ED209555BD00300AF4 /* GHScenarioOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHScenarioOutline.h; sourceTree = "<group>"; };
+		66D993EE209555BD00300AF4 /* GHScenarioOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHScenarioOutline.m; sourceTree = "<group>"; };
+		66D993EF209555BE00300AF4 /* GHGherkinLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGherkinLine.h; sourceTree = "<group>"; };
+		66D99439209555EC00300AF4 /* gherkin-languages.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "gherkin-languages.json"; sourceTree = "<group>"; };
+		66D9943F2095563900300AF4 /* libGherkin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGherkin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D994992095603300300AF4 /* DSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSL.swift; sourceTree = "<group>"; };
+		66D9949B209560D700300AF4 /* DSL+World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSL+World.swift"; sourceTree = "<group>"; };
+		66D9949D209560E100300AF4 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		66D994A0209560FE00300AF4 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		66D994A42095627C00300AF4 /* StepDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDefinition.swift; sourceTree = "<group>"; };
+		66D994A62095642C00300AF4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enum+CaseIterable.swift"; sourceTree = "<group>"; };
+		66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
+		66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+C99ExtendedIdentifier.swift"; sourceTree = "<group>"; };
+		66D994AB20956E5300300AF4 /* URL+Brine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Brine.swift"; sourceTree = "<group>"; };
+		66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredefinedSteps.swift; sourceTree = "<group>"; };
+		66D9950C2095F27400300AF4 /* Brine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brine.swift; sourceTree = "<group>"; };
+		66D9956A209605ED00300AF4 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		66D9956D2096065800300AF4 /* Gherkin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gherkin.h; sourceTree = "<group>"; };
+		66D9957320960B9500300AF4 /* BrineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D9957520960B9500300AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66D9957720960B9500300AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66D9957A20960B9500300AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66D9957C20960B9500300AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66D9957F20960B9600300AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66D9958120960B9600300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D9958620960B9600300AF4 /* BrineExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrineExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D9958A20960B9600300AF4 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		66D9958C20960B9600300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66D9959A2096148200300AF4 /* BrineLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrineLoader.m; sourceTree = "<group>"; };
+		66D9959C209616A700300AF4 /* BrineExampleUITests-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrineExampleUITests-BridgingHeader.h"; sourceTree = "<group>"; };
+		66D995A12096951100300AF4 /* Features */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Features; sourceTree = "<group>"; };
+		66D995A32096965100300AF4 /* TestDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDriver.swift; sourceTree = "<group>"; };
+		66D995A6209721ED00300AF4 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		66D995AC2097486E00300AF4 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
+		66FA61922098C19200290E07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		66FA61942098D25900290E07 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66D993872095544100300AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9950F2095F2F400300AF4 /* libGherkin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D993912095544100300AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D993952095544100300AF4 /* Brine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9943C2095563900300AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9957020960B9500300AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9958320960B9600300AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9959720960C1300300AF4 /* Brine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66D993812095544100300AF4 = {
+			isa = PBXGroup;
+			children = (
+				66D9938D2095544100300AF4 /* Brine */,
+				66D993982095544100300AF4 /* BrineTests */,
+				66D993A52095559500300AF4 /* Dependencies */,
+				66D9959420960BAB00300AF4 /* Example */,
+				66D9938C2095544100300AF4 /* Products */,
+				66D9950E2095F2F400300AF4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66D9938C2095544100300AF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66D9938B2095544100300AF4 /* Brine.framework */,
+				66D993942095544100300AF4 /* BrineTests.xctest */,
+				66D9943F2095563900300AF4 /* libGherkin.a */,
+				66D9957320960B9500300AF4 /* BrineExample.app */,
+				66D9958620960B9600300AF4 /* BrineExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66D9938D2095544100300AF4 /* Brine */ = {
+			isa = PBXGroup;
+			children = (
+				66D9950C2095F27400300AF4 /* Brine.swift */,
+				66D994A0209560FE00300AF4 /* Configuration.swift */,
+				66D995A6209721ED00300AF4 /* Feature.swift */,
+				66D994A62095642C00300AF4 /* Regex.swift */,
+				66D995AC2097486E00300AF4 /* Scenario.swift */,
+				66FA61942098D25900290E07 /* Step.swift */,
+				66D994A42095627C00300AF4 /* StepDefinition.swift */,
+				66FA61922098C19200290E07 /* Tag.swift */,
+				66D9949D209560E100300AF4 /* World.swift */,
+				66D994982095600700300AF4 /* DSL */,
+				66D9949F209560E800300AF4 /* Extensions */,
+				66D995092095F1E100300AF4 /* Steps */,
+				66D9949720955F7F00300AF4 /* Supporting Files */,
+			);
+			name = Brine;
+			path = Sources/Brine;
+			sourceTree = "<group>";
+		};
+		66D993982095544100300AF4 /* BrineTests */ = {
+			isa = PBXGroup;
+			children = (
+				66D993992095544100300AF4 /* BrineTests.swift */,
+				66D9949520955F5E00300AF4 /* Supporting Files */,
+			);
+			name = BrineTests;
+			path = Tests/BrineTests;
+			sourceTree = "<group>";
+		};
+		66D993A52095559500300AF4 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				66D993A62095559C00300AF4 /* Gherkin */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		66D993A62095559C00300AF4 /* Gherkin */ = {
+			isa = PBXGroup;
+			children = (
+				66D9953B2095FCC600300AF4 /* Headers */,
+				66D9953A2095FCC100300AF4 /* Sources */,
+				66D9949620955F7000300AF4 /* Supporting Files */,
+			);
+			path = Gherkin;
+			sourceTree = "<group>";
+		};
+		66D9949520955F5E00300AF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66D9939B2095544100300AF4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66D9949620955F7000300AF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66D99439209555EC00300AF4 /* gherkin-languages.json */,
+				66D9956A209605ED00300AF4 /* module.modulemap */,
+				66D9956D2096065800300AF4 /* Gherkin.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66D9949720955F7F00300AF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66D9938E2095544100300AF4 /* Brine.h */,
+				66D9938F2095544100300AF4 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66D994982095600700300AF4 /* DSL */ = {
+			isa = PBXGroup;
+			children = (
+				66D994992095603300300AF4 /* DSL.swift */,
+				66D9949B209560D700300AF4 /* DSL+World.swift */,
+			);
+			path = DSL;
+			sourceTree = "<group>";
+		};
+		66D9949F209560E800300AF4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */,
+				66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */,
+				66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */,
+				66D994AB20956E5300300AF4 /* URL+Brine.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66D995092095F1E100300AF4 /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */,
+			);
+			path = Steps;
+			sourceTree = "<group>";
+		};
+		66D9950E2095F2F400300AF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66D9953A2095FCC100300AF4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				66D993CE209555BB00300AF4 /* GHAstBuilder.m */,
+				66D993C8209555BB00300AF4 /* GHAstNode.m */,
+				66D993C0209555BA00300AF4 /* GHBackground.m */,
+				66D993AD209555B900300AF4 /* GHComment.m */,
+				66D993D9209555BC00300AF4 /* GHDataTable.m */,
+				66D993E8209555BD00300AF4 /* GHDocString.m */,
+				66D993A8209555B800300AF4 /* GHExamples.m */,
+				66D993E9209555BD00300AF4 /* GHFeature.m */,
+				66D993AB209555B900300AF4 /* GHGherkinDialect.m */,
+				66D993D7209555BC00300AF4 /* GHGherkinDialectProvider.m */,
+				66D993BC209555BA00300AF4 /* GHGherkinDocument.m */,
+				66D993E3209555BC00300AF4 /* GHGherkinLanguageConstants.m */,
+				66D993CB209555BB00300AF4 /* GHGherkinLanguageSetting.m */,
+				66D993E6209555BD00300AF4 /* GHGherkinLine.m */,
+				66D993D5209555BB00300AF4 /* GHGherkinLineSpan.m */,
+				66D993DD209555BC00300AF4 /* GHLocation.m */,
+				66D993CF209555BB00300AF4 /* GHNode.m */,
+				66D993DB209555BC00300AF4 /* GHParser.m */,
+				66D993BA209555BA00300AF4 /* GHParser+Extensions.m */,
+				66D993C4209555BA00300AF4 /* GHParserException.m */,
+				66D993AE209555B900300AF4 /* GHScenario.m */,
+				66D993E1209555BC00300AF4 /* GHScenarioDefinition.m */,
+				66D993EE209555BD00300AF4 /* GHScenarioOutline.m */,
+				66D993C6209555BA00300AF4 /* GHStep.m */,
+				66D993BD209555BA00300AF4 /* GHStepArgument.m */,
+				66D993B5209555B900300AF4 /* GHTableCell.m */,
+				66D993D1209555BB00300AF4 /* GHTableRow.m */,
+				66D993B2209555B900300AF4 /* GHTag.m */,
+				66D993E4209555BC00300AF4 /* GHToken.m */,
+				66D993DE209555BC00300AF4 /* GHTokenMatcher.m */,
+				66D993AF209555B900300AF4 /* GHTokenScanner.m */,
+				66D993B3209555B900300AF4 /* NSString+Trim.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		66D9953B2095FCC600300AF4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				66D993A9209555B900300AF4 /* GHAstBuilder.h */,
+				66D993CA209555BB00300AF4 /* GHAstNode.h */,
+				66D993BE209555BA00300AF4 /* GHBackground.h */,
+				66D993D6209555BC00300AF4 /* GHComment.h */,
+				66D993CD209555BB00300AF4 /* GHDataTable.h */,
+				66D993D0209555BB00300AF4 /* GHDocString.h */,
+				66D993D4209555BB00300AF4 /* GHExamples.h */,
+				66D993EC209555BD00300AF4 /* GHFeature.h */,
+				66D993C2209555BA00300AF4 /* GHGherkinDialect.h */,
+				66D993D2209555BB00300AF4 /* GHGherkinDialectProvider.h */,
+				66D993BF209555BA00300AF4 /* GHGherkinDialectProviderProtocol.h */,
+				66D993B9209555B900300AF4 /* GHGherkinDocument.h */,
+				66D993E5209555BD00300AF4 /* GHGherkinLanguageConstants.h */,
+				66D993BB209555BA00300AF4 /* GHGherkinLanguageSetting.h */,
+				66D993EF209555BE00300AF4 /* GHGherkinLine.h */,
+				66D993C3209555BA00300AF4 /* GHGherkinLineProtocol.h */,
+				66D993C1209555BA00300AF4 /* GHGherkinLineSpan.h */,
+				66D993DF209555BC00300AF4 /* GHHasDescriptionProtocol.h */,
+				66D993D3209555BB00300AF4 /* GHHasLocationProtocol.h */,
+				66D993E7209555BD00300AF4 /* GHHasRowsProtocol.h */,
+				66D993CC209555BB00300AF4 /* GHHasStepsProtocol.h */,
+				66D993B0209555B900300AF4 /* GHHasTagsProtocol.h */,
+				66D993EA209555BD00300AF4 /* GHLocation.h */,
+				66D993B6209555B900300AF4 /* GHNode.h */,
+				66D993A7209555B800300AF4 /* GHParser.h */,
+				66D993B1209555B900300AF4 /* GHParser+Extensions.h */,
+				66D993AA209555B900300AF4 /* GHParserException.h */,
+				66D993EB209555BD00300AF4 /* GHScenario.h */,
+				66D993B7209555B900300AF4 /* GHScenarioDefinition_Private.h */,
+				66D993C5209555BA00300AF4 /* GHScenarioDefinition.h */,
+				66D993ED209555BD00300AF4 /* GHScenarioOutline.h */,
+				66D993E0209555BC00300AF4 /* GHStep.h */,
+				66D993C7209555BA00300AF4 /* GHStepArgument.h */,
+				66D993D8209555BC00300AF4 /* GHTableCell.h */,
+				66D993AC209555B900300AF4 /* GHTableRow.h */,
+				66D993DA209555BC00300AF4 /* GHTag.h */,
+				66D993DC209555BC00300AF4 /* GHToken.h */,
+				66D993B8209555B900300AF4 /* GHTokenMatcher.h */,
+				66D993E2209555BC00300AF4 /* GHTokenScanner.h */,
+				66D993C9209555BB00300AF4 /* NSString+Trim.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		66D9957420960B9500300AF4 /* BrineExample */ = {
+			isa = PBXGroup;
+			children = (
+				66D9957520960B9500300AF4 /* AppDelegate.swift */,
+				66D9957720960B9500300AF4 /* ViewController.swift */,
+				66D9957920960B9500300AF4 /* Main.storyboard */,
+				66D9957C20960B9500300AF4 /* Assets.xcassets */,
+				66D9957E20960B9600300AF4 /* LaunchScreen.storyboard */,
+				66D9958120960B9600300AF4 /* Info.plist */,
+			);
+			path = BrineExample;
+			sourceTree = "<group>";
+		};
+		66D9958920960B9600300AF4 /* BrineExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66D995A12096951100300AF4 /* Features */,
+				66D9958A20960B9600300AF4 /* Steps.swift */,
+				66D995A32096965100300AF4 /* TestDriver.swift */,
+				66D9959D209616B000300AF4 /* Supporting Files */,
+			);
+			path = BrineExampleUITests;
+			sourceTree = "<group>";
+		};
+		66D9959420960BAB00300AF4 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				66D9957420960B9500300AF4 /* BrineExample */,
+				66D9958920960B9600300AF4 /* BrineExampleUITests */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		66D9959D209616B000300AF4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				66D9959A2096148200300AF4 /* BrineLoader.m */,
+				66D9958C20960B9600300AF4 /* Info.plist */,
+				66D9959C209616A700300AF4 /* BrineExampleUITests-BridgingHeader.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		66D993882095544100300AF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9939C2095544100300AF4 /* Brine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		66D9938A2095544100300AF4 /* Brine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine" */;
+			buildPhases = (
+				66D993862095544100300AF4 /* Sources */,
+				66D993872095544100300AF4 /* Frameworks */,
+				66D993882095544100300AF4 /* Headers */,
+				66D993892095544100300AF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66D994912095567F00300AF4 /* PBXTargetDependency */,
+			);
+			name = Brine;
+			productName = Brine;
+			productReference = 66D9938B2095544100300AF4 /* Brine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66D993932095544100300AF4 /* BrineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests" */;
+			buildPhases = (
+				66D993902095544100300AF4 /* Sources */,
+				66D993912095544100300AF4 /* Frameworks */,
+				66D993922095544100300AF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66D993972095544100300AF4 /* PBXTargetDependency */,
+			);
+			name = BrineTests;
+			productName = BrineTests;
+			productReference = 66D993942095544100300AF4 /* BrineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66D9943E2095563900300AF4 /* Gherkin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin" */;
+			buildPhases = (
+				66D9943B2095563900300AF4 /* Sources */,
+				66D9943C2095563900300AF4 /* Frameworks */,
+				66D9956B2096060300300AF4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gherkin;
+			productName = Gherkin;
+			productReference = 66D9943F2095563900300AF4 /* libGherkin.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		66D9957220960B9500300AF4 /* BrineExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D9958D20960B9600300AF4 /* Build configuration list for PBXNativeTarget "BrineExample" */;
+			buildPhases = (
+				66D9956F20960B9500300AF4 /* Sources */,
+				66D9957020960B9500300AF4 /* Frameworks */,
+				66D9957120960B9500300AF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrineExample;
+			productName = BrineExample;
+			productReference = 66D9957320960B9500300AF4 /* BrineExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66D9958520960B9600300AF4 /* BrineExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D9959020960B9600300AF4 /* Build configuration list for PBXNativeTarget "BrineExampleUITests" */;
+			buildPhases = (
+				66D9958220960B9600300AF4 /* Sources */,
+				66D9958320960B9600300AF4 /* Frameworks */,
+				66D9958420960B9600300AF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66D9959620960C0C00300AF4 /* PBXTargetDependency */,
+				66D9958820960B9600300AF4 /* PBXTargetDependency */,
+			);
+			name = BrineExampleUITests;
+			productName = BrineExampleUITests;
+			productReference = 66D9958620960B9600300AF4 /* BrineExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66D993822095544100300AF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					66D9938A2095544100300AF4 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					66D993932095544100300AF4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					66D9943E2095563900300AF4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					66D9957220960B9500300AF4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					66D9958520960B9600300AF4 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						TestTargetID = 66D9957220960B9500300AF4;
+					};
+				};
+			};
+			buildConfigurationList = 66D993852095544100300AF4 /* Build configuration list for PBXProject "Brine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66D993812095544100300AF4;
+			productRefGroup = 66D9938C2095544100300AF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66D9938A2095544100300AF4 /* Brine */,
+				66D993932095544100300AF4 /* BrineTests */,
+				66D9943E2095563900300AF4 /* Gherkin */,
+				66D9957220960B9500300AF4 /* BrineExample */,
+				66D9958520960B9600300AF4 /* BrineExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66D993892095544100300AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D995A52096B74100300AF4 /* gherkin-languages.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D993922095544100300AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9957120960B9500300AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9958020960B9600300AF4 /* LaunchScreen.storyboard in Resources */,
+				66D9957D20960B9500300AF4 /* Assets.xcassets in Resources */,
+				66D9957B20960B9500300AF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9958420960B9600300AF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D995A22096951100300AF4 /* Features in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66D993862095544100300AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D994AF20956E5300300AF4 /* URL+Brine.swift in Sources */,
+				66FA61952098D25900290E07 /* Step.swift in Sources */,
+				66D994A52095627C00300AF4 /* StepDefinition.swift in Sources */,
+				66D994A72095642C00300AF4 /* Regex.swift in Sources */,
+				66D9950D2095F27400300AF4 /* Brine.swift in Sources */,
+				66D994AC20956E5300300AF4 /* Enum+CaseIterable.swift in Sources */,
+				66D994A1209560FE00300AF4 /* Configuration.swift in Sources */,
+				66D9949C209560D700300AF4 /* DSL+World.swift in Sources */,
+				66D9949E209560E100300AF4 /* World.swift in Sources */,
+				66D995AD2097486E00300AF4 /* Scenario.swift in Sources */,
+				66D9949A2095603300300AF4 /* DSL.swift in Sources */,
+				66D994AD20956E5300300AF4 /* Bundle+CurrentTestBundle.swift in Sources */,
+				66D995A7209721ED00300AF4 /* Feature.swift in Sources */,
+				66FA61932098C19200290E07 /* Tag.swift in Sources */,
+				66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */,
+				66D994AE20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D993902095544100300AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9939A2095544100300AF4 /* BrineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9943B2095563900300AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D994482095565B00300AF4 /* GHAstBuilder.m in Sources */,
+				66D9944A2095565B00300AF4 /* GHAstNode.m in Sources */,
+				66D9944C2095565B00300AF4 /* GHBackground.m in Sources */,
+				66D9944E2095565B00300AF4 /* GHComment.m in Sources */,
+				66D994502095565B00300AF4 /* GHDataTable.m in Sources */,
+				66D994522095565B00300AF4 /* GHDocString.m in Sources */,
+				66D994552095565B00300AF4 /* GHExamples.m in Sources */,
+				66D994572095565B00300AF4 /* GHFeature.m in Sources */,
+				66D994592095565B00300AF4 /* GHGherkinDialect.m in Sources */,
+				66D9945B2095565B00300AF4 /* GHGherkinDialectProvider.m in Sources */,
+				66D9945E2095565B00300AF4 /* GHGherkinDocument.m in Sources */,
+				66D994602095565B00300AF4 /* GHGherkinLanguageConstants.m in Sources */,
+				66D994622095565B00300AF4 /* GHGherkinLanguageSetting.m in Sources */,
+				66D994642095565B00300AF4 /* GHGherkinLine.m in Sources */,
+				66D994672095565B00300AF4 /* GHGherkinLineSpan.m in Sources */,
+				66D9946E2095565B00300AF4 /* GHLocation.m in Sources */,
+				66D994702095565B00300AF4 /* GHNode.m in Sources */,
+				66D994722095565B00300AF4 /* GHParser.m in Sources */,
+				66D994742095565B00300AF4 /* GHParser+Extensions.m in Sources */,
+				66D994762095565B00300AF4 /* GHParserException.m in Sources */,
+				66D994782095565B00300AF4 /* GHScenario.m in Sources */,
+				66D9947B2095565B00300AF4 /* GHScenarioDefinition.m in Sources */,
+				66D9947D2095565B00300AF4 /* GHScenarioOutline.m in Sources */,
+				66D9947F2095565B00300AF4 /* GHStep.m in Sources */,
+				66D994812095565B00300AF4 /* GHStepArgument.m in Sources */,
+				66D994832095565B00300AF4 /* GHTableCell.m in Sources */,
+				66D994852095565B00300AF4 /* GHTableRow.m in Sources */,
+				66D994872095565B00300AF4 /* GHTag.m in Sources */,
+				66D994892095565B00300AF4 /* GHToken.m in Sources */,
+				66D9948B2095565B00300AF4 /* GHTokenMatcher.m in Sources */,
+				66D9948D2095565B00300AF4 /* GHTokenScanner.m in Sources */,
+				66D9948F2095565B00300AF4 /* NSString+Trim.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9956F20960B9500300AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9957820960B9500300AF4 /* ViewController.swift in Sources */,
+				66D9957620960B9500300AF4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D9958220960B9600300AF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D9958B20960B9600300AF4 /* Steps.swift in Sources */,
+				66D995A42096965100300AF4 /* TestDriver.swift in Sources */,
+				66D9959B2096148200300AF4 /* BrineLoader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66D993972095544100300AF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D9938A2095544100300AF4 /* Brine */;
+			targetProxy = 66D993962095544100300AF4 /* PBXContainerItemProxy */;
+		};
+		66D994912095567F00300AF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D9943E2095563900300AF4 /* Gherkin */;
+			targetProxy = 66D994902095567F00300AF4 /* PBXContainerItemProxy */;
+		};
+		66D9958820960B9600300AF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D9957220960B9500300AF4 /* BrineExample */;
+			targetProxy = 66D9958720960B9600300AF4 /* PBXContainerItemProxy */;
+		};
+		66D9959620960C0C00300AF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D9938A2095544100300AF4 /* Brine */;
+			targetProxy = 66D9959520960C0C00300AF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66D9957920960B9500300AF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66D9957A20960B9500300AF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66D9957E20960B9600300AF4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66D9957F20960B9600300AF4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66D9939D2095544100300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		66D9939E2095544100300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		66D993A02095544100300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Brine/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66D993A12095544100300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Brine/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66D993A32095544100300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66D993A42095544100300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66D994442095563900300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66D994452095563900300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66D9958E20960B9600300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Example/BrineExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66D9958F20960B9600300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Example/BrineExample/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66D9959120960B9600300AF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/BrineExampleUITests-BridgingHeader.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrineExample;
+			};
+			name = Debug;
+		};
+		66D9959220960B9600300AF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = YB42T69E5P;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/BrineExampleUITests-BridgingHeader.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrineExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66D993852095544100300AF4 /* Build configuration list for PBXProject "Brine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D9939D2095544100300AF4 /* Debug */,
+				66D9939E2095544100300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D993A02095544100300AF4 /* Debug */,
+				66D993A12095544100300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D993A32095544100300AF4 /* Debug */,
+				66D993A42095544100300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D994442095563900300AF4 /* Debug */,
+				66D994452095563900300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D9958D20960B9600300AF4 /* Build configuration list for PBXNativeTarget "BrineExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D9958E20960B9600300AF4 /* Debug */,
+				66D9958F20960B9600300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D9959020960B9600300AF4 /* Build configuration list for PBXNativeTarget "BrineExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D9959120960B9600300AF4 /* Debug */,
+				66D9959220960B9600300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66D993822095544100300AF4 /* Project object */;
+}
