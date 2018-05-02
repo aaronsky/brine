@@ -56,7 +56,8 @@ public class Brine {
         guard let result = parser.parse(path.path) else {
             return nil
         }
-        return Feature(from: result.feature)
+        let testClass: AnyClass? = BrineTestCase.createClass(for: result.feature)
+        return Feature(from: result.feature, testClass: testClass)
     }
 
     func executeFeatures() {
