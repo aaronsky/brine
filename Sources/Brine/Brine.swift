@@ -1,39 +1,38 @@
-
 import Foundation
 import Gherkin
 
 public class Brine {
     var configurations: [Configuration] = []
     var finalizeConfig = false
-    
+
     var features: [Feature] = []
     var world: World
-    
+
     public init(_ world: World = World.shared) {
         self.world = world
     }
-    
+
     public func configure(with configuration: Configuration) {
         configure(with: [configuration])
     }
-    
+
     public func configure(with configurations: [Configuration]) {
         precondition(!finalizeConfig, "Attempted to alter configuration after it has been finalized")
         self.configurations.append(contentsOf: configurations)
     }
-    
+
     public func start(filterForTags tags: [String] = []) {
         finalizeConfig = true
         loadFeatures()
         executeFeatures()
     }
-    
+
     func loadFeatures() {
         let featuresPaths = configurations.map { $0.featuresPath }
         features = featuresPaths.flatMap(getFeatureFilePathsRecursively)
             .compactMap(loadFeature)
     }
-    
+
     func getFeatureFilePathsRecursively(in path: URL) -> [URL] {
         let contents: [URL]
         do {
@@ -51,7 +50,7 @@ public class Brine {
         }
         return features
     }
-    
+
     func loadFeature(from path: URL) -> Feature? {
         let parser = GHParser()
         guard let result = parser.parse(path.path) else {
@@ -59,7 +58,7 @@ public class Brine {
         }
         return Feature(from: result.feature)
     }
-    
+
     func executeFeatures() {
         for feature in features {
             for scenario in feature.scenarios {
@@ -67,10 +66,10 @@ public class Brine {
             }
         }
     }
-    
+
     // MARK: Runtime methods
-    
+
     @objc static func testInvocations() {
-        
+
     }
 }

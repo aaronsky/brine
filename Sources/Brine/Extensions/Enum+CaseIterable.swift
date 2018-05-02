@@ -1,4 +1,3 @@
-
 #if !swift(>=4.2)
     public protocol CaseIterable {
         associatedtype AllCases: Collection where AllCases.Element == Self

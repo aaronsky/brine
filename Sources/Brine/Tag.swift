@@ -1,14 +1,13 @@
-
 import Gherkin
 
 public struct Tag: CustomStringConvertible {
-    private let gh: GHTag
-    
+    private let gherkin: GHTag
+
     public var description: String {
-        return gh.name
+        return gherkin.name
     }
-    
+
     init(from tag: GHTag) {
-        gh = tag
+        gherkin = tag
     }
 }

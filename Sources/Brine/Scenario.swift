@@ -1,4 +1,3 @@
-
 import Gherkin
 
 public enum ScenarioKind {
@@ -6,7 +5,7 @@ public enum ScenarioKind {
     case scenario
     case scenarioOutline
     case background
-    
+
     init(_ keyword: String) {
         switch keyword {
         case "scenario": self = .scenario
@@ -18,19 +17,19 @@ public enum ScenarioKind {
 }
 
 public struct Scenario {
-    private let gh: GHScenarioDefinition
-    
+    private let gherkin: GHScenarioDefinition
+
     public let kind: ScenarioKind
     public let steps: [Step]
     public let tags: [Tag]
-    
+
     public init(from scenario: GHScenarioDefinition) {
-        gh = scenario
+        gherkin = scenario
         kind = ScenarioKind(scenario.keyword)
-        steps = gh.steps.map(Step.init)
-        tags = gh.tags.map(Tag.init)
+        steps = gherkin.steps.map(Step.init)
+        tags = gherkin.tags.map(Tag.init)
     }
-    
+
     public func run(in world: World) {
         let stepDefs = world.matchingSteps(for: self)
         for (step, def) in stepDefs {
@@ -45,6 +44,6 @@ public struct Scenario {
 
 extension Scenario: CustomStringConvertible {
     public var description: String {
-        return gh.desc
+        return gherkin.desc
     }
 }
