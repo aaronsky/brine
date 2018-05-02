@@ -21,9 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		33FD47162099C65A00768220 /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; };
+		33FD47172099C65A00768220 /* BrineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FD47152099C65A00768220 /* BrineTestCase.m */; };
+		33FD471F2099DC0A00768220 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66D993952095544100300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
 		66D9939A2095544100300AF4 /* BrineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D993992095544100300AF4 /* BrineTests.swift */; };
-		66D9939C2095544100300AF4 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66D994482095565B00300AF4 /* GHAstBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CE209555BB00300AF4 /* GHAstBuilder.m */; };
 		66D9944A2095565B00300AF4 /* GHAstNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C8209555BB00300AF4 /* GHAstNode.m */; };
 		66D9944C2095565B00300AF4 /* GHBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C0209555BA00300AF4 /* GHBackground.m */; };
@@ -134,6 +136,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
+		33FD47152099C65A00768220 /* BrineTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrineTestCase.m; sourceTree = "<group>"; };
 		66D9938B2095544100300AF4 /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D9938E2095544100300AF4 /* Brine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brine.h; sourceTree = "<group>"; };
 		66D9938F2095544100300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -290,6 +294,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33FD47132099C50100768220 /* Dynamics */ = {
+			isa = PBXGroup;
+			children = (
+				33FD47142099C65A00768220 /* BrineTestCase.h */,
+				33FD47152099C65A00768220 /* BrineTestCase.m */,
+			);
+			path = Dynamics;
+			sourceTree = "<group>";
+		};
 		66D993812095544100300AF4 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +340,7 @@
 				66FA61922098C19200290E07 /* Tag.swift */,
 				66D9949D209560E100300AF4 /* World.swift */,
 				66D994982095600700300AF4 /* DSL */,
+				33FD47132099C50100768220 /* Dynamics */,
 				66D9949F209560E800300AF4 /* Extensions */,
 				66D995092095F1E100300AF4 /* Steps */,
 				66D9949720955F7F00300AF4 /* Supporting Files */,
@@ -561,7 +575,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D9939C2095544100300AF4 /* Brine.h in Headers */,
+				33FD471F2099DC0A00768220 /* Brine.h in Headers */,
+				33FD47162099C65A00768220 /* BrineTestCase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -786,6 +801,7 @@
 				66D995A7209721ED00300AF4 /* Feature.swift in Sources */,
 				66FA61932098C19200290E07 /* Tag.swift in Sources */,
 				66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */,
+				33FD47172099C65A00768220 /* BrineTestCase.m in Sources */,
 				66D994AE20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1044,6 +1060,7 @@
 		66D993A02095544100300AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -1075,6 +1092,7 @@
 		66D993A12095544100300AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
