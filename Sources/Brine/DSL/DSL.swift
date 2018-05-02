@@ -1,4 +1,3 @@
-
 import Foundation
 
 public func given(_ pattern: String, block: @escaping BrineStepBlock) {

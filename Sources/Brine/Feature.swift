@@ -1,13 +1,12 @@
-
 import Gherkin
 import ObjectiveC
 
 public struct Feature {
-    let gh: GHFeature
+    private let gherkin: GHFeature
     let scenarios: [Scenario]
-    
+
     init(from feature: GHFeature) {
-        gh = feature
+        gherkin = feature
         scenarios = feature.children.map(Scenario.init)
     }
 }

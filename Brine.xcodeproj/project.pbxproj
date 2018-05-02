@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		332146792099481900C89615 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3321467C2099481A00C89615 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				3321467D2099482200C89615 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		66D993952095544100300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
 		66D9939A2095544100300AF4 /* BrineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D993992095544100300AF4 /* BrineTests.swift */; };
@@ -654,6 +668,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					332146792099481900C89615 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					66D9938A2095544100300AF4 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -692,6 +709,7 @@
 				66D9943E2095563900300AF4 /* Gherkin */,
 				66D9957220960B9500300AF4 /* BrineExample */,
 				66D9958520960B9600300AF4 /* BrineExampleUITests */,
+				332146792099481900C89615 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -731,6 +749,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3321467D2099482200C89615 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		66D993862095544100300AF4 /* Sources */ = {
@@ -867,6 +901,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3321467A2099481A00C89615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3321467B2099481A00C89615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		66D9939D2095544100300AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1204,6 +1256,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3321467C2099481A00C89615 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3321467A2099481A00C89615 /* Debug */,
+				3321467B2099481A00C89615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66D993852095544100300AF4 /* Build configuration list for PBXProject "Brine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

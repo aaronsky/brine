@@ -1,13 +1,12 @@
-
 import Foundation
 
 public struct Regex {
     private let regularExpression: NSRegularExpression
-    
-    public var ns: NSRegularExpression {
+
+    public var nsRegularExpression: NSRegularExpression {
         return regularExpression
     }
-    
+
     public init(_ pattern: String, options: [Option] = []) {
         do {
             regularExpression = try NSRegularExpression(pattern: pattern, options: options.nsOptionSet)
@@ -15,12 +14,12 @@ public struct Regex {
             preconditionFailure("Error while creating regex: \(error)")
         }
     }
-    
+
     public func matches(for string: String) -> [Match] {
         let matches = regularExpression.matches(in: string, range: NSRange(location: 0, length: string.count))
         return matches.compactMap { Match(nsMatch: $0, for: string) }
     }
-    
+
     public func any(_ string: String) -> Bool {
         return regularExpression.numberOfMatches(in: string, range: NSRange(location: 0, length: string.count)) > 0
     }
@@ -31,19 +30,19 @@ public struct Regex {
         case anchorsMatchLines
         case dotMatchesLineSeparators
     }
-    
+
     typealias CaptureGroup = (match: String, index: Int)
-    
+
     public struct Match {
         let text: String
         private let captureGroups: [CaptureGroup]
-        
+
         init?(nsMatch: NSTextCheckingResult, for string: String) {
             guard let range = Range(nsMatch.range, in: string) else {
                 return nil
             }
             self.text = String(string[range])
-            
+
             let lastCaptureIndex = nsMatch.numberOfRanges - 1
             guard lastCaptureIndex >= 1 else {
                 self.captureGroups = []
@@ -56,7 +55,7 @@ public struct Regex {
                 return (match: String(string[captureGroupRange]), index: index)
             }
         }
-        
+
         subscript(index: Int) -> CaptureGroup? {
             guard index >= 0 && index < captureGroups.count else {
                 return nil
@@ -70,11 +69,11 @@ extension Regex: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         self.init(value)
     }
-    
+
     public init(unicodeScalarLiteral value: String) {
         self.init(stringLiteral: value)
     }
-    
+
     public init(extendedGraphemeClusterLiteral value: String) {
         self.init(stringLiteral: value)
     }
@@ -91,7 +90,6 @@ extension Regex: CustomDebugStringConvertible {
         return description
     }
 }
-
 
 extension Array where Element == Regex.Option {
     var nsOptionSet: NSRegularExpression.Options {
