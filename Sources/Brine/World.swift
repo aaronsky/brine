@@ -1,13 +1,14 @@
 import XCTest
 
-public class World {
+@objc public class World: NSObject {
     public static let shared = World()
 
     public private(set) var application = XCUIApplication()
 
     private var steps: [StepDefinition] = []
 
-    init() {
+    override init() {
+        super.init()
         PredefinedSteps.register()
     }
 

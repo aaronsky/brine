@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		33FD47162099C65A00768220 /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; };
+		339816E9209BE6D5008A9E85 /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33FD47172099C65A00768220 /* BrineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FD47152099C65A00768220 /* BrineTestCase.m */; };
 		33FD471F2099DC0A00768220 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66D993952095544100300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
@@ -66,7 +66,7 @@
 		66D994A72095642C00300AF4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A62095642C00300AF4 /* Regex.swift */; };
 		66D994AC20956E5300300AF4 /* Enum+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */; };
 		66D994AD20956E5300300AF4 /* Bundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */; };
-		66D994AE20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */; };
+		66D994AE20956E5300300AF4 /* NSString+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AA20956E5300300AF4 /* NSString+Brine.swift */; };
 		66D994AF20956E5300300AF4 /* URL+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AB20956E5300300AF4 /* URL+Brine.swift */; };
 		66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */; };
 		66D9950D2095F27400300AF4 /* Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950C2095F27400300AF4 /* Brine.swift */; };
@@ -226,7 +226,7 @@
 		66D994A62095642C00300AF4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enum+CaseIterable.swift"; sourceTree = "<group>"; };
 		66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
-		66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+C99ExtendedIdentifier.swift"; sourceTree = "<group>"; };
+		66D994AA20956E5300300AF4 /* NSString+Brine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Brine.swift"; sourceTree = "<group>"; };
 		66D994AB20956E5300300AF4 /* URL+Brine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Brine.swift"; sourceTree = "<group>"; };
 		66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredefinedSteps.swift; sourceTree = "<group>"; };
 		66D9950C2095F27400300AF4 /* Brine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brine.swift; sourceTree = "<group>"; };
@@ -418,7 +418,7 @@
 			children = (
 				66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */,
 				66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */,
-				66D994AA20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift */,
+				66D994AA20956E5300300AF4 /* NSString+Brine.swift */,
 				66D994AB20956E5300300AF4 /* URL+Brine.swift */,
 			);
 			path = Extensions;
@@ -576,7 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33FD471F2099DC0A00768220 /* Brine.h in Headers */,
-				33FD47162099C65A00768220 /* BrineTestCase.h in Headers */,
+				339816E9209BE6D5008A9E85 /* BrineTestCase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +802,7 @@
 				66FA61932098C19200290E07 /* Tag.swift in Sources */,
 				66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */,
 				33FD47172099C65A00768220 /* BrineTestCase.m in Sources */,
-				66D994AE20956E5300300AF4 /* NSString+C99ExtendedIdentifier.swift in Sources */,
+				66D994AE20956E5300300AF4 /* NSString+Brine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

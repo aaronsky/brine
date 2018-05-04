@@ -16,12 +16,20 @@ public enum ScenarioKind {
     }
 }
 
-public struct Scenario {
+@objcMembers
+public class Scenario: NSObject {
     private let gherkin: GHScenarioDefinition
 
     public let kind: ScenarioKind
     public let steps: [Step]
     public let tags: [Tag]
+
+    public var name: String {
+        return gherkin.name
+    }
+    public override var description: String {
+        return gherkin.desc
+    }
 
     public init(from scenario: GHScenarioDefinition) {
         gherkin = scenario
@@ -34,16 +42,11 @@ public struct Scenario {
         let stepDefs = world.matchingSteps(for: self)
         for (step, def) in stepDefs {
             guard let def = def else {
-                preconditionFailure("Existing step definition does not exist for \"\(step.text)\"")
+                XCTFail("Existing step definition does not exist for \"\(step.text)\"")
+                return
             }
             let matches = def.matches(for: step.text)
             def.execute(with: matches, in: world)
         }
-    }
-}
-
-extension Scenario: CustomStringConvertible {
-    public var description: String {
-        return gherkin.desc
     }
 }
