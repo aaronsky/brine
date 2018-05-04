@@ -1,10 +1,10 @@
 import Gherkin
 import ObjectiveC
 
-public struct Feature {
+@objc public class Feature: NSObject {
     private let gherkin: GHFeature
     let testClass: AnyClass?
-    let scenarios: [Scenario]
+    @objc public let scenarios: [Scenario]
 
     init(from feature: GHFeature, testClass: AnyClass? = nil) {
         gherkin = feature

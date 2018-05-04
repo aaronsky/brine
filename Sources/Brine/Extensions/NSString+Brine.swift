@@ -28,4 +28,10 @@ public extension NSString {
 
         return result.isEmpty ? "_" : result
     }
+
+    @objc(brine_titlecasedString)
+    var titlecased: String {
+        let capitalizedString = capitalized
+        return capitalizedString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression)
+    }
 }

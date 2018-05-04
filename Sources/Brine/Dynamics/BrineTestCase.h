@@ -8,7 +8,17 @@
 #import <XCTest/XCTest.h>
 @import Gherkin;
 
+@class Feature;
+@class World;
+
+@protocol BrineTestCaseDelegate
+@property (nonatomic, readonly) World *world;
+- (Feature *)featureForFeatureClass:(Class)class;
+@end
+
 @interface BrineTestCase : XCTestCase
+
+@property (class, nonatomic, weak) id<BrineTestCaseDelegate> classDelegate;
 
 + (Class)createClassForFeature:(GHFeature *)feature;
 
