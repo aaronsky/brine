@@ -1,12 +1,12 @@
 import Foundation
 import Gherkin
 
-public class Brine {
+@objc public class Brine: NSObject {
     var configurations: [Configuration] = []
     var finalizeConfig = false
 
     var features: [Feature] = []
-    var world: World
+    public var world: World
 
     public init(_ world: World = World.shared) {
         self.world = world
@@ -23,8 +23,9 @@ public class Brine {
 
     public func start(filterForTags tags: [String] = []) {
         finalizeConfig = true
+        BrineTestCase.classDelegate = self
         loadFeatures()
-        executeFeatures()
+//        executeFeatures()
     }
 
     func loadFeatures() {
@@ -56,20 +57,21 @@ public class Brine {
         guard let result = parser.parse(path.path) else {
             return nil
         }
-        return Feature(from: result.feature)
+        let testClass: AnyClass? = BrineTestCase.createClass(for: result.feature)
+        return Feature(from: result.feature, testClass: testClass)
     }
 
-    func executeFeatures() {
-        for feature in features {
-            for scenario in feature.scenarios {
-                scenario.run(in: world)
-            }
-        }
-    }
+//    func executeFeatures() {
+//        for feature in features {
+//            for scenario in feature.scenarios {
+//                scenario.run(in: world)
+//            }
+//        }
+//    }
+}
 
-    // MARK: Runtime methods
-
-    @objc static func testInvocations() {
-
+extension Brine: BrineTestCaseDelegate {
+    public func feature(forFeatureClass class: AnyClass) -> Feature? {
+        return features.first(where: { $0.testClass == `class` })
     }
 }
