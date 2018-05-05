@@ -1,26 +1,11 @@
-//
-//  BrineTestCase.h
-//  Brine
-//
-//  Created by Aaron Sky on 5/2/18.
-//
-
 #import <XCTest/XCTest.h>
 @import Gherkin;
 
-@class Feature;
-@class World;
-
-@protocol BrineTestCaseDelegate
-@property (nonatomic, readonly) World *world;
-- (Feature *)featureForFeatureClass:(Class)class;
-@end
+@protocol BrineTestCaseDelegate;
 
 @interface BrineTestCase : XCTestCase
 
-@property (class, nonatomic, weak) id<BrineTestCaseDelegate> classDelegate;
-
-+ (Class)createClassForFeature:(GHFeature *)feature;
+@property (class, nonatomic, weak, nullable) id<BrineTestCaseDelegate> classDelegate;
 
 + (NSArray<NSInvocation *> *)testInvocations;
 + (instancetype)testCaseWithSelector:(SEL)selector;
