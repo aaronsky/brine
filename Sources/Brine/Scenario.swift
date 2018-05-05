@@ -38,7 +38,7 @@ public class Scenario: NSObject {
         tags = gherkin.tags.map(Tag.init)
     }
 
-    public func run(in world: World) {
+    func run(in world: World) {
         let stepDefs = world.matchingSteps(for: self)
         for (step, def) in stepDefs {
             guard let def = def else {

@@ -71,7 +71,7 @@ import Gherkin
 }
 
 extension Brine: BrineTestCaseDelegate {
-    public func feature(forFeatureClass class: AnyClass?) -> Feature? {
+    public func feature(forFeatureClass class: AnyClass) -> Feature? {
         return features.first(where: { $0.testClass == `class` })
     }
 }
