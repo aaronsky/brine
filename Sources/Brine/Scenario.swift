@@ -48,7 +48,7 @@ public class Scenario: NSObject {
         tags = gherkin.tags.map(Tag.init)
         examples = (gherkin as? GHScenarioOutline)?.examples.map(Example.init) ?? []
     }
-    
+
     public convenience init(copy scenario: Scenario, asOutlineWithExample example: Example, index: Int) {
         let data = example.data[index]
         let steps: [Step] = scenario.steps.map { step in
