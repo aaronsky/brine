@@ -22,7 +22,13 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
     Feature *feature = [_classDelegate featureForFeatureClass:[self class]];
     NSMutableArray<NSInvocation *> *invocations = [NSMutableArray array];
     for (Scenario *scenario in feature.scenarios) {
-        [invocations addObject:[[self class] invocationForScenario:scenario inFeature:feature]];
+        if (scenario.kind == ScenarioKindScenario) {
+            [invocations addObject:[[self class] invocationForScenario:scenario inFeature:feature]];
+        } else if (scenario.kind == ScenarioKindScenarioOutline) {
+            [invocations addObjectsFromArray:[[self class] invocationsForOutline:scenario inFeature:feature]];
+        } else if (scenario.kind == ScenarioKindBackground) {
+            [feature setBackground:scenario];
+        }
     }
     return invocations;
 }
@@ -45,16 +51,12 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
 
 - (void)recordFailureWithDescription:(NSString *)description inFile:(NSString *)filePath atLine:(NSUInteger)lineNumber expected:(BOOL)expected
 {
-    if ([filePath hasSuffix:@".feature"]) {
-        [self recordFailureWithDescription:description inFile:filePath atLine:lineNumber expected:expected];
-    } else {
-        // throwException
-    }
+    [super recordFailureWithDescription:description inFile:filePath atLine:lineNumber expected:expected];
 }
 
 + (NSInvocation *)invocationForScenario:(Scenario *)scenario inFeature:(Feature *)feature
 {
-    NSString *methodName = [scenario.name titlecasedString];
+    NSString *methodName = [@"test" stringByAppendingString:[scenario.name titlecasedString]];
     SEL selector = NSSelectorFromString(methodName);
     [[self class] addMethodFor:selector];
     NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:selector];
@@ -64,6 +66,27 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
     [invocation setArgument:&feature atIndex:3];
     [invocation retainArguments];
     return invocation;
+}
+
++ (NSArray<NSInvocation *> *)invocationsForOutline:(Scenario *)scenario inFeature:(Feature *)feature
+{
+    NSMutableArray<NSInvocation *> *invocations = [NSMutableArray array];
+    for (Example *example in scenario.examples) {
+        NSUInteger dataCount = [example.data count];
+        for (int i = 0; i < dataCount; i++) {
+            [invocations addObject:[[self class] invocationForOutline:scenario
+                                                              example:example
+                                                                index:i
+                                                            inFeature:feature]];
+        }
+    }
+    return invocations;
+}
+
++ (NSInvocation *)invocationForOutline:(Scenario *)scenario example:(Example *)example index:(NSInteger)index inFeature:(Feature *)feature
+{
+    Scenario *newScenario = [[Scenario alloc]initWithCopy:scenario asOutlineWithExample:example index:index];
+    return [[self class] invocationForScenario:newScenario inFeature:feature];
 }
 
 @end

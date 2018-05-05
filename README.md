@@ -7,8 +7,8 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
 ## Todo
 
 - [x] Prototype
-- [ ] Xcode integration
-- [ ] Support for other scenario types (outline, background)
+- [x] Xcode integration
+- [x] Support for other scenario types (outline, background)
 - [ ] Filter tests by tag
 - [ ] Tables
 - [ ] Before/after hooks

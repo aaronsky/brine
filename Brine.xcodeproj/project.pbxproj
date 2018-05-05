@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		339816E9209BE6D5008A9E85 /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		339816F0209D340A008A9E85 /* BrineTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339816EF209D340A008A9E85 /* BrineTestCase.swift */; };
+		33F2D8B3209DFAB400ADCB95 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2D8B2209DFAB400ADCB95 /* Example.swift */; };
 		33FD47172099C65A00768220 /* BrineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FD47152099C65A00768220 /* BrineTestCase.m */; };
 		33FD471F2099DC0A00768220 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		66D993952095544100300AF4 /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
@@ -138,6 +139,7 @@
 
 /* Begin PBXFileReference section */
 		339816EF209D340A008A9E85 /* BrineTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrineTestCase.swift; sourceTree = "<group>"; };
+		33F2D8B2209DFAB400ADCB95 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
 		33FD47152099C65A00768220 /* BrineTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrineTestCase.m; sourceTree = "<group>"; };
 		66D9938B2095544100300AF4 /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +337,7 @@
 			children = (
 				66D9950C2095F27400300AF4 /* Brine.swift */,
 				66D994A0209560FE00300AF4 /* Configuration.swift */,
+				33F2D8B2209DFAB400ADCB95 /* Example.swift */,
 				66D995A6209721ED00300AF4 /* Feature.swift */,
 				66D994A62095642C00300AF4 /* Regex.swift */,
 				66D995AC2097486E00300AF4 /* Scenario.swift */,
@@ -802,6 +805,7 @@
 				66D9949A2095603300300AF4 /* DSL.swift in Sources */,
 				66D994AD20956E5300300AF4 /* Bundle+CurrentTestBundle.swift in Sources */,
 				339816F0209D340A008A9E85 /* BrineTestCase.swift in Sources */,
+				33F2D8B3209DFAB400ADCB95 /* Example.swift in Sources */,
 				66D995A7209721ED00300AF4 /* Feature.swift in Sources */,
 				66FA61932098C19200290E07 /* Tag.swift in Sources */,
 				66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */,
@@ -998,6 +1002,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1055,6 +1060,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1077,7 +1083,7 @@
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Brine/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Sources/Brine/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1109,7 +1115,7 @@
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Brine/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Sources/Brine/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1129,7 +1135,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1148,7 +1154,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ***REMOVED***;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
 				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

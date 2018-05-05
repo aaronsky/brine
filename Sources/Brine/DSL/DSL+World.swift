@@ -2,7 +2,7 @@ import Foundation
 
 extension World {
     public func given(_ pattern: String, block: @escaping BrineStepBlock) {
-        given(pattern: Regex(pattern), block: block)
+        given(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
     public func given(pattern: Regex, block: @escaping BrineStepBlock) {
@@ -10,7 +10,7 @@ extension World {
     }
 
     public func when(_ pattern: String, block: @escaping BrineStepBlock) {
-        when(pattern: Regex(pattern), block: block)
+        when(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
     public func when(pattern: Regex, block: @escaping BrineStepBlock) {
@@ -18,7 +18,7 @@ extension World {
     }
 
     public func then(_ pattern: String, block: @escaping BrineStepBlock) {
-        then(pattern: Regex(pattern), block: block)
+        then(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
     public func then(pattern: Regex, block: @escaping BrineStepBlock) {

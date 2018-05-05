@@ -6,6 +6,7 @@ public class Feature: NSObject {
     private let gherkin: GHFeature
     let testClass: AnyClass?
     public let scenarios: [Scenario]
+    public weak var background: Scenario?
 
     init(from feature: GHFeature, testClass: AnyClass? = nil) {
         gherkin = feature
