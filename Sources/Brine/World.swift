@@ -5,6 +5,8 @@ import XCTest
 
     public private(set) var application = XCUIApplication()
 
+    var hooks = Hooks()
+
     private var steps: [StepDefinition] = []
     private var transformableTypes: [MatchTransformable.Type] = []
 
@@ -21,6 +23,26 @@ import XCTest
 
     func registerTransformableType(_ type: MatchTransformable.Type) {
         transformableTypes.append(type)
+    }
+
+    func registerBeforeHook(_ hook: ScenarioHook) {
+        hooks.beforeEach.append(hook)
+    }
+
+    func registerAfterHook(_ hook: ScenarioHook) {
+        hooks.afterEach.append(hook)
+    }
+
+    func registerAroundHook(_ hook: AroundHook) {
+        hooks.around.append(hook)
+    }
+
+    func registerExitingHook(_ hook: ExitingHook) {
+        hooks.exiting.append(hook)
+    }
+
+    func registerAfterConfigurationHook(_ hook: AfterConfigurationHook) {
+        hooks.afterConfiguration.append(hook)
     }
 
     func matchingSteps(for scenario: Scenario) -> [(Step, StepDefinition?)] {

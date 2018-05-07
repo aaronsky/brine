@@ -26,15 +26,24 @@ import Gherkin
     }
 }
 
+protocol ParentTagsProvider: class {
+    var parentTags: [Tag] { get }
+}
+
 @objcMembers
 public class Scenario: NSObject {
-    private let gherkin: GHScenarioDefinition
-
     public let name: String
     public let kind: ScenarioKind
-    public let steps: [Step]
-    public let tags: [Tag]
     public let examples: [Example]
+    let steps: [Step]
+    private let scenarioTags: [Tag]
+    private let gherkin: GHScenarioDefinition
+
+    weak var parentTagsProvider: ParentTagsProvider?
+
+    public var tags: [Tag] {
+        return (parentTagsProvider?.parentTags ?? []) + scenarioTags
+    }
 
     public override var description: String {
         return gherkin.desc
@@ -45,8 +54,10 @@ public class Scenario: NSObject {
         name = gherkin.name
         kind = ScenarioKind(scenario.keyword)
         steps = gherkin.steps.map(Step.init)
-        tags = gherkin.tags.map(Tag.init)
+        scenarioTags = gherkin.tags.map(Tag.init)
         examples = (gherkin as? GHScenarioOutline)?.examples.map(Example.init) ?? []
+        super.init()
+        examples.forEach { $0.parentTagsProvider = self }
     }
 
     public convenience init(copy scenario: Scenario, asOutlineWithExample example: Example, index: Int) {
@@ -59,16 +70,19 @@ public class Scenario: NSObject {
             return Step(copy: step, overridingText: text)
         }
         let name = scenario.exampleScenarioName(for: example, index: index)
-        self.init(gherkin: scenario.gherkin, name: name, kind: .scenarioOutline, steps: steps, tags: scenario.tags)
+        self.init(gherkin: scenario.gherkin, name: name, kind: .scenarioOutline, steps: steps, tags: scenario.tags, parentTagsProvider: scenario.parentTagsProvider)
     }
 
-    private init(gherkin: GHScenarioDefinition, name: String = "", kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = []) {
+    private init(gherkin: GHScenarioDefinition, name: String = "", kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = [], parentTagsProvider: ParentTagsProvider? = nil) {
         self.gherkin = gherkin
         self.name = name
         self.kind = kind
         self.steps = steps
-        self.tags = tags
+        self.scenarioTags = tags
         self.examples = examples
+        self.parentTagsProvider = parentTagsProvider
+        super.init()
+        examples.forEach { $0.parentTagsProvider = self }
     }
 
     func run(in world: World) {
@@ -85,5 +99,11 @@ public class Scenario: NSObject {
     private func exampleScenarioName(for example: Example, index: Int) -> String {
         let name = example.data[index].map { $0.value }
         return self.name.appendingFormat(" %@ Example %lu", name.joined(separator: "-"), index + 1)
+    }
+}
+
+extension Scenario: ParentTagsProvider {
+    var parentTags: [Tag] {
+        return tags
     }
 }

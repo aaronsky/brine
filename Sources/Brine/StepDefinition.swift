@@ -8,7 +8,7 @@ public struct StepContext {
     public let arguments: [Argument]
 }
 
-public struct StepDefinition {
+struct StepDefinition {
     private let pattern: Regex
     private let handler: BrineStepBlock
 

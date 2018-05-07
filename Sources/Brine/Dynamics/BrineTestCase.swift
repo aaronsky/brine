@@ -50,6 +50,9 @@ extension BrineTestCase {
             XCTFail("Cannot run scenario \(scenario.name) without steps context. World is nil")
             return
         }
-        scenario.run(in: world)
+        world.hooks.before(scenario)
+        feature.background?.run(in: world)
+        world.hooks.around(scenario, world: world)
+        world.hooks.after(scenario)
     }
 }

@@ -33,6 +33,31 @@ private func registerStep(with pattern: Regex, block: @escaping BrineStepBlock) 
 
 // MARK: Hooks
 
+public func before(_ tags: String..., block: @escaping BrineScenarioHookBlock) {
+    let hook = ScenarioHook(tags: tags, handler: block)
+    World.shared.registerBeforeHook(hook)
+}
+
+public func after(_ tags: String..., block: @escaping BrineScenarioHookBlock) {
+    let hook = ScenarioHook(tags: tags, handler: block)
+    World.shared.registerAfterHook(hook)
+}
+
+public func around(_ tags: String..., block: @escaping BrineAroundHookBlock) {
+    let hook = AroundHook(tags: tags, handler: block)
+    World.shared.registerAroundHook(hook)
+}
+
+public func onExit(block: @escaping BrineExitingHookBlock) {
+    let hook = ExitingHook(handler: block)
+    World.shared.registerExitingHook(hook)
+}
+
+public func afterConfiguration(block: @escaping BrineAfterConfigurationBlock) {
+    let hook = AfterConfigurationHook(handler: block)
+    World.shared.registerAfterConfigurationHook(hook)
+}
+
 // MARK: Transform
 
 public func transform<T: MatchTransformable>(_ type: T.Type) {

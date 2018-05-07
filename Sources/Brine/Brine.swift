@@ -23,6 +23,7 @@ import Gherkin
 
     public func start(filterForTags tags: [String] = []) {
         finalizeConfig = true
+//        world.hooks.afterConfiguration(configuration)
         BrineTestCase.classDelegate = self
         loadFeatures()
 //        executeFeatures()

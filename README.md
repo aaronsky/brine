@@ -17,13 +17,13 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
         - [x] Step transforms
         - [x] Data Tables
         - [ ] Doc strings
-    - [ ] Hooks
-        - [ ] Before/After/Around Steps
-        - [ ] Tagged hooks
+    - [x] Hooks
+        - [x] Before/After/Around Steps
+        - [x] Tagged hooks
     - [ ] Tags
         - [ ] Add to test/case names
         - [ ] Filter by tag
-        - [ ] Tag inheritance
+        - [x] Tag inheritance
         - [ ] Tag expressions (for hooks and filtered runs)
 - [ ] Link test failure to line in step **and** line in feature
 - [ ] Improve logging

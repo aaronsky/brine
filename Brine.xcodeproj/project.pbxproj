@@ -26,6 +26,7 @@
 		333F8F4B209FADBA00FC1404 /* PredefinedTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F4A209FADBA00FC1404 /* PredefinedTransforms.swift */; };
 		333F8F4D209FADD000FC1404 /* PredefinedHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F4C209FADD000FC1404 /* PredefinedHooks.swift */; };
 		333F8F54209FC6FC00FC1404 /* XCTest+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F53209FC6FC00FC1404 /* XCTest+Brine.swift */; };
+		333F8F56209FFF3800FC1404 /* Hook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F55209FFF3800FC1404 /* Hook.swift */; };
 		339816E9209BE6D5008A9E85 /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		339816F0209D340A008A9E85 /* BrineTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339816EF209D340A008A9E85 /* BrineTestCase.swift */; };
 		33F2D8B3209DFAB400ADCB95 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2D8B2209DFAB400ADCB95 /* Example.swift */; };
@@ -149,6 +150,7 @@
 		333F8F4A209FADBA00FC1404 /* PredefinedTransforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredefinedTransforms.swift; sourceTree = "<group>"; };
 		333F8F4C209FADD000FC1404 /* PredefinedHooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredefinedHooks.swift; sourceTree = "<group>"; };
 		333F8F53209FC6FC00FC1404 /* XCTest+Brine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Brine.swift"; sourceTree = "<group>"; };
+		333F8F55209FFF3800FC1404 /* Hook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hook.swift; sourceTree = "<group>"; };
 		339816EF209D340A008A9E85 /* BrineTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrineTestCase.swift; sourceTree = "<group>"; };
 		33F2D8B2209DFAB400ADCB95 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
@@ -347,17 +349,18 @@
 		66D9938D2095544100300AF4 /* Brine */ = {
 			isa = PBXGroup;
 			children = (
+				333F8F45209F276E00FC1404 /* Argument.swift */,
 				66D9950C2095F27400300AF4 /* Brine.swift */,
 				66D994A0209560FE00300AF4 /* Configuration.swift */,
 				33F2D8B2209DFAB400ADCB95 /* Example.swift */,
 				66D995A6209721ED00300AF4 /* Feature.swift */,
+				333F8F55209FFF3800FC1404 /* Hook.swift */,
 				66D994A62095642C00300AF4 /* Regex.swift */,
 				66D995AC2097486E00300AF4 /* Scenario.swift */,
 				66FA61942098D25900290E07 /* Step.swift */,
 				66D994A42095627C00300AF4 /* StepDefinition.swift */,
 				66FA61922098C19200290E07 /* Tag.swift */,
 				66D9949D209560E100300AF4 /* World.swift */,
-				333F8F45209F276E00FC1404 /* Argument.swift */,
 				66D994982095600700300AF4 /* DSL */,
 				33FD47132099C50100768220 /* Dynamics */,
 				66D9949F209560E800300AF4 /* Extensions */,
@@ -831,6 +834,7 @@
 				66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */,
 				33FD47172099C65A00768220 /* BrineTestCase.m in Sources */,
 				66D994AE20956E5300300AF4 /* NSString+Brine.swift in Sources */,
+				333F8F56209FFF3800FC1404 /* Hook.swift in Sources */,
 				333F8F4B209FADBA00FC1404 /* PredefinedTransforms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,9 +8,9 @@ public protocol Argument {
 }
 
 public struct MatchArgument: Argument {
+    public let name: String?
     let match: Regex.Match
     let type: MatchTransformable.Type
-    public let name: String?
 
     init?(match: Regex.Match, type: MatchTransformable.Type, name: String? = nil) {
         guard type.patterns.contains(where: { match.text.any($0) }) else {
@@ -27,8 +27,8 @@ public struct MatchArgument: Argument {
 }
 
 public struct CodableArgument: Argument {
-    let data: Data
     public let name: String?
+    let data: Data
 
     init(data: Data, name: String? = nil) {
         self.data = data
@@ -46,7 +46,7 @@ public struct CodableArgument: Argument {
 }
 
 public extension Array where Element == Argument {
-    public subscript(_ name: String) -> Argument? {
+    public func named(_ name: String) -> Argument? {
         return self.first { $0.name == name }
     }
 }

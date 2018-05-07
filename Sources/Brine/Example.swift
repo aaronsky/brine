@@ -3,16 +3,24 @@ import Gherkin
 
 @objcMembers
 public class Example: NSObject {
-    private let gherkin: GHExamples
     public let data: [[String: String]]
+    private let exampleTags: [Tag]
+    private let gherkin: GHExamples
+
+    weak var parentTagsProvider: ParentTagsProvider?
 
     public override var description: String {
         return gherkin.desc
     }
 
+    public var tags: [Tag] {
+        return (parentTagsProvider?.parentTags ?? []) + exampleTags
+    }
+
     public init(from example: GHExamples) {
         gherkin = example
         data = gherkin.tableBody.toTable(headers: example.tableHeader)
+        exampleTags = gherkin.tags.map(Tag.init)
     }
 }
 

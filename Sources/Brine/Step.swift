@@ -1,9 +1,8 @@
 import Gherkin
 
 public struct Step {
-    private let gherkin: GHStep
-
     public let text: String
+    private let gherkin: GHStep
 
     public var argument: Argument? {
         guard let table = gherkin.argument as? GHDataTable else {

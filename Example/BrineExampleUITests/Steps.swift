@@ -49,5 +49,8 @@ class Steps {
         }
 
         transform(Int.self)
+        before { scenario in
+            print(scenario.tags)
+        }
     }
 }
