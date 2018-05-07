@@ -4,17 +4,15 @@ env:
   global:
   - PROJECT="Brine.xcodeproj"
   - IOS_SDK=iphonesimulator11.3
-  - BRINE_FRAMEWORK_IOS_SCHEME="Brine"
-  - BRINE_EXAMPLE_IOS_SCHEME="BrineExample"
 
 matrix:
   include:
     - osx_image: xcode9.3
       env:
         - DESTINATION="OS=11.3,name=iPhone 8 Plus"
-        - SCHEME="$BRINE_FRAMEWORK_IOS_SCHEME"
+        - SCHEME="Brine-iOS"
         - SDK="$IOS_SDK"
-        - EXAMPLE_SCHEME="$BRINE_EXAMPLE_IOS_SCHEME"
+        - EXAMPLE_SCHEME="BrineExample-iOS"
 
 script:
   - set -o pipefail

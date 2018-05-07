@@ -357,6 +357,8 @@
 		66E64CAE20A0C062003CA74F /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E64CBB20A0C0B7003CA74F /* BrineTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrineTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E64CE620A0C15B003CA74F /* libGherkin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGherkin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E64CF620A0D78A003CA74F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		66E64CF720A0D78B003CA74F /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		66FA61922098C19200290E07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		66FA61942098D25900290E07 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -440,6 +442,8 @@
 			isa = PBXGroup;
 			children = (
 				333F8F44209E2B9D00FC1404 /* README.md */,
+				66E64CF620A0D78A003CA74F /* .swiftlint.yml */,
+				66E64CF720A0D78B003CA74F /* .travis.yml */,
 				66D9938D2095544100300AF4 /* Brine */,
 				66D993982095544100300AF4 /* BrineTests */,
 				66D993A52095559500300AF4 /* Dependencies */,
