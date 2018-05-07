@@ -78,7 +78,6 @@
 		66D994AF20956E5300300AF4 /* URL+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AB20956E5300300AF4 /* URL+Brine.swift */; };
 		66D9950B2095F1FE00300AF4 /* PredefinedSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */; };
 		66D9950D2095F27400300AF4 /* Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950C2095F27400300AF4 /* Brine.swift */; };
-		66D9950F2095F2F400300AF4 /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
 		66D9956C2096060900300AF4 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956A209605ED00300AF4 /* module.modulemap */; };
 		66D9956E209606B500300AF4 /* Gherkin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956D2096065800300AF4 /* Gherkin.h */; };
 		66D9957620960B9500300AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9957520960B9500300AF4 /* AppDelegate.swift */; };
@@ -94,6 +93,71 @@
 		66D995A52096B74100300AF4 /* gherkin-languages.json in Resources */ = {isa = PBXBuildFile; fileRef = 66D99439209555EC00300AF4 /* gherkin-languages.json */; };
 		66D995A7209721ED00300AF4 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995A6209721ED00300AF4 /* Feature.swift */; };
 		66D995AD2097486E00300AF4 /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995AC2097486E00300AF4 /* Scenario.swift */; };
+		66E64C8C20A0C062003CA74F /* URL+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AB20956E5300300AF4 /* URL+Brine.swift */; };
+		66E64C8D20A0C062003CA74F /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61942098D25900290E07 /* Step.swift */; };
+		66E64C8E20A0C062003CA74F /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F45209F276E00FC1404 /* Argument.swift */; };
+		66E64C8F20A0C062003CA74F /* StepDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A42095627C00300AF4 /* StepDefinition.swift */; };
+		66E64C9020A0C062003CA74F /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A62095642C00300AF4 /* Regex.swift */; };
+		66E64C9120A0C062003CA74F /* Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950C2095F27400300AF4 /* Brine.swift */; };
+		66E64C9220A0C062003CA74F /* Enum+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */; };
+		66E64C9320A0C062003CA74F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A0209560FE00300AF4 /* Configuration.swift */; };
+		66E64C9420A0C062003CA74F /* DSL+World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949B209560D700300AF4 /* DSL+World.swift */; };
+		66E64C9520A0C062003CA74F /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949D209560E100300AF4 /* World.swift */; };
+		66E64C9620A0C062003CA74F /* XCTest+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F53209FC6FC00FC1404 /* XCTest+Brine.swift */; };
+		66E64C9720A0C062003CA74F /* PredefinedHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F4C209FADD000FC1404 /* PredefinedHooks.swift */; };
+		66E64C9820A0C062003CA74F /* Scenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995AC2097486E00300AF4 /* Scenario.swift */; };
+		66E64C9920A0C062003CA74F /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994992095603300300AF4 /* DSL.swift */; };
+		66E64C9A20A0C062003CA74F /* Bundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */; };
+		66E64C9B20A0C062003CA74F /* BrineTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339816EF209D340A008A9E85 /* BrineTestCase.swift */; };
+		66E64C9C20A0C062003CA74F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2D8B2209DFAB400ADCB95 /* Example.swift */; };
+		66E64C9D20A0C062003CA74F /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D995A6209721ED00300AF4 /* Feature.swift */; };
+		66E64C9E20A0C062003CA74F /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61922098C19200290E07 /* Tag.swift */; };
+		66E64C9F20A0C062003CA74F /* PredefinedSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950A2095F1FE00300AF4 /* PredefinedSteps.swift */; };
+		66E64CA020A0C062003CA74F /* BrineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FD47152099C65A00768220 /* BrineTestCase.m */; };
+		66E64CA120A0C062003CA74F /* NSString+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AA20956E5300300AF4 /* NSString+Brine.swift */; };
+		66E64CA220A0C062003CA74F /* Hook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F55209FFF3800FC1404 /* Hook.swift */; };
+		66E64CA320A0C062003CA74F /* PredefinedTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F8F4A209FADBA00FC1404 /* PredefinedTransforms.swift */; };
+		66E64CA720A0C062003CA74F /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66E64CA820A0C062003CA74F /* BrineTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 33FD47142099C65A00768220 /* BrineTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66E64CAA20A0C062003CA74F /* gherkin-languages.json in Resources */ = {isa = PBXBuildFile; fileRef = 66D99439209555EC00300AF4 /* gherkin-languages.json */; };
+		66E64CB420A0C0B7003CA74F /* BrineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D993992095544100300AF4 /* BrineTests.swift */; };
+		66E64CB620A0C0B7003CA74F /* Brine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9938B2095544100300AF4 /* Brine.framework */; };
+		66E64CBF20A0C15B003CA74F /* GHAstBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CE209555BB00300AF4 /* GHAstBuilder.m */; };
+		66E64CC020A0C15B003CA74F /* GHAstNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C8209555BB00300AF4 /* GHAstNode.m */; };
+		66E64CC120A0C15B003CA74F /* GHBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C0209555BA00300AF4 /* GHBackground.m */; };
+		66E64CC220A0C15B003CA74F /* GHComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AD209555B900300AF4 /* GHComment.m */; };
+		66E64CC320A0C15B003CA74F /* GHDataTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D9209555BC00300AF4 /* GHDataTable.m */; };
+		66E64CC420A0C15B003CA74F /* GHDocString.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E8209555BD00300AF4 /* GHDocString.m */; };
+		66E64CC520A0C15B003CA74F /* GHExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993A8209555B800300AF4 /* GHExamples.m */; };
+		66E64CC620A0C15B003CA74F /* GHFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E9209555BD00300AF4 /* GHFeature.m */; };
+		66E64CC720A0C15B003CA74F /* GHGherkinDialect.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AB209555B900300AF4 /* GHGherkinDialect.m */; };
+		66E64CC820A0C15B003CA74F /* GHGherkinDialectProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D7209555BC00300AF4 /* GHGherkinDialectProvider.m */; };
+		66E64CC920A0C15B003CA74F /* GHGherkinDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BC209555BA00300AF4 /* GHGherkinDocument.m */; };
+		66E64CCA20A0C15B003CA74F /* GHGherkinLanguageConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E3209555BC00300AF4 /* GHGherkinLanguageConstants.m */; };
+		66E64CCB20A0C15B003CA74F /* GHGherkinLanguageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CB209555BB00300AF4 /* GHGherkinLanguageSetting.m */; };
+		66E64CCC20A0C15B003CA74F /* GHGherkinLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E6209555BD00300AF4 /* GHGherkinLine.m */; };
+		66E64CCD20A0C15B003CA74F /* GHGherkinLineSpan.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D5209555BB00300AF4 /* GHGherkinLineSpan.m */; };
+		66E64CCE20A0C15B003CA74F /* GHLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DD209555BC00300AF4 /* GHLocation.m */; };
+		66E64CCF20A0C15B003CA74F /* GHNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993CF209555BB00300AF4 /* GHNode.m */; };
+		66E64CD020A0C15B003CA74F /* GHParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DB209555BC00300AF4 /* GHParser.m */; };
+		66E64CD120A0C15B003CA74F /* GHParser+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BA209555BA00300AF4 /* GHParser+Extensions.m */; };
+		66E64CD220A0C15B003CA74F /* GHParserException.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C4209555BA00300AF4 /* GHParserException.m */; };
+		66E64CD320A0C15B003CA74F /* GHScenario.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AE209555B900300AF4 /* GHScenario.m */; };
+		66E64CD420A0C15B003CA74F /* GHScenarioDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E1209555BC00300AF4 /* GHScenarioDefinition.m */; };
+		66E64CD520A0C15B003CA74F /* GHScenarioOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993EE209555BD00300AF4 /* GHScenarioOutline.m */; };
+		66E64CD620A0C15B003CA74F /* GHStep.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993C6209555BA00300AF4 /* GHStep.m */; };
+		66E64CD720A0C15B003CA74F /* GHStepArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993BD209555BA00300AF4 /* GHStepArgument.m */; };
+		66E64CD820A0C15B003CA74F /* GHTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B5209555B900300AF4 /* GHTableCell.m */; };
+		66E64CD920A0C15B003CA74F /* GHTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993D1209555BB00300AF4 /* GHTableRow.m */; };
+		66E64CDA20A0C15B003CA74F /* GHTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B2209555B900300AF4 /* GHTag.m */; };
+		66E64CDB20A0C15B003CA74F /* GHToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993E4209555BC00300AF4 /* GHToken.m */; };
+		66E64CDC20A0C15B003CA74F /* GHTokenMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993DE209555BC00300AF4 /* GHTokenMatcher.m */; };
+		66E64CDD20A0C15B003CA74F /* GHTokenScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993AF209555B900300AF4 /* GHTokenScanner.m */; };
+		66E64CDE20A0C15B003CA74F /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D993B3209555B900300AF4 /* NSString+Trim.m */; };
+		66E64CE120A0C15B003CA74F /* Gherkin.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956D2096065800300AF4 /* Gherkin.h */; };
+		66E64CE220A0C15B003CA74F /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 66D9956A209605ED00300AF4 /* module.modulemap */; };
+		66E64CE920A0C1D5003CA74F /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E64CE620A0C15B003CA74F /* libGherkin.a */; };
+		66E64CEA20A0C1DC003CA74F /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
 		66FA61932098C19200290E07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61922098C19200290E07 /* Tag.swift */; };
 		66FA61952098D25900290E07 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FA61942098D25900290E07 /* Step.swift */; };
 /* End PBXBuildFile section */
@@ -127,6 +191,20 @@
 			remoteGlobalIDString = 66D9938A2095544100300AF4;
 			remoteInfo = Brine;
 		};
+		66E64CE720A0C181003CA74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E64CBD20A0C15B003CA74F;
+			remoteInfo = "Gherkin-macOS";
+		};
+		66E64CEB20A0C399003CA74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66E64C8820A0C062003CA74F;
+			remoteInfo = "Brine-macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -138,6 +216,17 @@
 			files = (
 				66D9956E209606B500300AF4 /* Gherkin.h in CopyFiles */,
 				66D9956C2096060900300AF4 /* module.modulemap in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CE020A0C15B003CA74F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/Gherkin;
+			dstSubfolderSpec = 16;
+			files = (
+				66E64CE120A0C15B003CA74F /* Gherkin.h in CopyFiles */,
+				66E64CE220A0C15B003CA74F /* module.modulemap in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +247,7 @@
 		66D9938B2095544100300AF4 /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D9938E2095544100300AF4 /* Brine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brine.h; sourceTree = "<group>"; };
 		66D9938F2095544100300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66D993942095544100300AF4 /* BrineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D993942095544100300AF4 /* BrineTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrineTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D993992095544100300AF4 /* BrineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrineTests.swift; sourceTree = "<group>"; };
 		66D9939B2095544100300AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D993A7209555B800300AF4 /* GHParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHParser.h; sourceTree = "<group>"; };
@@ -265,6 +354,9 @@
 		66D995A32096965100300AF4 /* TestDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDriver.swift; sourceTree = "<group>"; };
 		66D995A6209721ED00300AF4 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		66D995AC2097486E00300AF4 /* Scenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenario.swift; sourceTree = "<group>"; };
+		66E64CAE20A0C062003CA74F /* Brine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Brine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E64CBB20A0C0B7003CA74F /* BrineTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrineTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66E64CE620A0C15B003CA74F /* libGherkin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGherkin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FA61922098C19200290E07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		66FA61942098D25900290E07 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -274,7 +366,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66D9950F2095F2F400300AF4 /* libGherkin.a in Frameworks */,
+				66E64CEA20A0C1DC003CA74F /* libGherkin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +400,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66E64CA420A0C062003CA74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CE920A0C1D5003CA74F /* libGherkin.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CB520A0C0B7003CA74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CB620A0C0B7003CA74F /* Brine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CDF20A0C15B003CA74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -338,10 +453,13 @@
 			isa = PBXGroup;
 			children = (
 				66D9938B2095544100300AF4 /* Brine.framework */,
-				66D993942095544100300AF4 /* BrineTests.xctest */,
+				66D993942095544100300AF4 /* BrineTests-iOS.xctest */,
 				66D9943F2095563900300AF4 /* libGherkin.a */,
 				66D9957320960B9500300AF4 /* BrineExample.app */,
 				66D9958620960B9600300AF4 /* BrineExampleUITests.xctest */,
+				66E64CAE20A0C062003CA74F /* Brine.framework */,
+				66E64CBB20A0C0B7003CA74F /* BrineTests-macOS.xctest */,
+				66E64CE620A0C15B003CA74F /* libGherkin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -606,12 +724,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66E64CA620A0C062003CA74F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CA720A0C062003CA74F /* Brine.h in Headers */,
+				66E64CA820A0C062003CA74F /* BrineTestCase.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		66D9938A2095544100300AF4 /* Brine */ = {
+		66D9938A2095544100300AF4 /* Brine-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine" */;
+			buildConfigurationList = 66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine-iOS" */;
 			buildPhases = (
 				66D993862095544100300AF4 /* Sources */,
 				66D993872095544100300AF4 /* Frameworks */,
@@ -623,14 +750,14 @@
 			dependencies = (
 				66D994912095567F00300AF4 /* PBXTargetDependency */,
 			);
-			name = Brine;
+			name = "Brine-iOS";
 			productName = Brine;
 			productReference = 66D9938B2095544100300AF4 /* Brine.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		66D993932095544100300AF4 /* BrineTests */ = {
+		66D993932095544100300AF4 /* BrineTests-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests" */;
+			buildConfigurationList = 66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests-iOS" */;
 			buildPhases = (
 				66D993902095544100300AF4 /* Sources */,
 				66D993912095544100300AF4 /* Frameworks */,
@@ -641,14 +768,14 @@
 			dependencies = (
 				66D993972095544100300AF4 /* PBXTargetDependency */,
 			);
-			name = BrineTests;
+			name = "BrineTests-iOS";
 			productName = BrineTests;
-			productReference = 66D993942095544100300AF4 /* BrineTests.xctest */;
+			productReference = 66D993942095544100300AF4 /* BrineTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66D9943E2095563900300AF4 /* Gherkin */ = {
+		66D9943E2095563900300AF4 /* Gherkin-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin" */;
+			buildConfigurationList = 66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin-iOS" */;
 			buildPhases = (
 				66D9943B2095563900300AF4 /* Sources */,
 				66D9943C2095563900300AF4 /* Frameworks */,
@@ -658,7 +785,7 @@
 			);
 			dependencies = (
 			);
-			name = Gherkin;
+			name = "Gherkin-iOS";
 			productName = Gherkin;
 			productReference = 66D9943F2095563900300AF4 /* libGherkin.a */;
 			productType = "com.apple.product-type.library.static";
@@ -698,6 +825,60 @@
 			productName = BrineExampleUITests;
 			productReference = 66D9958620960B9600300AF4 /* BrineExampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		66E64C8820A0C062003CA74F /* Brine-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66E64CAB20A0C062003CA74F /* Build configuration list for PBXNativeTarget "Brine-macOS" */;
+			buildPhases = (
+				66E64C8B20A0C062003CA74F /* Sources */,
+				66E64CA420A0C062003CA74F /* Frameworks */,
+				66E64CA620A0C062003CA74F /* Headers */,
+				66E64CA920A0C062003CA74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66E64CE820A0C181003CA74F /* PBXTargetDependency */,
+			);
+			name = "Brine-macOS";
+			productName = Brine;
+			productReference = 66E64CAE20A0C062003CA74F /* Brine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66E64CB020A0C0B7003CA74F /* BrineTests-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66E64CB820A0C0B7003CA74F /* Build configuration list for PBXNativeTarget "BrineTests-macOS" */;
+			buildPhases = (
+				66E64CB320A0C0B7003CA74F /* Sources */,
+				66E64CB520A0C0B7003CA74F /* Frameworks */,
+				66E64CB720A0C0B7003CA74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66E64CEC20A0C399003CA74F /* PBXTargetDependency */,
+			);
+			name = "BrineTests-macOS";
+			productName = BrineTests;
+			productReference = 66E64CBB20A0C0B7003CA74F /* BrineTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66E64CBD20A0C15B003CA74F /* Gherkin-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66E64CE320A0C15B003CA74F /* Build configuration list for PBXNativeTarget "Gherkin-macOS" */;
+			buildPhases = (
+				66E64CBE20A0C15B003CA74F /* Sources */,
+				66E64CDF20A0C15B003CA74F /* Frameworks */,
+				66E64CE020A0C15B003CA74F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gherkin-macOS";
+			productName = Gherkin;
+			productReference = 66E64CE620A0C15B003CA74F /* libGherkin.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -745,9 +926,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66D9938A2095544100300AF4 /* Brine */,
-				66D993932095544100300AF4 /* BrineTests */,
-				66D9943E2095563900300AF4 /* Gherkin */,
+				66D9938A2095544100300AF4 /* Brine-iOS */,
+				66E64C8820A0C062003CA74F /* Brine-macOS */,
+				66D993932095544100300AF4 /* BrineTests-iOS */,
+				66E64CB020A0C0B7003CA74F /* BrineTests-macOS */,
+				66D9943E2095563900300AF4 /* Gherkin-iOS */,
+				66E64CBD20A0C15B003CA74F /* Gherkin-macOS */,
 				66D9957220960B9500300AF4 /* BrineExample */,
 				66D9958520960B9600300AF4 /* BrineExampleUITests */,
 				332146792099481900C89615 /* SwiftLint */,
@@ -786,6 +970,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D995A22096951100300AF4 /* Features in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CA920A0C062003CA74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CAA20A0C062003CA74F /* gherkin-languages.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CB720A0C0B7003CA74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,17 +1105,95 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		66E64C8B20A0C062003CA74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64C8C20A0C062003CA74F /* URL+Brine.swift in Sources */,
+				66E64C8D20A0C062003CA74F /* Step.swift in Sources */,
+				66E64C8E20A0C062003CA74F /* Argument.swift in Sources */,
+				66E64C8F20A0C062003CA74F /* StepDefinition.swift in Sources */,
+				66E64C9020A0C062003CA74F /* Regex.swift in Sources */,
+				66E64C9120A0C062003CA74F /* Brine.swift in Sources */,
+				66E64C9220A0C062003CA74F /* Enum+CaseIterable.swift in Sources */,
+				66E64C9320A0C062003CA74F /* Configuration.swift in Sources */,
+				66E64C9420A0C062003CA74F /* DSL+World.swift in Sources */,
+				66E64C9520A0C062003CA74F /* World.swift in Sources */,
+				66E64C9620A0C062003CA74F /* XCTest+Brine.swift in Sources */,
+				66E64C9720A0C062003CA74F /* PredefinedHooks.swift in Sources */,
+				66E64C9820A0C062003CA74F /* Scenario.swift in Sources */,
+				66E64C9920A0C062003CA74F /* DSL.swift in Sources */,
+				66E64C9A20A0C062003CA74F /* Bundle+CurrentTestBundle.swift in Sources */,
+				66E64C9B20A0C062003CA74F /* BrineTestCase.swift in Sources */,
+				66E64C9C20A0C062003CA74F /* Example.swift in Sources */,
+				66E64C9D20A0C062003CA74F /* Feature.swift in Sources */,
+				66E64C9E20A0C062003CA74F /* Tag.swift in Sources */,
+				66E64C9F20A0C062003CA74F /* PredefinedSteps.swift in Sources */,
+				66E64CA020A0C062003CA74F /* BrineTestCase.m in Sources */,
+				66E64CA120A0C062003CA74F /* NSString+Brine.swift in Sources */,
+				66E64CA220A0C062003CA74F /* Hook.swift in Sources */,
+				66E64CA320A0C062003CA74F /* PredefinedTransforms.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CB320A0C0B7003CA74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CB420A0C0B7003CA74F /* BrineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66E64CBE20A0C15B003CA74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66E64CBF20A0C15B003CA74F /* GHAstBuilder.m in Sources */,
+				66E64CC020A0C15B003CA74F /* GHAstNode.m in Sources */,
+				66E64CC120A0C15B003CA74F /* GHBackground.m in Sources */,
+				66E64CC220A0C15B003CA74F /* GHComment.m in Sources */,
+				66E64CC320A0C15B003CA74F /* GHDataTable.m in Sources */,
+				66E64CC420A0C15B003CA74F /* GHDocString.m in Sources */,
+				66E64CC520A0C15B003CA74F /* GHExamples.m in Sources */,
+				66E64CC620A0C15B003CA74F /* GHFeature.m in Sources */,
+				66E64CC720A0C15B003CA74F /* GHGherkinDialect.m in Sources */,
+				66E64CC820A0C15B003CA74F /* GHGherkinDialectProvider.m in Sources */,
+				66E64CC920A0C15B003CA74F /* GHGherkinDocument.m in Sources */,
+				66E64CCA20A0C15B003CA74F /* GHGherkinLanguageConstants.m in Sources */,
+				66E64CCB20A0C15B003CA74F /* GHGherkinLanguageSetting.m in Sources */,
+				66E64CCC20A0C15B003CA74F /* GHGherkinLine.m in Sources */,
+				66E64CCD20A0C15B003CA74F /* GHGherkinLineSpan.m in Sources */,
+				66E64CCE20A0C15B003CA74F /* GHLocation.m in Sources */,
+				66E64CCF20A0C15B003CA74F /* GHNode.m in Sources */,
+				66E64CD020A0C15B003CA74F /* GHParser.m in Sources */,
+				66E64CD120A0C15B003CA74F /* GHParser+Extensions.m in Sources */,
+				66E64CD220A0C15B003CA74F /* GHParserException.m in Sources */,
+				66E64CD320A0C15B003CA74F /* GHScenario.m in Sources */,
+				66E64CD420A0C15B003CA74F /* GHScenarioDefinition.m in Sources */,
+				66E64CD520A0C15B003CA74F /* GHScenarioOutline.m in Sources */,
+				66E64CD620A0C15B003CA74F /* GHStep.m in Sources */,
+				66E64CD720A0C15B003CA74F /* GHStepArgument.m in Sources */,
+				66E64CD820A0C15B003CA74F /* GHTableCell.m in Sources */,
+				66E64CD920A0C15B003CA74F /* GHTableRow.m in Sources */,
+				66E64CDA20A0C15B003CA74F /* GHTag.m in Sources */,
+				66E64CDB20A0C15B003CA74F /* GHToken.m in Sources */,
+				66E64CDC20A0C15B003CA74F /* GHTokenMatcher.m in Sources */,
+				66E64CDD20A0C15B003CA74F /* GHTokenScanner.m in Sources */,
+				66E64CDE20A0C15B003CA74F /* NSString+Trim.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		66D993972095544100300AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D9938A2095544100300AF4 /* Brine */;
+			target = 66D9938A2095544100300AF4 /* Brine-iOS */;
 			targetProxy = 66D993962095544100300AF4 /* PBXContainerItemProxy */;
 		};
 		66D994912095567F00300AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D9943E2095563900300AF4 /* Gherkin */;
+			target = 66D9943E2095563900300AF4 /* Gherkin-iOS */;
 			targetProxy = 66D994902095567F00300AF4 /* PBXContainerItemProxy */;
 		};
 		66D9958820960B9600300AF4 /* PBXTargetDependency */ = {
@@ -926,8 +1203,18 @@
 		};
 		66D9959620960C0C00300AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D9938A2095544100300AF4 /* Brine */;
+			target = 66D9938A2095544100300AF4 /* Brine-iOS */;
 			targetProxy = 66D9959520960C0C00300AF4 /* PBXContainerItemProxy */;
+		};
+		66E64CE820A0C181003CA74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E64CBD20A0C15B003CA74F /* Gherkin-macOS */;
+			targetProxy = 66E64CE720A0C181003CA74F /* PBXContainerItemProxy */;
+		};
+		66E64CEC20A0C399003CA74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66E64C8820A0C062003CA74F /* Brine-macOS */;
+			targetProxy = 66E64CEB20A0C399003CA74F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1117,7 +1404,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Brine;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1149,7 +1436,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = Brine;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1197,12 +1484,13 @@
 		66D994442095563900300AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gherkin;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1212,12 +1500,13 @@
 		66D994452095563900300AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gherkin;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1307,6 +1596,147 @@
 			};
 			name = Release;
 		};
+		66E64CAC20A0C062003CA74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Sources/Brine/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
+				PRODUCT_NAME = Brine;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66E64CAD20A0C062003CA74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Sources/Brine/Supporting Files/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
+				PRODUCT_NAME = Brine;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66E64CB920A0C0B7003CA74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66E64CBA20A0C0B7003CA74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52W2H99QHH;
+				INFOPLIST_FILE = "$(PROJECT_DIR)/Tests/BrineTests/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66E64CE420A0C15B003CA74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Gherkin;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66E64CE520A0C15B003CA74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Gherkin;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1328,7 +1758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine" */ = {
+		66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D993A02095544100300AF4 /* Debug */,
@@ -1337,7 +1767,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests" */ = {
+		66D993A22095544100300AF4 /* Build configuration list for PBXNativeTarget "BrineTests-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D993A32095544100300AF4 /* Debug */,
@@ -1346,7 +1776,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin" */ = {
+		66D994432095563900300AF4 /* Build configuration list for PBXNativeTarget "Gherkin-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D994442095563900300AF4 /* Debug */,
@@ -1369,6 +1799,33 @@
 			buildConfigurations = (
 				66D9959120960B9600300AF4 /* Debug */,
 				66D9959220960B9600300AF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66E64CAB20A0C062003CA74F /* Build configuration list for PBXNativeTarget "Brine-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66E64CAC20A0C062003CA74F /* Debug */,
+				66E64CAD20A0C062003CA74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66E64CB820A0C0B7003CA74F /* Build configuration list for PBXNativeTarget "BrineTests-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66E64CB920A0C0B7003CA74F /* Debug */,
+				66E64CBA20A0C0B7003CA74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66E64CE320A0C15B003CA74F /* Build configuration list for PBXNativeTarget "Gherkin-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66E64CE420A0C15B003CA74F /* Debug */,
+				66E64CE520A0C15B003CA74F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

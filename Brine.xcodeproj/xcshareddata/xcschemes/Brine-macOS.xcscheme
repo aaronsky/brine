@@ -14,9 +14,37 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "66D9943E2095563900300AF4"
-               BuildableName = "libGherkin.a"
-               BlueprintName = "Gherkin"
+               BlueprintIdentifier = "66E64C8820A0C062003CA74F"
+               BuildableName = "Brine.framework"
+               BlueprintName = "Brine-macOS"
+               ReferencedContainer = "container:Brine.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "332146792099481900C89615"
+               BuildableName = "SwiftLint"
+               BlueprintName = "SwiftLint"
+               ReferencedContainer = "container:Brine.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "66E64CB020A0C0B7003CA74F"
+               BuildableName = "BrineTests-macOS.xctest"
+               BlueprintName = "BrineTests-macOS"
                ReferencedContainer = "container:Brine.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,6 +57,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "332146792099481900C89615"
+            BuildableName = "SwiftLint"
+            BlueprintName = "SwiftLint"
+            ReferencedContainer = "container:Brine.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66D9943E2095563900300AF4"
-            BuildableName = "libGherkin.a"
-            BlueprintName = "Gherkin"
+            BlueprintIdentifier = "332146792099481900C89615"
+            BuildableName = "SwiftLint"
+            BlueprintName = "SwiftLint"
             ReferencedContainer = "container:Brine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +100,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "66D9943E2095563900300AF4"
-            BuildableName = "libGherkin.a"
-            BlueprintName = "Gherkin"
+            BlueprintIdentifier = "66E64C8820A0C062003CA74F"
+            BuildableName = "Brine.framework"
+            BlueprintName = "Brine-macOS"
             ReferencedContainer = "container:Brine.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
