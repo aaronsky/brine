@@ -1,14 +1,15 @@
-import Foundation
+import XCTest
 import Gherkin
 
 @objc public class Brine: NSObject {
-    var configurations: [Configuration] = []
+    var configuration: Configuration
     var finalizeConfig = false
 
     var features: [Feature] = []
     public var world: World
 
     public init(_ world: World = World.shared) {
+        self.configuration = Configuration()
         self.world = world
     }
 
@@ -18,21 +19,20 @@ import Gherkin
 
     public func configure(with configurations: [Configuration]) {
         precondition(!finalizeConfig, "Attempted to alter configuration after it has been finalized")
-        self.configurations.append(contentsOf: configurations)
+        configuration = configurations.reduce(configuration) { $1.combine(into: $0) }
     }
 
     public func start(filterForTags tags: [String] = []) {
         finalizeConfig = true
-//        world.hooks.afterConfiguration(configuration)
+        world.hooks.afterConfiguration(configuration)
         BrineTestCase.classDelegate = self
         loadFeatures()
-//        executeFeatures()
     }
 
     func loadFeatures() {
-        let featuresPaths = configurations.map { $0.featuresPath }
-        features = featuresPaths.flatMap(getFeatureFilePathsRecursively)
-            .compactMap(loadFeature)
+        features = configuration.featuresPath
+            .flatMap(getFeatureFilePathsRecursively)
+            .flatMap { $0.compactMap(loadFeature) } ?? []
     }
 
     func getFeatureFilePathsRecursively(in path: URL) -> [URL] {
@@ -61,14 +61,6 @@ import Gherkin
         let testClass: AnyClass? = BrineTestCase.createClass(for: result.feature)
         return Feature(from: result.feature, testClass: testClass)
     }
-
-//    func executeFeatures() {
-//        for feature in features {
-//            for scenario in feature.scenarios {
-//                scenario.run(in: world)
-//            }
-//        }
-//    }
 }
 
 extension Brine: BrineTestCaseDelegate {
