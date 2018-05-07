@@ -1,4 +1,4 @@
-﻿#import "GHGherkinLine.h"
+#import "GHGherkinLine.h"
 
 #import "GHGherkinLanguageConstants.h"
 #import "GHGherkinLineSpan.h"
@@ -147,7 +147,7 @@
         }
         else if ([stringCharacter isEqualToString: GHTableCellEscape])
         {
-            stringCharacter = i + 1 < rowLength ? [theRow substringWithRange: NSMakeRange(++i, 1)] : nil;
+            stringCharacter = i + 1 < rowLength ? [theRow substringWithRange: NSMakeRange(++i, 1)] : @"";
             if ([stringCharacter isEqualToString: GHTableCellNewlineEscape])
                 [cell appendString: @"\n"];
             else

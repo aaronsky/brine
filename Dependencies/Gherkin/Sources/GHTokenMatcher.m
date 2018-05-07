@@ -1,4 +1,4 @@
-﻿#import "GHTokenMatcher.h"
+#import "GHTokenMatcher.h"
 
 #import "GHGherkinDialectProvider.h"
 #import "GHGherkinLineSpan.h"
@@ -77,7 +77,13 @@
     [theToken setMatchedText: theText];
     [theToken setMatchedItems: theItems];
     [theToken setMatchedGherkinDialect: currentDialect];
-    [theToken setMatchedIndent: theIndent ? [theIndent integerValue] : [theToken line] ? [[theToken line] indent] : 0];
+    if ([theIndent boolValue]) {
+        [theToken setMatchedIndent:[theIndent integerValue]];
+    } else if ([theToken line]) {
+        [theToken setMatchedIndent:[[theToken line] indent]];
+    } else {
+        [theToken setMatchedIndent:0];
+    }
     
     [theToken setLocation: [[GHLocation alloc] initWithLine: [[theToken location] line] column: [theToken matchedIndent] + 1]];
 }

@@ -78,13 +78,12 @@ public class Scenario: NSObject {
                 XCTFail("Existing step definition does not exist for \"\(step.text)\"")
                 return
             }
-            let matches = def.matches(for: step.text)
-            def.execute(with: matches, in: world)
+            step.run(from: self, with: def, in: world)
         }
     }
 
     private func exampleScenarioName(for example: Example, index: Int) -> String {
-        let name = example.data[index].map { $0.key }
+        let name = example.data[index].map { $0.value }
         return self.name.appendingFormat(" %@ Example %lu", name.joined(separator: "-"), index + 1)
     }
 }

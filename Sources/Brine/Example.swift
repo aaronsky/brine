@@ -1,10 +1,3 @@
-//
-//  Example.swift
-//  Brine
-//
-//  Created by Aaron Sky on 5/4/18.
-//
-
 import Foundation
 import Gherkin
 
@@ -19,10 +12,16 @@ public class Example: NSObject {
 
     public init(from example: GHExamples) {
         gherkin = example
-        data = gherkin.tableBody.map { row in
-            return zip(row.cells, example.tableHeader.cells)
+        data = gherkin.tableBody.toTable(headers: example.tableHeader)
+    }
+}
+
+extension Array where Element == GHTableRow {
+    func toTable(headers: GHTableRow) -> [[String: String]] {
+        return map { row in
+            return zip(headers.cells, row.cells)
                 .reduce(into: [String: String]()) { accumulator, zip in
-                accumulator[zip.0.value] = zip.1.value
+                    accumulator[zip.0.value] = zip.1.value
             }
         }
     }

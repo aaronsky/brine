@@ -1,11 +1,3 @@
-//
-//  BrineTests.swift
-//  BrineTests
-//
-//  Created by Aaron Sky on 4/28/18.
-//  Copyright © 2018 Aaron Sky. All rights reserved.
-//
-
 import XCTest
 @testable import Brine
 

@@ -8,12 +8,15 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
 
 - [x] Prototype
 - [x] Xcode integration
-- [x] Support for other scenario types (outlines, backgrounds)
-- [ ] Match Cucumber feature specification more closely
+- [ ] Match Cucumber feature specification as closely as is reasonable
     - [ ] Step results (logging should also be at parity)
+    - [x] Other scenario types
+        - [x] Scenario Outlines
+        - [x] Backgrounds
     - [ ] Step arguments
+        - [x] Step transforms
+        - [x] Data Tables
         - [ ] Doc strings
-        - [ ] Data Tables
     - [ ] Hooks
         - [ ] Before/After/Around Steps
         - [ ] Tagged hooks

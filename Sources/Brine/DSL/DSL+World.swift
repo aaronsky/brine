@@ -1,32 +1,42 @@
 import Foundation
 
 extension World {
+    // MARK: Steps
+
     public func given(_ pattern: String, block: @escaping BrineStepBlock) {
-        given(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
+        given(Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
-    public func given(pattern: Regex, block: @escaping BrineStepBlock) {
+    public func given(_ pattern: Regex, block: @escaping BrineStepBlock) {
         registerStep(pattern: pattern, block: block)
     }
 
     public func when(_ pattern: String, block: @escaping BrineStepBlock) {
-        when(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
+        when(Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
-    public func when(pattern: Regex, block: @escaping BrineStepBlock) {
+    public func when(_ pattern: Regex, block: @escaping BrineStepBlock) {
         registerStep(pattern: pattern, block: block)
     }
 
     public func then(_ pattern: String, block: @escaping BrineStepBlock) {
-        then(pattern: Regex(pattern, options: [.ignoreCase]), block: block)
+        then(Regex(pattern, options: [.ignoreCase]), block: block)
     }
 
-    public func then(pattern: Regex, block: @escaping BrineStepBlock) {
+    public func then(_ pattern: Regex, block: @escaping BrineStepBlock) {
         registerStep(pattern: pattern, block: block)
     }
 
     private func registerStep(pattern: Regex, block: @escaping BrineStepBlock) {
-        let step = StepDefinition(pattern: pattern, handler: block)
+        let step = StepDefinition(pattern, handler: block)
         registerStep(step)
+    }
+
+    // MARK: Hooks
+
+    // MARK: Transform
+
+    public func transform<T: MatchTransformable>(_ type: T.Type) {
+        registerTransformableType(type)
     }
 }

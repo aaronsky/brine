@@ -9,3 +9,16 @@ Scenario Outline: jamming
         | start | eat | left |
         |  12   |  5  |  7   |
         |  20   |  5  |  15  |
+
+Scenario: jimming
+    Given the following users:
+    | name   | password  |
+    | jimmy  | password  |
+    | jeremy | password1 |
+    | dennis | passw0rd  |
+    Then print these numbers:
+    | 0 |
+    | 1 |
+    | 2 |
+    | 3 |
+    | 4 |

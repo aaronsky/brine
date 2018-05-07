@@ -31,13 +31,13 @@ public struct Regex {
         case dotMatchesLineSeparators
     }
 
-    typealias CaptureGroup = (match: String, index: Int)
+    public typealias CaptureGroup = (match: String, index: Int)
 
     public struct Match {
-        let text: String
+        public let text: String
         private let captureGroups: [CaptureGroup]
 
-        init?(nsMatch: NSTextCheckingResult, for string: String) {
+        fileprivate init?(nsMatch: NSTextCheckingResult, for string: String) {
             guard let range = Range(nsMatch.range, in: string) else {
                 return nil
             }
@@ -56,7 +56,7 @@ public struct Regex {
             }
         }
 
-        subscript(index: Int) -> CaptureGroup? {
+        public subscript(index: Int) -> CaptureGroup? {
             guard index >= 0 && index < captureGroups.count else {
                 return nil
             }
@@ -88,6 +88,24 @@ extension Regex: CustomStringConvertible {
 extension Regex: CustomDebugStringConvertible {
     public var debugDescription: String {
         return description
+    }
+}
+
+extension String {
+    func matches(_ pattern: String) -> [Regex.Match] {
+        return matches(pattern: Regex(pattern))
+    }
+
+    func matches(pattern: Regex) -> [Regex.Match] {
+        return pattern.matches(for: self)
+    }
+
+    func any(_ pattern: String) -> Bool {
+        return any(pattern: Regex(pattern))
+    }
+
+    func any(pattern: Regex) -> Bool {
+        return pattern.any(self)
     }
 }
 
