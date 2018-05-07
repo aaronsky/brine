@@ -13,14 +13,16 @@ matrix:
         - DESTINATION="OS=11.3,name=iPhone 8 Plus"
         - SCHEME="Brine-iOS"
         - SDK="$IOS_SDK"
+        - XCODEBUILD_COMMAND="test"
     - osx_image: xcode9.3
       env:
         - DESTINATION="platform=macOS,arch=x86_64"
         - SCHEME="Brine-macOS"
         - SDK="$MACOS_SDK"
+        - XCODEBUILD_COMMAND="build-for-testing"
 
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-  - travis_retry xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+  - travis_retry xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES "$XCODEBUILD_COMMAND" | xcpretty;
