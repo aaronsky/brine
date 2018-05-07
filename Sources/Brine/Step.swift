@@ -36,13 +36,19 @@ public struct Step {
 
 private extension GHDataTable {
     func toArgument() -> Argument? {
+        let data: Data?
         if rows.first?.cells.count == 1 {
             let list = rows.flatMap { $0.cells.map { $0.value ?? "" } }
-            return ListArgument(list: list)
+            data = try? JSONSerialization.data(withJSONObject: list)
         } else if let headers = rows.first {
             let table = Array(rows.dropFirst()).toTable(headers: headers)
-            return TableArgument(table: table)
+            data = try? JSONSerialization.data(withJSONObject: table)
+        } else {
+            data = nil
         }
-        return nil
+        guard let unwrappedData = data else {
+            return nil
+        }
+        return CodableArgument(data: unwrappedData)
     }
 }

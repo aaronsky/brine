@@ -31,19 +31,19 @@ class Steps {
 
         given("the following users") { context in
             for arg in context.arguments {
-                guard let argument = arg as? TableArgument else {
+                guard let argument = arg as? CodableArgument else {
                     continue
                 }
-                let table = argument.get(asTableOf: User.self)
+                let table = argument.get([User].self)
                 print(table)
             }
         }
         then("print these numbers") { context in
             for arg in context.arguments {
-                guard let argument = arg as? ListArgument else {
+                guard let argument = arg as? CodableArgument else {
                     continue
                 }
-                let list = argument.get(asListOf: String.self)
+                let list = argument.get([String].self)
                 print(list)
             }
         }

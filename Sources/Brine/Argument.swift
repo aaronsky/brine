@@ -1,3 +1,8 @@
+public protocol MatchTransformable {
+    static var patterns: [String] { get }
+    static func transform(_ match: Regex.Match) -> Self?
+}
+
 public protocol Argument {
     var name: String? { get }
 }
@@ -21,31 +26,22 @@ public struct MatchArgument: Argument {
     }
 }
 
-public struct ListArgument: Argument {
-    let list: [String]
+public struct CodableArgument: Argument {
+    let data: Data
     public let name: String?
 
-    init(list: [String], name: String? = nil) {
-        self.list = list
+    init(data: Data, name: String? = nil) {
+        self.data = data
         self.name = nil
     }
 
-    public func get<T: Transformable>(asListOf type: T.Type) -> [T] {
-        return list.transform(into: T.self)
-    }
-}
-
-public struct TableArgument: Argument {
-    let table: [[String: String]]
-    public let name: String?
-
-    init(table: [[String: String]], name: String? = nil) {
-        self.table = table
-        self.name = nil
-    }
-
-    public func get<T: TableTransformable>(asTableOf type: T.Type) -> [T] {
-        return table.transform(into: T.self)
+    public func get<T: Decodable>(_ type: T.Type, using decoder: JSONDecoder = JSONDecoder()) -> T {
+        do {
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            XCTFail(error.localizedDescription)
+            fatalError("Something has gone very wrong if the test reaches this point")
+        }
     }
 }
 
