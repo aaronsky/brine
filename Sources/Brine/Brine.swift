@@ -8,9 +8,9 @@ import Gherkin
     var features: [Feature] = []
     public var world: World
 
-    public init(_ world: World = World.shared) {
+    public init(_ world: World? = nil) {
         self.configuration = Configuration()
-        self.world = world
+        self.world = world ?? World.shared
     }
 
     public func configure(with configuration: Configuration) {

@@ -25,11 +25,8 @@ public class Example: NSObject {
 
 extension Array where Element == GHTableRow {
     func toTable(headers: GHTableRow) -> [[String: String]] {
-        return map { row in
-            return zip(headers.cells, row.cells)
-                .reduce(into: [String: String]()) { accumulator, zip in
-                    accumulator[zip.0.value] = zip.1.value
-            }
+        return map { zip(headers.cells, $0.cells)
+                .reduce(into: [String: String]()) { $0[$1.0.value] = $1.1.value }
         }
     }
 }

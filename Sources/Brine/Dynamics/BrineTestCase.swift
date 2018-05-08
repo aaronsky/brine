@@ -46,7 +46,7 @@ extension BrineTestCase {
     }
 
     @objc public class func addMethod(for selector: Selector) {
-        guard let method = class_getClassMethod(BrineTestCase.self, #selector(BrineTestCase.executeScenario)) else {
+        guard let method = class_getInstanceMethod(BrineTestCase.self, #selector(BrineTestCase.executeScenario)) else {
             preconditionFailure("Couldn't get class method for executeScenario")
         }
         guard let types = ("v@:@:@" as NSString).utf8String else {
@@ -55,14 +55,16 @@ extension BrineTestCase {
         class_addMethod(BrineTestCase.self, selector, method_getImplementation(method), types)
     }
 
-    @objc private class func executeScenario(_ scenario: Scenario, feature: Feature) {
+    @objc private func executeScenario(_ scenario: Scenario, feature: Feature) {
         guard let world = BrineTestCase.classDelegate?.world else {
             XCTFail("Cannot run scenario \(scenario.name) without steps context. World is nil")
             return
         }
         world.hooks.before(scenario)
-        feature.background?.run(in: world)
-        world.hooks.around(scenario, world: world)
+        feature.background?.run(self, in: world)
+        world.hooks.around(scenario) {
+            scenario.run(self, in: world)
+        }
         world.hooks.after(scenario)
     }
 }

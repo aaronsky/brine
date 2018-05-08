@@ -1,5 +1,6 @@
 disabled_rules:
   - line_length
+  - force_cast
 excluded:
   - Carthage
   - Documentation

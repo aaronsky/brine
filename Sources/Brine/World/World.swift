@@ -1,19 +1,54 @@
 import XCTest
 
-@objc public class World: NSObject {
-    public static let shared = World()
+private class WorldHook {
+    private weak var target: AnyObject?
+    private let handler: (AnyObject) -> () -> Void
 
+    init<U: AnyObject>(_ target: U, handler: @escaping (U) -> () -> Void) {
+        self.target = target
+        self.handler = { handler($0 as! U) }
+    }
+
+    func invoke() {
+        guard let target = target else {
+            return
+        }
+        handler(target)()
+    }
+}
+
+@objc public class World: NSObject {
+    static let shared = World()
+
+    public var userInfo: [String: Any] = [:]
     private(set) var application = XCUIApplication()
     private(set) var hooks = Hooks()
 
     private var steps: [StepDefinition] = []
     private var transformableTypes: [MatchTransformable.Type] = []
 
+    private var setPendingHook: WorldHook?
+
     override init() {
         super.init()
         PredefinedSteps.register()
         PredefinedHooks.register()
         PredefinedTransforms.register()
+    }
+
+    public subscript(_ key: String) -> Any? {
+        return userInfo[key]
+    }
+
+    func resetState() {
+        userInfo = [:]
+        setPendingHook = nil
+
+//        application.launch()
+//        guard application.wait(for: .runningForeground, timeout: 0.5) else {
+//            XCTFail("Application never launched")
+//            return
+//        }
     }
 
     func registerStep(_ step: StepDefinition) {
@@ -44,10 +79,10 @@ import XCTest
         hooks.afterConfiguration.append(hook)
     }
 
-    func matchingSteps(for scenario: Scenario) -> [(Step, StepDefinition?)] {
+    func matchingSteps(for scenario: Scenario) -> [(Step, [StepDefinition])] {
         let stepsLIFO = steps.reversed()
         return scenario.steps.map { step in
-            let stepDefinition = stepsLIFO.first { $0.matches(step.text) }
+            let stepDefinition = stepsLIFO.filter { $0.matches(step.text) }
             return (step, stepDefinition)
         }
     }
@@ -57,5 +92,13 @@ import XCTest
             let (match, type) = zipped
             return MatchArgument(match: match, type: type)
         }
+    }
+
+    func setupStepHooks(with scenario: Scenario) {
+        setPendingHook = WorldHook(scenario, handler: Scenario.setCurrentStepPending)
+    }
+
+    func setCurrentStepPending() {
+        setPendingHook?.invoke()
     }
 }

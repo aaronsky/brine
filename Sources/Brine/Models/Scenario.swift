@@ -41,6 +41,7 @@ public class Scenario: NSObject {
     private let gherkin: GHScenarioDefinition
 
     weak var parentTagsProvider: ParentTagsProvider?
+    private var currentStepShouldBeMarkedPending: Bool = false
 
     public var tags: [Tag] {
         return (parentTagsProvider?.parentTags ?? []) + scenarioTags
@@ -86,17 +87,32 @@ public class Scenario: NSObject {
         examples.forEach { $0.parentTagsProvider = self }
     }
 
-    func run(in world: World) {
-        let stepDefs = world.matchingSteps(for: self)
+    func run(_ testCase: XCTestCase, in world: World) {
+        world.resetState()
+        let stepsAndDefinitions = world.matchingSteps(for: self)
+        world.setupStepHooks(with: self)
         running = true
-        for (step, def) in stepDefs {
-            guard let def = def else {
-                XCTFail("Existing step definition does not exist for \"\(step.text)\"")
+        var lastStatus: StepStatus = .waiting
+        for (var step, definitions) in stepsAndDefinitions {
+            if lastStatus.groundsToSkip {
+                step.status = .skipped
+            } else if definitions.count == 0 {
+                step.status = .undefined
+            } else if definitions.count > 1 {
+                step.status = .ambiguous
+                XCTFail("Step \"\(step.text)\" is ambiguous for definitions \"\(definitions.map { $0.description }.joined(separator: "\", \""))\"")
                 return
+            } else if let definition = definitions.first {
+                step.run(testCase, from: self, with: definition, in: world)
             }
-            step.run(from: self, with: def, in: world)
+            lastStatus = currentStepShouldBeMarkedPending ? .pending : step.status
+            currentStepShouldBeMarkedPending = false
         }
         running = false
+    }
+
+    func setCurrentStepPending() {
+        self.currentStepShouldBeMarkedPending = true
     }
 
     private func exampleScenarioName(for example: Example, index: Int) -> String {

@@ -1,3 +1,5 @@
+import XCTest
+
 public typealias BrineScenarioHookBlock = (Scenario) -> Void
 public typealias BrineAroundHookBlock = (Scenario, @autoclosure () -> Void) -> Void
 public typealias BrineExitingHookBlock = () -> Void
@@ -22,14 +24,14 @@ class Hooks {
             .forEach { $0.run(scenario) }
     }
 
-    func around(_ scenario: Scenario, world: World) {
+    func around(_ scenario: Scenario, block: @escaping () -> Void) {
         if around.isEmpty {
-            scenario.run(in: world)
+            block()
             return
         }
         around
             .filter({ $0.shouldRun(scenario) })
-            .forEach { $0.run(scenario, in: world) }
+            .forEach { _ in block() }
     }
 
     func exit() {
@@ -91,8 +93,8 @@ struct AroundHook: TaggedHook {
         self.handler = handler
     }
 
-    func run(_ scenario: Scenario, in world: World) {
-        handler(scenario, scenario.run(in: world))
+    func run(_ scenario: Scenario, testCase: XCTestCase, in world: World) {
+        handler(scenario, scenario.run(testCase, in: world))
     }
 }
 
