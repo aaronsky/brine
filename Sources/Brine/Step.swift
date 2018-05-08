@@ -1,10 +1,10 @@
 import Gherkin
 
-public struct Step {
-    public let text: String
+struct Step {
+    let text: String
     private let gherkin: GHStep
 
-    public var argument: Argument? {
+    var argument: Argument? {
         guard let table = gherkin.argument as? GHDataTable else {
             return nil
         }

@@ -1,3 +1,5 @@
+import XCTest
+
 public protocol MatchTransformable {
     static var patterns: [String] { get }
     static func transform(_ match: Regex.Match) -> Self?

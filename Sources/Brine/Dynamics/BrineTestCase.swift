@@ -1,4 +1,6 @@
+import XCTest
 import ObjectiveC
+import Gherkin
 
 @objc public protocol BrineTestCaseDelegate {
     var world: World { get }
@@ -6,6 +8,14 @@ import ObjectiveC
 }
 
 extension BrineTestCase {
+    // MARK: XCTestCase overrides
+
+    open override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: Int, expected: Bool) {
+        super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+    }
+
+    // MARK: Dynamic helpers
+
     class func createClass(for feature: GHFeature) -> AnyClass {
         let className = feature.name.titlecased
 

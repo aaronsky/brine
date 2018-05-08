@@ -1,5 +1,8 @@
 #import "BrineTestCase.h"
+
+@import Gherkin;
 #import <objc/runtime.h>
+
 #import <Brine/Brine-Swift.h>
 
 @implementation BrineTestCase
@@ -47,11 +50,6 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
         }
     }
     return invocationTest;
-}
-
-- (void)recordFailureWithDescription:(NSString *)description inFile:(NSString *)filePath atLine:(NSUInteger)lineNumber expected:(BOOL)expected
-{
-    [super recordFailureWithDescription:description inFile:filePath atLine:lineNumber expected:expected];
 }
 
 + (NSInvocation *)invocationForScenario:(Scenario *)scenario inFeature:(Feature *)feature

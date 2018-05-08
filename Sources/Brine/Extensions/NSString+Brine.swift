@@ -1,6 +1,6 @@
 import Foundation
 
-public extension NSString {
+extension NSString {
     private static var invalidCharacters: CharacterSet = {
         var invalidCharacters = CharacterSet()
 
@@ -29,7 +29,7 @@ public extension NSString {
     }
 
     @objc(titlecasedString)
-    var titlecased: String {
+    public var titlecased: String {
         let capitalizedString = capitalized
         return capitalizedString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression)
     }

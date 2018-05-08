@@ -1,14 +1,12 @@
-#import <XCTest/XCTest.h>
-@import Gherkin;
+@import XCTest;
 
 @protocol BrineTestCaseDelegate;
 
 @interface BrineTestCase : XCTestCase
 
 @property (class, nonatomic, weak, nullable) id<BrineTestCaseDelegate> classDelegate;
+@property (class, readonly, copy) NSArray<NSInvocation *> *testInvocations;
 
-+ (NSArray<NSInvocation *> *)testInvocations;
-+ (instancetype)testCaseWithSelector:(SEL)selector;
-- (void)recordFailureWithDescription:(NSString *)description inFile:(NSString *)filePath atLine:(NSUInteger)lineNumber expected:(BOOL)expected;
++ (nullable instancetype)testCaseWithSelector:(SEL)selector;
 
 @end

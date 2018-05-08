@@ -3,9 +3,8 @@ import XCTest
 @objc public class World: NSObject {
     public static let shared = World()
 
-    public private(set) var application = XCUIApplication()
-
-    var hooks = Hooks()
+    private(set) var application = XCUIApplication()
+    private(set) var hooks = Hooks()
 
     private var steps: [StepDefinition] = []
     private var transformableTypes: [MatchTransformable.Type] = []

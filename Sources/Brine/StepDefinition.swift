@@ -17,15 +17,15 @@ struct StepDefinition {
         self.handler = handler
     }
 
-    public func matches(_ string: String) -> Bool {
+    func matches(_ string: String) -> Bool {
         return pattern.any(string)
     }
 
-    public func matches(for string: String) -> [Regex.Match] {
+    func matches(for string: String) -> [Regex.Match] {
         return pattern.matches(for: string)
     }
 
-    public func execute(with matches: [Regex.Match], arguments: [Argument], in world: World = World.shared) {
+    func execute(with matches: [Regex.Match], arguments: [Argument], in world: World = World.shared) {
         let context = StepContext(application: world.application, matches: matches, arguments: arguments)
         self.handler(context)
     }

@@ -6,7 +6,6 @@ public class Example: NSObject {
     public let data: [[String: String]]
     private let exampleTags: [Tag]
     private let gherkin: GHExamples
-
     weak var parentTagsProvider: ParentTagsProvider?
 
     public override var description: String {

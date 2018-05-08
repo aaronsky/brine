@@ -35,6 +35,7 @@ public class Scenario: NSObject {
     public let name: String
     public let kind: ScenarioKind
     public let examples: [Example]
+    public var running: Bool = false
     let steps: [Step]
     private let scenarioTags: [Tag]
     private let gherkin: GHScenarioDefinition
@@ -87,6 +88,7 @@ public class Scenario: NSObject {
 
     func run(in world: World) {
         let stepDefs = world.matchingSteps(for: self)
+        running = true
         for (step, def) in stepDefs {
             guard let def = def else {
                 XCTFail("Existing step definition does not exist for \"\(step.text)\"")
@@ -94,6 +96,7 @@ public class Scenario: NSObject {
             }
             step.run(from: self, with: def, in: world)
         }
+        running = false
     }
 
     private func exampleScenarioName(for example: Example, index: Int) -> String {
