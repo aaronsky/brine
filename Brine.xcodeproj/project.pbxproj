@@ -536,6 +536,7 @@
 		66D993A62095559C00300AF4 /* Gherkin */ = {
 			isa = PBXGroup;
 			children = (
+				66D9956A209605ED00300AF4 /* module.modulemap */,
 				66D9953B2095FCC600300AF4 /* Headers */,
 				66D9953A2095FCC100300AF4 /* Sources */,
 				66D9949620955F7000300AF4 /* Supporting Files */,
@@ -555,7 +556,6 @@
 			isa = PBXGroup;
 			children = (
 				66D99439209555EC00300AF4 /* gherkin-languages.json */,
-				66D9956A209605ED00300AF4 /* module.modulemap */,
 				66D9956D2096065800300AF4 /* Gherkin.h */,
 			);
 			path = "Supporting Files";
@@ -1522,7 +1522,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Gherkin;
 				SKIP_INSTALL = YES;
@@ -1538,7 +1538,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Gherkin;
 				SKIP_INSTALL = YES;
@@ -1744,7 +1744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Gherkin;
 				SDKROOT = macosx;
@@ -1761,7 +1761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
-				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/Supporting Files/module.modulemap";
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/Gherkin/module.modulemap";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Gherkin;
 				SDKROOT = macosx;
