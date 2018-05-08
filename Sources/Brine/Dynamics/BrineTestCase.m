@@ -1,8 +1,5 @@
 #import "BrineTestCase.h"
-
-@import Gherkin;
 #import <objc/runtime.h>
-
 #import <Brine/Brine-Swift.h>
 
 @implementation BrineTestCase
