@@ -32,6 +32,16 @@
 		33F2D8B3209DFAB400ADCB95 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F2D8B2209DFAB400ADCB95 /* Example.swift */; };
 		33FD47172099C65A00768220 /* BrineTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FD47152099C65A00768220 /* BrineTestCase.m */; };
 		33FD471F2099DC0A00768220 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		660E9EBD20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */; };
+		660E9EBE20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */; };
+		660E9EC020A2603800B9A73F /* EnumExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */; };
+		660E9EC120A2603800B9A73F /* EnumExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */; };
+		660E9EC320A263A900B9A73F /* NSStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */; };
+		660E9EC420A263A900B9A73F /* NSStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */; };
+		660E9EC620A268E700B9A73F /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC520A268E700B9A73F /* URLExtensionTests.swift */; };
+		660E9EC720A268E700B9A73F /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC520A268E700B9A73F /* URLExtensionTests.swift */; };
+		6618E14520A26DFE00CE49A1 /* ArgumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */; };
+		6618E14620A26DFE00CE49A1 /* ArgumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */; };
 		66CFC97920A1E00D000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
 		66CFC97A20A1E014000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E64CE620A0C15B003CA74F /* libGherkin.a */; };
 		66CFC9AC20A20632000A0E1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC9AA20A20632000A0E1D /* DetailViewController.swift */; };
@@ -247,6 +257,11 @@
 		33F2D8B2209DFAB400ADCB95 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
 		33FD47152099C65A00768220 /* BrineTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrineTestCase.m; sourceTree = "<group>"; };
+		660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionTests.swift; sourceTree = "<group>"; };
+		660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtensionTests.swift; sourceTree = "<group>"; };
+		660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringExtensionTests.swift; sourceTree = "<group>"; };
+		660E9EC520A268E700B9A73F /* URLExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensionTests.swift; sourceTree = "<group>"; };
+		6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentTests.swift; sourceTree = "<group>"; };
 		66CFC9AA20A20632000A0E1D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		66CFC9AB20A20632000A0E1D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		66CFC9AF20A21C63000A0E1D /* Reporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
@@ -443,6 +458,25 @@
 			path = Dynamics;
 			sourceTree = "<group>";
 		};
+		660E9EBB20A25E6D00B9A73F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */,
+				660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */,
+				660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */,
+				660E9EC520A268E700B9A73F /* URLExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6618E14320A26DCF00CE49A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		66CFC97B20A1E066000A0E1D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				66D9950C2095F27400300AF4 /* Brine.swift */,
+				66CFC9AF20A21C63000A0E1D /* Reporter.swift */,
 				66D994982095600700300AF4 /* DSL */,
 				33FD47132099C50100768220 /* Dynamics */,
 				66D9949F209560E800300AF4 /* Extensions */,
@@ -509,7 +544,6 @@
 				66D995092095F1E100300AF4 /* Predefined */,
 				66D9949720955F7F00300AF4 /* Supporting Files */,
 				66CFC9AE20A21B16000A0E1D /* World */,
-				66CFC9AF20A21C63000A0E1D /* Reporter.swift */,
 			);
 			name = Brine;
 			path = Sources/Brine;
@@ -518,6 +552,8 @@
 		66D993982095544100300AF4 /* BrineTests */ = {
 			isa = PBXGroup;
 			children = (
+				6618E14320A26DCF00CE49A1 /* Models */,
+				660E9EBB20A25E6D00B9A73F /* Extensions */,
 				66D993992095544100300AF4 /* BrineTests.swift */,
 				66D9949520955F5E00300AF4 /* Supporting Files */,
 			);
@@ -1071,6 +1107,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D9939A2095544100300AF4 /* BrineTests.swift in Sources */,
+				660E9EC620A268E700B9A73F /* URLExtensionTests.swift in Sources */,
+				6618E14520A26DFE00CE49A1 /* ArgumentTests.swift in Sources */,
+				660E9EC020A2603800B9A73F /* EnumExtensionTests.swift in Sources */,
+				660E9EBD20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */,
+				660E9EC320A263A900B9A73F /* NSStringExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,6 +1212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				66E64CB420A0C0B7003CA74F /* BrineTests.swift in Sources */,
+				660E9EC720A268E700B9A73F /* URLExtensionTests.swift in Sources */,
+				6618E14620A26DFE00CE49A1 /* ArgumentTests.swift in Sources */,
+				660E9EC120A2603800B9A73F /* EnumExtensionTests.swift in Sources */,
+				660E9EBE20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */,
+				660E9EC420A263A900B9A73F /* NSStringExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

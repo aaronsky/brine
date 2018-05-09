@@ -8,10 +8,10 @@ extension Int: MatchTransformable {
     }
 
     public static func transform(_ match: Regex.Match) -> Int? {
-        guard let first = match[0]?.match else {
+        guard let str = match[0]?.match else {
             return nil
         }
-        return Int(first)
+        return Int(str)
     }
 }
 

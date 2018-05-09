@@ -14,15 +14,18 @@ matrix:
         - SCHEME="Brine-iOS"
         - SDK="$IOS_SDK"
         - XCODEBUILD_COMMAND="test"
+        - PLATFORM="iOS"
     - osx_image: xcode9.3
       env:
         - DESTINATION="platform=macOS,arch=x86_64"
         - SCHEME="Brine-macOS"
         - SDK="$MACOS_SDK"
         - XCODEBUILD_COMMAND="build-for-testing"
+        - PLATFORM="macOS"
 
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
   - travis_retry xcodebuild -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES "$XCODEBUILD_COMMAND" | xcpretty;
+  - travis_retry carthage build --no-skip-current --platform "$PLATFORM"

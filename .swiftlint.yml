@@ -1,6 +1,9 @@
 disabled_rules:
   - line_length
   - force_cast
+opt_in_rules:
+  - trailing_comma:
+    - mandatory_comma: true
 excluded:
   - Carthage
   - Documentation

@@ -17,7 +17,7 @@ extension BrineTestCase {
     // MARK: Dynamic helpers
 
     class func createClass(for feature: GHFeature) -> AnyClass {
-        let className = feature.name.titlecased
+        let className = feature.name.pascalcased
 
         if let classNameCString = (className as NSString).utf8String,
             let featureClass = objc_allocateClassPair(BrineTestCase.self, classNameCString, 0) {

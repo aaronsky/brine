@@ -37,7 +37,7 @@ public struct Regex {
         public let text: String
         private let captureGroups: [CaptureGroup]
 
-        fileprivate init?(nsMatch: NSTextCheckingResult, for string: String) {
+        init?(nsMatch: NSTextCheckingResult, for string: String) {
             guard let range = Range(nsMatch.range, in: string) else {
                 return nil
             }

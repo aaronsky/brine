@@ -20,8 +20,8 @@ extension NSString {
         return result.isEmpty ? "_" : result
     }
 
-    @objc(titlecasedString)
-    public var titlecased: String {
+    @objc(pascalcasedString)
+    public var pascalcased: String {
         let capitalizedString = capitalized
         return capitalizedString.replacingOccurrences(of: "\\s", with: "", options: .regularExpression)
     }

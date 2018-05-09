@@ -90,7 +90,7 @@ private class WorldHook {
     func arguments(for matches: [Regex.Match], in text: String) -> [Argument] {
         return zip(matches, transformableTypes).compactMap { zipped in
             let (match, type) = zipped
-            return MatchArgument(match: match, type: type)
+            return MatchArgument(match: match, as: type)
         }
     }
 
