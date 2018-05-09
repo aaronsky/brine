@@ -33,18 +33,18 @@ private func registerStep(with pattern: Regex, block: @escaping BrineStepBlock) 
 
 // MARK: Hooks
 
-public func before(_ tags: String..., block: @escaping BrineScenarioHookBlock) {
-    let hook = ScenarioHook(tags: tags, handler: block)
+public func before(_ tagExpression: String = "", block: @escaping BrineScenarioHookBlock) {
+    let hook = ScenarioHook(tags: tagExpression, handler: block)
     World.shared.registerBeforeHook(hook)
 }
 
-public func after(_ tags: String..., block: @escaping BrineScenarioHookBlock) {
-    let hook = ScenarioHook(tags: tags, handler: block)
+public func after(_ tagExpression: String = "", block: @escaping BrineScenarioHookBlock) {
+    let hook = ScenarioHook(tags: tagExpression, handler: block)
     World.shared.registerAfterHook(hook)
 }
 
-public func around(_ tags: String..., block: @escaping BrineAroundHookBlock) {
-    let hook = AroundHook(tags: tags, handler: block)
+public func around(_ tagExpression: String = "", block: @escaping BrineAroundHookBlock) {
+    let hook = AroundHook(tags: tagExpression, handler: block)
     World.shared.registerAroundHook(hook)
 }
 

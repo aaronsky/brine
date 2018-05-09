@@ -42,15 +42,23 @@ public class Scenario: NSObject {
 
     weak var parentTagsProvider: ParentTagsProvider?
     private var currentStepShouldBeMarkedPending: Bool = false
+    private var additionalTestNameMetadata: String = ""
 
     public var tags: [Tag] {
         return (parentTagsProvider?.parentTags ?? []) + scenarioTags
+    }
+    
+    public var testName: String {
+        let tagNames = tags.map({ "tag\($0)" }).joined(separator: " ")
+        let tagsSeparator = tagNames.isEmpty ? "" : " "
+        let metadataSeparator = additionalTestNameMetadata.isEmpty ? "" : " "
+        return "test_\(name.pascalcased)\(tagsSeparator)\(tagNames)\(metadataSeparator)\(additionalTestNameMetadata)".c99ExtendedIdentifier
     }
 
     public override var description: String {
         return gherkin.desc
     }
-
+    
     public init(from scenario: GHScenarioDefinition) {
         gherkin = scenario
         name = gherkin.name
@@ -71,17 +79,19 @@ public class Scenario: NSObject {
             }
             return Step(copy: step, overridingText: text)
         }
-        let name = scenario.exampleScenarioName(for: example, index: index)
-        self.init(gherkin: scenario.gherkin, name: name, kind: .scenarioOutline, steps: steps, tags: scenario.tags, parentTagsProvider: scenario.parentTagsProvider)
+        
+        let additionalTestNameMetadata = "example \(index + 1) data \(data.map({ $0.value }).joined(separator: "-"))"
+        self.init(gherkin: scenario.gherkin, name: scenario.name, kind: .scenarioOutline, steps: steps, tags: scenario.tags, additionalTestNameMetadata: additionalTestNameMetadata, parentTagsProvider: scenario.parentTagsProvider)
     }
 
-    private init(gherkin: GHScenarioDefinition, name: String = "", kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = [], parentTagsProvider: ParentTagsProvider? = nil) {
+    private init(gherkin: GHScenarioDefinition, name: String = "", kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = [], additionalTestNameMetadata: String, parentTagsProvider: ParentTagsProvider? = nil) {
         self.gherkin = gherkin
         self.name = name
         self.kind = kind
         self.steps = steps
         self.scenarioTags = tags
         self.examples = examples
+        self.additionalTestNameMetadata = additionalTestNameMetadata
         self.parentTagsProvider = parentTagsProvider
         super.init()
         examples.forEach { $0.parentTagsProvider = self }
@@ -113,11 +123,6 @@ public class Scenario: NSObject {
 
     func setCurrentStepPending() {
         self.currentStepShouldBeMarkedPending = true
-    }
-
-    private func exampleScenarioName(for example: Example, index: Int) -> String {
-        let name = example.data[index].map { $0.value }
-        return self.name.appendingFormat(" %@ Example %lu", name.joined(separator: "-"), index + 1)
     }
 }
 

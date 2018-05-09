@@ -1,4 +1,5 @@
 import XCTest
+import TagExpressions
 
 public typealias BrineScenarioHookBlock = (Scenario) -> Void
 public typealias BrineAroundHookBlock = (Scenario, @autoclosure () -> Void) -> Void
@@ -13,15 +14,23 @@ class Hooks {
     var afterConfiguration: [AfterConfigurationHook] = []
 
     func before(_ scenario: Scenario) {
-        beforeEach
-            .filter({ $0.shouldRun(scenario) })
-            .forEach { $0.run(scenario) }
+        do {
+            try beforeEach
+                .filter({ try $0.shouldRun(scenario) })
+                .forEach { $0.run(scenario) }
+        } catch {
+            fatalError("A problem occurred while processing beforeEach hooks: \(error)")
+        }
     }
 
     func after(_ scenario: Scenario) {
-        afterEach.reversed()
-            .filter({ $0.shouldRun(scenario) })
-            .forEach { $0.run(scenario) }
+        do {
+            try afterEach.reversed()
+                .filter({ try $0.shouldRun(scenario) })
+                .forEach { $0.run(scenario) }
+        } catch {
+            fatalError("A problem occurred while processing beforeEach hooks: \(error)")
+        }
     }
 
     func around(_ scenario: Scenario, block: @escaping () -> Void) {
@@ -29,9 +38,13 @@ class Hooks {
             block()
             return
         }
-        around
-            .filter({ $0.shouldRun(scenario) })
-            .forEach { _ in block() }
+        do {
+            try around
+                .filter({ try $0.shouldRun(scenario) })
+                .forEach { _ in block() }
+        } catch {
+            fatalError("A problem occurred while processing beforeEach hooks: \(error)")
+        }
     }
 
     func exit() {
@@ -43,38 +56,24 @@ class Hooks {
     }
 }
 
-private func evaluateTagExpression(_ tags: [String], scenario: Scenario) -> Bool {
-    let scenarioTags = scenario.tags.map { $0.description }
-    for expr in tags {
-        let conditions = expr.split(separator: ",")
-            .map { $0.trimmingCharacters(in: .whitespaces) }
-            .map { $0.hasPrefix("~") ? !scenarioTags.contains($0) : scenarioTags.contains($0) }
-        guard Set(conditions).contains(false) else {
-            return true
-        }
-    }
-    return false
-}
-
 protocol TaggedHook {
-    var tags: [String] { get }
-    func shouldRun(_ scenario: Scenario) -> Bool
+    var tags: String { get }
+    func shouldRun(_ scenario: Scenario) throws -> Bool
 }
 
 extension TaggedHook {
-    func shouldRun(_ scenario: Scenario) -> Bool {
-        if tags.isEmpty {
-            return true
-        }
-        return evaluateTagExpression(tags, scenario: scenario)
+    func shouldRun(_ scenario: Scenario) throws -> Bool {
+        let parser = TagExpressionParser()
+        let expression = try parser.parse(tags)
+        return expression.evaluate(scenario.tags.map({ $0.description }))
     }
 }
 
 struct ScenarioHook: TaggedHook {
-    let tags: [String]
+    let tags: String
     private let handler: BrineScenarioHookBlock
 
-    init(tags: [String], handler: @escaping BrineScenarioHookBlock) {
+    init(tags: String, handler: @escaping BrineScenarioHookBlock) {
         self.tags = tags
         self.handler = handler
     }
@@ -85,10 +84,10 @@ struct ScenarioHook: TaggedHook {
 }
 
 struct AroundHook: TaggedHook {
-    let tags: [String]
+    let tags: String
     private let handler: BrineAroundHookBlock
 
-    init(tags: [String], handler: @escaping BrineAroundHookBlock) {
+    init(tags: String, handler: @escaping BrineAroundHookBlock) {
         self.tags = tags
         self.handler = handler
     }

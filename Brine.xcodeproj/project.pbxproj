@@ -42,6 +42,26 @@
 		660E9EC720A268E700B9A73F /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC520A268E700B9A73F /* URLExtensionTests.swift */; };
 		6618E14520A26DFE00CE49A1 /* ArgumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */; };
 		6618E14620A26DFE00CE49A1 /* ArgumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */; };
+		6618E16220A368EB00CE49A1 /* TagExpressions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6618E16120A368A600CE49A1 /* TagExpressions.h */; };
+		6618E16320A368EB00CE49A1 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6618E15F20A3685B00CE49A1 /* module.modulemap */; };
+		6618E16620A3690100CE49A1 /* libTagExpressions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6618E14F20A3681700CE49A1 /* libTagExpressions.a */; };
+		6618E16720A3691F00CE49A1 /* libTagExpressions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6618E15E20A3683B00CE49A1 /* libTagExpressions.a */; };
+		6618E16B20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16A20A369AA00CE49A1 /* TagExpressionParser.swift */; };
+		6618E16C20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16A20A369AA00CE49A1 /* TagExpressionParser.swift */; };
+		6618E17320A36A0400CE49A1 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16D20A36A0400CE49A1 /* Not.swift */; };
+		6618E17420A36A0400CE49A1 /* Not.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16D20A36A0400CE49A1 /* Not.swift */; };
+		6618E17520A36A0400CE49A1 /* Or.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16E20A36A0400CE49A1 /* Or.swift */; };
+		6618E17620A36A0400CE49A1 /* Or.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16E20A36A0400CE49A1 /* Or.swift */; };
+		6618E17720A36A0400CE49A1 /* True.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16F20A36A0400CE49A1 /* True.swift */; };
+		6618E17820A36A0400CE49A1 /* True.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E16F20A36A0400CE49A1 /* True.swift */; };
+		6618E17920A36A0400CE49A1 /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17020A36A0400CE49A1 /* Literal.swift */; };
+		6618E17A20A36A0400CE49A1 /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17020A36A0400CE49A1 /* Literal.swift */; };
+		6618E17B20A36A0400CE49A1 /* And.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17120A36A0400CE49A1 /* And.swift */; };
+		6618E17C20A36A0400CE49A1 /* And.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17120A36A0400CE49A1 /* And.swift */; };
+		6618E17D20A36A0400CE49A1 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17220A36A0400CE49A1 /* Expression.swift */; };
+		6618E17E20A36A0400CE49A1 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E17220A36A0400CE49A1 /* Expression.swift */; };
+		6618E17F20A36A2500CE49A1 /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6618E15F20A3685B00CE49A1 /* module.modulemap */; };
+		6618E18020A36A2500CE49A1 /* TagExpressions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6618E16120A368A600CE49A1 /* TagExpressions.h */; };
 		66CFC97920A1E00D000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
 		66CFC97A20A1E014000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E64CE620A0C15B003CA74F /* libGherkin.a */; };
 		66CFC9AC20A20632000A0E1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC9AA20A20632000A0E1D /* DetailViewController.swift */; };
@@ -176,6 +196,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6618E16420A368F900CE49A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6618E14E20A3681700CE49A1;
+			remoteInfo = "TagExpressions-iOS";
+		};
+		6618E16820A3692300CE49A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D993822095544100300AF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6618E15620A3683B00CE49A1;
+			remoteInfo = "TagExpressions-macOS";
+		};
 		66D993962095544100300AF4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66D993822095544100300AF4 /* Project object */;
@@ -221,6 +255,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		6618E14D20A3681700CE49A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/TagExpressions;
+			dstSubfolderSpec = 16;
+			files = (
+				6618E17F20A36A2500CE49A1 /* module.modulemap in CopyFiles */,
+				6618E18020A36A2500CE49A1 /* TagExpressions.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6618E15A20A3683B00CE49A1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include/TagExpressions;
+			dstSubfolderSpec = 16;
+			files = (
+				6618E16220A368EB00CE49A1 /* TagExpressions.h in CopyFiles */,
+				6618E16320A368EB00CE49A1 /* module.modulemap in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D9956B2096060300300AF4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +318,17 @@
 		660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringExtensionTests.swift; sourceTree = "<group>"; };
 		660E9EC520A268E700B9A73F /* URLExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensionTests.swift; sourceTree = "<group>"; };
 		6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentTests.swift; sourceTree = "<group>"; };
+		6618E14F20A3681700CE49A1 /* libTagExpressions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTagExpressions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6618E15E20A3683B00CE49A1 /* libTagExpressions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTagExpressions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6618E15F20A3685B00CE49A1 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		6618E16120A368A600CE49A1 /* TagExpressions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagExpressions.h; sourceTree = "<group>"; };
+		6618E16A20A369AA00CE49A1 /* TagExpressionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagExpressionParser.swift; sourceTree = "<group>"; };
+		6618E16D20A36A0400CE49A1 /* Not.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Not.swift; sourceTree = "<group>"; };
+		6618E16E20A36A0400CE49A1 /* Or.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Or.swift; sourceTree = "<group>"; };
+		6618E16F20A36A0400CE49A1 /* True.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = True.swift; sourceTree = "<group>"; };
+		6618E17020A36A0400CE49A1 /* Literal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
+		6618E17120A36A0400CE49A1 /* And.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = And.swift; sourceTree = "<group>"; };
+		6618E17220A36A0400CE49A1 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		66CFC9AA20A20632000A0E1D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		66CFC9AB20A20632000A0E1D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		66CFC9AF20A21C63000A0E1D /* Reporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
@@ -384,10 +451,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6618E14C20A3681700CE49A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6618E15920A3683B00CE49A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D993872095544100300AF4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6618E16620A3690100CE49A1 /* libTagExpressions.a in Frameworks */,
 				66CFC97920A1E00D000A0E1D /* libGherkin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +508,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6618E16720A3691F00CE49A1 /* libTagExpressions.a in Frameworks */,
 				66CFC97A20A1E014000A0E1D /* libGherkin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +558,30 @@
 				6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6618E15020A3681700CE49A1 /* TagExpressions */ = {
+			isa = PBXGroup;
+			children = (
+				6618E17120A36A0400CE49A1 /* And.swift */,
+				6618E17220A36A0400CE49A1 /* Expression.swift */,
+				6618E17020A36A0400CE49A1 /* Literal.swift */,
+				6618E16D20A36A0400CE49A1 /* Not.swift */,
+				6618E16E20A36A0400CE49A1 /* Or.swift */,
+				6618E16F20A36A0400CE49A1 /* True.swift */,
+				6618E15F20A3685B00CE49A1 /* module.modulemap */,
+				6618E16020A3689800CE49A1 /* Supporting Files */,
+				6618E16A20A369AA00CE49A1 /* TagExpressionParser.swift */,
+			);
+			path = TagExpressions;
+			sourceTree = "<group>";
+		};
+		6618E16020A3689800CE49A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6618E16120A368A600CE49A1 /* TagExpressions.h */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		66CFC97B20A1E066000A0E1D /* Models */ = {
@@ -528,6 +635,8 @@
 				66E64CAE20A0C062003CA74F /* Brine.framework */,
 				66E64CBB20A0C0B7003CA74F /* BrineTests-macOS.xctest */,
 				66E64CE620A0C15B003CA74F /* libGherkin.a */,
+				6618E14F20A3681700CE49A1 /* libTagExpressions.a */,
+				6618E15E20A3683B00CE49A1 /* libTagExpressions.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -565,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				66D993A62095559C00300AF4 /* Gherkin */,
+				6618E15020A3681700CE49A1 /* TagExpressions */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -799,6 +909,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6618E14E20A3681700CE49A1 /* TagExpressions-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6618E15520A3681700CE49A1 /* Build configuration list for PBXNativeTarget "TagExpressions-iOS" */;
+			buildPhases = (
+				6618E14B20A3681700CE49A1 /* Sources */,
+				6618E14C20A3681700CE49A1 /* Frameworks */,
+				6618E14D20A3681700CE49A1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TagExpressions-iOS";
+			productName = TagExpressions;
+			productReference = 6618E14F20A3681700CE49A1 /* libTagExpressions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6618E15620A3683B00CE49A1 /* TagExpressions-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6618E15B20A3683B00CE49A1 /* Build configuration list for PBXNativeTarget "TagExpressions-macOS" */;
+			buildPhases = (
+				6618E15720A3683B00CE49A1 /* Sources */,
+				6618E15920A3683B00CE49A1 /* Frameworks */,
+				6618E15A20A3683B00CE49A1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TagExpressions-macOS";
+			productName = TagExpressions;
+			productReference = 6618E15E20A3683B00CE49A1 /* libTagExpressions.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		66D9938A2095544100300AF4 /* Brine-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66D9939F2095544100300AF4 /* Build configuration list for PBXNativeTarget "Brine-iOS" */;
@@ -811,6 +955,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6618E16520A368F900CE49A1 /* PBXTargetDependency */,
 				66D994912095567F00300AF4 /* PBXTargetDependency */,
 			);
 			name = "Brine-iOS";
@@ -901,6 +1046,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6618E16920A3692300CE49A1 /* PBXTargetDependency */,
 				66E64CE820A0C181003CA74F /* PBXTargetDependency */,
 			);
 			name = "Brine-macOS";
@@ -956,6 +1102,9 @@
 					332146792099481900C89615 = {
 						CreatedOnToolsVersion = 9.3;
 					};
+					6618E14E20A3681700CE49A1 = {
+						CreatedOnToolsVersion = 9.3;
+					};
 					66D9938A2095544100300AF4 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
@@ -995,6 +1144,8 @@
 				66E64CB020A0C0B7003CA74F /* BrineTests-macOS */,
 				66D9943E2095563900300AF4 /* Gherkin-iOS */,
 				66E64CBD20A0C15B003CA74F /* Gherkin-macOS */,
+				6618E14E20A3681700CE49A1 /* TagExpressions-iOS */,
+				6618E15620A3683B00CE49A1 /* TagExpressions-macOS */,
 				66D9957220960B9500300AF4 /* BrineExample */,
 				66D9958520960B9600300AF4 /* BrineExampleUITests */,
 				332146792099481900C89615 /* SwiftLint */,
@@ -1070,6 +1221,34 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6618E14B20A3681700CE49A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6618E16B20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */,
+				6618E17720A36A0400CE49A1 /* True.swift in Sources */,
+				6618E17920A36A0400CE49A1 /* Literal.swift in Sources */,
+				6618E17B20A36A0400CE49A1 /* And.swift in Sources */,
+				6618E17320A36A0400CE49A1 /* Not.swift in Sources */,
+				6618E17D20A36A0400CE49A1 /* Expression.swift in Sources */,
+				6618E17520A36A0400CE49A1 /* Or.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6618E15720A3683B00CE49A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6618E16C20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */,
+				6618E17820A36A0400CE49A1 /* True.swift in Sources */,
+				6618E17A20A36A0400CE49A1 /* Literal.swift in Sources */,
+				6618E17C20A36A0400CE49A1 /* And.swift in Sources */,
+				6618E17420A36A0400CE49A1 /* Not.swift in Sources */,
+				6618E17E20A36A0400CE49A1 /* Expression.swift in Sources */,
+				6618E17620A36A0400CE49A1 /* Or.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D993862095544100300AF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1262,6 +1441,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6618E16520A368F900CE49A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6618E14E20A3681700CE49A1 /* TagExpressions-iOS */;
+			targetProxy = 6618E16420A368F900CE49A1 /* PBXContainerItemProxy */;
+		};
+		6618E16920A3692300CE49A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6618E15620A3683B00CE49A1 /* TagExpressions-macOS */;
+			targetProxy = 6618E16820A3692300CE49A1 /* PBXContainerItemProxy */;
+		};
 		66D993972095544100300AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 66D9938A2095544100300AF4 /* Brine-iOS */;
@@ -1331,6 +1520,68 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52W2H99QHH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6618E15320A3681700CE49A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/TagExpressions/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TagExpressions;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6618E15420A3681700CE49A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/TagExpressions/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TagExpressions;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6618E15C20A3683B00CE49A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/TagExpressions/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TagExpressions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6618E15D20A3683B00CE49A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				MODULEMAP_FILE = "$(PROJECT_DIR)/Dependencies/TagExpressions/module.modulemap";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = TagExpressions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1825,6 +2076,24 @@
 			buildConfigurations = (
 				3321467A2099481A00C89615 /* Debug */,
 				3321467B2099481A00C89615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6618E15520A3681700CE49A1 /* Build configuration list for PBXNativeTarget "TagExpressions-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6618E15320A3681700CE49A1 /* Debug */,
+				6618E15420A3681700CE49A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6618E15B20A3683B00CE49A1 /* Build configuration list for PBXNativeTarget "TagExpressions-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6618E15C20A3683B00CE49A1 /* Debug */,
+				6618E15D20A3683B00CE49A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

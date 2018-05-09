@@ -4,6 +4,11 @@
 
 A BDD test suite using the Gherkin feature syntax and XCUITest
 
+## Dependencies
+
+* [Gherkin for Objective-C](https://github.com/cucumber/gherkin-objective-c) – using as-is
+* [Cucumber Tag Expressions for Java](https://github.com/cucumber/cucumber/tree/master/tag-expressions/java) – ported from Java to Swift
+
 ## Todo
 
 - [x] Prototype
@@ -21,10 +26,10 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
         - [x] Before/After/Around Steps
         - [x] Tagged hooks
     - [ ] Tags
-        - [ ] Add to test/case names
+        - [x] Add to test/case names
         - [ ] Filter by tag
         - [x] Tag inheritance
-        - [ ] Tag expressions (for hooks and filtered runs)
+        - [x] Tag expressions (for hooks and filtered runs)
 - [ ] Link test failure to line in step **and** line in feature
 - [ ] Package Manager support
     - [ ] Carthage

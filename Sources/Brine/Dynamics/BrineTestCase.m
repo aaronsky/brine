@@ -51,7 +51,7 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
 
 + (NSInvocation *)invocationForScenario:(Scenario *)scenario inFeature:(Feature *)feature
 {
-    NSString *methodName = [@"test" stringByAppendingString:[scenario.name pascalcasedString]];
+    NSString *methodName = [scenario testName];
     SEL selector = NSSelectorFromString(methodName);
     [[self class] addMethodFor:selector];
     NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:selector];
