@@ -312,6 +312,9 @@
 		333F8F53209FC6FC00FC1404 /* XCTest+Brine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+Brine.swift"; sourceTree = "<group>"; };
 		333F8F55209FFF3800FC1404 /* Hook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hook.swift; sourceTree = "<group>"; };
 		339816EF209D340A008A9E85 /* BrineTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrineTestCase.swift; sourceTree = "<group>"; };
+		33E0ADD420A4751600B61B87 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		33E0ADD520A4751600B61B87 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		33E0ADD620A4751600B61B87 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		33F2D8B2209DFAB400ADCB95 /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
 		33FD47152099C65A00768220 /* BrineTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrineTestCase.m; sourceTree = "<group>"; };
@@ -617,6 +620,9 @@
 			isa = PBXGroup;
 			children = (
 				333F8F44209E2B9D00FC1404 /* README.md */,
+				33E0ADD520A4751600B61B87 /* CONTRIBUTING.md */,
+				33E0ADD420A4751600B61B87 /* CODE_OF_CONDUCT.md */,
+				33E0ADD620A4751600B61B87 /* LICENSE */,
 				66E64CF620A0D78A003CA74F /* .swiftlint.yml */,
 				66E64CF720A0D78B003CA74F /* .travis.yml */,
 				66D9938D2095544100300AF4 /* Brine */,
