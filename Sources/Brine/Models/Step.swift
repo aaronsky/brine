@@ -3,10 +3,11 @@ import Gherkin
 
 enum StepStatus {
     case waiting
+    case running
     case success
     case undefined
     case pending
-    case failed(Error)
+    case failed
     case skipped
     case ambiguous
 
@@ -18,60 +19,46 @@ enum StepStatus {
     }
 }
 
-struct Step {
+class Step {
     let text: String
     var status: StepStatus = .waiting
+    let location: Location
     private let gherkin: GHStep
 
     var argument: Argument? {
-        guard let table = gherkin.argument as? GHDataTable else {
-            return nil
+        if let table = gherkin.argument as? GHDataTable {
+            return CodableArgument(table)
+        } else if let docString = gherkin.argument as? GHDocString {
+            return StringArgument(docString)
         }
-        return table.toArgument()
+        return nil
     }
 
-    init(from step: GHStep) {
+    init(from step: GHStep, filePath: URL) {
         gherkin = step
         text = gherkin.text
+        location = Location(from: step.location, filePath: filePath)
     }
 
     init(copy step: Step, overridingText text: String? = nil) {
         gherkin = step.gherkin
         self.text = text ?? step.gherkin.text
+        location = step.location
     }
 
-    mutating func run(_ testCase: XCTestCase, from scenario: Scenario, with definition: StepDefinition, in world: World) {
+    func run(_ testCase: XCTestCase, from scenario: Scenario, with definition: StepDefinition, in world: World) {
         let matches = definition.matches(for: text)
 
-        var arguments: [Argument] = world.arguments(for: matches, in: text)
+        var arguments = world.arguments(for: matches, in: text)
         if let argument = argument {
             arguments.append(argument)
         }
-
+        status = .running
         do {
             try definition.execute(with: matches, arguments: arguments, testCase: testCase, in: world)
             status = .success
         } catch {
-            status = .failed(error)
+            status = .failed
         }
-    }
-}
-
-private extension GHDataTable {
-    func toArgument() -> Argument? {
-        let data: Data?
-        if rows.first?.cells.count == 1 {
-            let list = rows.flatMap { $0.cells.map { $0.value ?? "" } }
-            data = try? JSONSerialization.data(withJSONObject: list)
-        } else if let headers = rows.first {
-            let table = Array(rows.dropFirst()).toTable(headers: headers)
-            data = try? JSONSerialization.data(withJSONObject: table)
-        } else {
-            data = nil
-        }
-        guard let unwrappedData = data else {
-            return nil
-        }
-        return CodableArgument(data: unwrappedData)
     }
 }

@@ -1,4 +1,5 @@
 import XCTest
+import Gherkin
 
 public protocol MatchTransformable {
     static var patterns: [String] { get }
@@ -34,6 +35,23 @@ public struct CodableArgument: Argument {
         self.data = data
         self.name = name
     }
+    
+    init?(_ table: GHDataTable) {
+        let data: Data?
+        if table.rows.first?.cells.count == 1 {
+            let list = table.rows.flatMap { $0.cells.map { $0.value ?? "" } }
+            data = try? JSONSerialization.data(withJSONObject: list)
+        } else if let headers = table.rows.first {
+            let table = Array(table.rows.dropFirst()).toTable(headers: headers)
+            data = try? JSONSerialization.data(withJSONObject: table)
+        } else {
+            data = nil
+        }
+        guard let unwrappedData = data else {
+            return nil
+        }
+        self.init(data: unwrappedData)
+    }
 
     public func get<T: Decodable>(_ type: T.Type, using decoder: JSONDecoder = JSONDecoder()) -> T {
         do {
@@ -42,6 +60,25 @@ public struct CodableArgument: Argument {
             XCTFail(error.localizedDescription)
             fatalError("Something has gone very wrong if the test reaches this point")
         }
+    }
+}
+
+public struct StringArgument: Argument, CustomStringConvertible {
+    public let name: String? = nil
+    private let gherkin: GHDocString
+    
+    public var description: String {
+        return gherkin.content
+    }
+    public var content: String {
+        return description
+    }
+    public var contentType: String? {
+        return gherkin.contentType
+    }
+    
+    init(_ docString: GHDocString) {
+        gherkin = docString
     }
 }
 

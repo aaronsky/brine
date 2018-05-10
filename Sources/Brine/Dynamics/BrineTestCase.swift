@@ -12,7 +12,14 @@ extension BrineTestCase {
     // MARK: XCTestCase overrides
 
     open override func recordFailure(withDescription description: String, inFile filePath: String, atLine lineNumber: Int, expected: Bool) {
-        super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+        if let feature = BrineTestCase.classDelegate?.feature(forFeatureClass: type(of: self)),
+            let scenario = feature.scenarios.first(where: { $0.running }),
+            let lastRunningStep = scenario.steps.first(where: { $0.status == .running }) {
+            let location = lastRunningStep.location
+            super.recordFailure(withDescription: description, inFile: location.filePath.path, atLine: location.line, expected: expected)
+        } else {
+            super.recordFailure(withDescription: description, inFile: filePath, atLine: lineNumber, expected: expected)
+        }
     }
 
     // MARK: Dynamic helpers

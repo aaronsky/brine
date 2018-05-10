@@ -4,7 +4,7 @@ import Brine
 class Steps {
     static func registerSteps() {
         given("I am on the (.*) page") { context in
-            print(context.matches)
+            print(context.arguments.last ?? "")
         }
         when("I tap the (.*) button") { context in
             print(context.matches)
@@ -20,7 +20,6 @@ class Steps {
             print(context.matches)
         }
         then("I should have (\\d+) cucumbers") { context in
-            print("FINAL STEP >>>")
             guard let arg = context.arguments.first as? MatchArgument,
                 let cucumbers = arg.get(as: Int.self) else {
                 XCTFail("could not cucumber for shit")

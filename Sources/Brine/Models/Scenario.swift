@@ -33,6 +33,7 @@ protocol ParentTagsProvider: class {
 @objcMembers
 public class Scenario: NSObject {
     public let name: String
+    public let location: Location
     public let kind: ScenarioKind
     public let examples: [Example]
     public var running: Bool = false
@@ -59,11 +60,12 @@ public class Scenario: NSObject {
         return gherkin.desc
     }
 
-    public init(from scenario: GHScenarioDefinition) {
+    public init(from scenario: GHScenarioDefinition, filePath: URL) {
         gherkin = scenario
         name = gherkin.name
+        location = Location(from: scenario.location, filePath: filePath)
         kind = ScenarioKind(scenario.keyword)
-        steps = gherkin.steps.map(Step.init)
+        steps = gherkin.steps.map { Step(from: $0, filePath: filePath) }
         scenarioTags = gherkin.tags.map(Tag.init)
         examples = (gherkin as? GHScenarioOutline)?.examples.map(Example.init) ?? []
         super.init()
@@ -81,12 +83,13 @@ public class Scenario: NSObject {
         }
 
         let additionalTestNameMetadata = "example \(index + 1) data \(data.map({ $0.value }).joined(separator: "-"))"
-        self.init(gherkin: scenario.gherkin, name: scenario.name, kind: .scenarioOutline, steps: steps, tags: scenario.tags, additionalTestNameMetadata: additionalTestNameMetadata, parentTagsProvider: scenario.parentTagsProvider)
+        self.init(gherkin: scenario.gherkin, name: scenario.name, location: scenario.location, kind: .scenarioOutline, steps: steps, tags: scenario.tags, additionalTestNameMetadata: additionalTestNameMetadata, parentTagsProvider: scenario.parentTagsProvider)
     }
 
-    private init(gherkin: GHScenarioDefinition, name: String = "", kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = [], additionalTestNameMetadata: String, parentTagsProvider: ParentTagsProvider? = nil) {
+    private init(gherkin: GHScenarioDefinition, name: String = "", location: Location, kind: ScenarioKind = .unknown, steps: [Step] = [], tags: [Tag] = [], examples: [Example] = [], additionalTestNameMetadata: String, parentTagsProvider: ParentTagsProvider? = nil) {
         self.gherkin = gherkin
         self.name = name
+        self.location = location
         self.kind = kind
         self.steps = steps
         self.scenarioTags = tags
@@ -103,7 +106,7 @@ public class Scenario: NSObject {
         world.setupStepHooks(with: self)
         running = true
         var lastStatus: StepStatus = .waiting
-        for (var step, definitions) in stepsAndDefinitions {
+        for (step, definitions) in stepsAndDefinitions {
             if lastStatus.groundsToSkip {
                 step.status = .skipped
             } else if definitions.count == 0 {

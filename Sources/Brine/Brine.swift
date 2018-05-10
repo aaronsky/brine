@@ -60,7 +60,7 @@ import TagExpressions
             return nil
         }
         let testClass: AnyClass? = BrineTestCase.createClass(for: result.feature)
-        return Feature(from: result.feature, testClass: testClass)
+        return Feature(from: result.feature, filePath: path, testClass: testClass)
     }
 }
 

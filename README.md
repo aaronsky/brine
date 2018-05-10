@@ -13,15 +13,15 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
 
 - [x] Prototype
 - [x] Xcode integration
-- [ ] Match Cucumber feature specification as closely as is reasonable
+- [x] Match Cucumber feature specification as closely as is reasonable
     - [x] Step results (logging should also be at parity)
     - [x] Other scenario types
         - [x] Scenario Outlines
         - [x] Backgrounds
-    - [ ] Step arguments
+    - [x] Step arguments
         - [x] Step transforms
         - [x] Data Tables
-        - [ ] Doc strings
+        - [x] Doc strings
     - [x] Hooks
         - [x] Before/After/Around Steps
         - [x] Tagged hooks
@@ -30,7 +30,7 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
         - [x] Filter by tag
         - [x] Tag inheritance
         - [x] Tag expressions (for hooks and filtered runs)
-- [ ] Link test failure to line in step **and** line in feature
+- [x] Link test failure to line in step **and** line in feature
 - [ ] Package Manager support
     - [ ] Carthage
     - [ ] SPM
