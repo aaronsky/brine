@@ -22,6 +22,9 @@ static id<BrineTestCaseDelegate> _classDelegate = nil;
     Feature *feature = [_classDelegate featureForFeatureClass:[self class]];
     NSMutableArray<NSInvocation *> *invocations = [NSMutableArray array];
     for (Scenario *scenario in feature.scenarios) {
+        if (![_classDelegate scenarioShouldBeTested:scenario]) {
+            continue;
+        }
         if (scenario.kind == ScenarioKindScenario) {
             [invocations addObject:[[self class] invocationForScenario:scenario inFeature:feature]];
         } else if (scenario.kind == ScenarioKindScenarioOutline) {

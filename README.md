@@ -25,9 +25,9 @@ A BDD test suite using the Gherkin feature syntax and XCUITest
     - [x] Hooks
         - [x] Before/After/Around Steps
         - [x] Tagged hooks
-    - [ ] Tags
+    - [x] Tags
         - [x] Add to test/case names
-        - [ ] Filter by tag
+        - [x] Filter by tag
         - [x] Tag inheritance
         - [x] Tag expressions (for hooks and filtered runs)
 - [ ] Link test failure to line in step **and** line in feature

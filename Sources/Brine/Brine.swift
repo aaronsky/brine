@@ -1,5 +1,6 @@
 import XCTest
 import Gherkin
+import TagExpressions
 
 @objc public class Brine: NSObject {
     var configuration: Configuration
@@ -22,7 +23,7 @@ import Gherkin
         configuration = configurations.reduce(configuration) { $1.combine(into: $0) }
     }
 
-    public func start(filterForTags tags: [String] = []) {
+    public func start() {
         finalizeConfig = true
         world.hooks.afterConfiguration(configuration)
         BrineTestCase.classDelegate = self
@@ -66,5 +67,11 @@ import Gherkin
 extension Brine: BrineTestCaseDelegate {
     public func feature(forFeatureClass class: AnyClass) -> Feature? {
         return features.first(where: { $0.testClass == `class` })
+    }
+
+    public func scenarioShouldBeTested(_ scenario: Scenario) -> Bool {
+        let tags = scenario.tags.map { $0.description }
+        let expr = configuration.tagExpression ?? configuration.tags.joined(separator: " or ")
+        return (try? TagExpressionParser().parse(expr).evaluate(tags)) ?? true
     }
 }

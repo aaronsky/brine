@@ -11,7 +11,7 @@ import Brine
     }
 
     @objc func start() {
-        brine.start(filterForTags: self.filterTags())
+        brine.start()
     }
 
     func configurations() -> [Configuration] {
@@ -20,9 +20,5 @@ import Brine
             return []
         }
         return [Configuration(featuresPath: featuresPath)]
-    }
-
-    func filterTags() -> [String] {
-        return []
     }
 }

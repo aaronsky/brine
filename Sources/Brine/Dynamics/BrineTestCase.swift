@@ -5,6 +5,7 @@ import Gherkin
 @objc public protocol BrineTestCaseDelegate {
     var world: World { get }
     func feature(forFeatureClass class: AnyClass) -> Feature?
+    func scenarioShouldBeTested(_ scenario: Scenario) -> Bool
 }
 
 extension BrineTestCase {

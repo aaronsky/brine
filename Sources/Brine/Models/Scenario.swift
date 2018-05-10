@@ -47,7 +47,7 @@ public class Scenario: NSObject {
     public var tags: [Tag] {
         return (parentTagsProvider?.parentTags ?? []) + scenarioTags
     }
-    
+
     public var testName: String {
         let tagNames = tags.map({ "tag\($0)" }).joined(separator: " ")
         let tagsSeparator = tagNames.isEmpty ? "" : " "
@@ -58,7 +58,7 @@ public class Scenario: NSObject {
     public override var description: String {
         return gherkin.desc
     }
-    
+
     public init(from scenario: GHScenarioDefinition) {
         gherkin = scenario
         name = gherkin.name
@@ -79,7 +79,7 @@ public class Scenario: NSObject {
             }
             return Step(copy: step, overridingText: text)
         }
-        
+
         let additionalTestNameMetadata = "example \(index + 1) data \(data.map({ $0.value }).joined(separator: "-"))"
         self.init(gherkin: scenario.gherkin, name: scenario.name, kind: .scenarioOutline, steps: steps, tags: scenario.tags, additionalTestNameMetadata: additionalTestNameMetadata, parentTagsProvider: scenario.parentTagsProvider)
     }

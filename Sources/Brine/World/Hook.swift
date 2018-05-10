@@ -63,6 +63,9 @@ protocol TaggedHook {
 
 extension TaggedHook {
     func shouldRun(_ scenario: Scenario) throws -> Bool {
+        guard scenario.kind != .background else {
+            return true
+        }
         let parser = TagExpressionParser()
         let expression = try parser.parse(tags)
         return expression.evaluate(scenario.tags.map({ $0.description }))
