@@ -2,38 +2,75 @@
 
 [![Build Status](https://travis-ci.org/aaronsky/brine.svg?branch=master)](https://travis-ci.org/aaronsky/brine)
 
-A BDD test suite using the Gherkin feature syntax and XCUITest
+A [Cucumber](https://docs.cucumber.io/)-inspired BDD testing framework intended for use with Swift and Xcode UI Testing. Uses [Gherkin feature syntax](https://docs.cucumber.io/gherkin/reference/) for associating plain language to reusable step definitions.
+
+## Features
+
+* :computer: Integration with Xcode Test Navigator
+* :iphone: Full support for Xcode UI Testing without additional runtime requirements
+* :dango: Designed for Gherkin features
+* :eggplant: Parity with the Cucumber API reference and specification
+    * Filtered runs for tags
+    * Implementation of Data Tables using Codable
+    * Scenario Outlines
+    * Before, After, Around Scenario Hooks
+    * Tagged Hooks
+    * Swift reimplementation of the Cucumber Tag Expression parser
+
+## Install
+
+Package manager support coming soon, stay tuned for v0.8!
+
+## Usage
+
+Write your feature file:
+
+```gherkin
+Feature: Test my great app with BDD
+
+Scenario: Do the first test
+    Given I am on the Home page
+    When I tap the Add button
+    Then nothing
+```
+
+Define your steps:
+
+```swift
+given("I am on the (.*) page") { context in
+    let pageName = context.matches[0]
+    XCTAssertEqual(pageName, "Home")
+}
+
+when("I tap the (.*) button") { context in
+    context.pending()
+}
+
+then("nothing") { context in
+    print("Do nothing")
+}
+```
+
+Run your tests!
+
+```swift
+let brine = Brine()
+brine.start()
+```
+
+## API
+
+Coming soon
+
+## Contributing
+
+Hey, thanks for getting this far! If you'd like to contribute to Brine, please check out our [CONTRIBUTING](CONTRIBUTING.md) page before jumping in.
 
 ## Dependencies
 
 * [Gherkin for Objective-C](https://github.com/cucumber/gherkin-objective-c) – using as-is
 * [Cucumber Tag Expressions for Java](https://github.com/cucumber/cucumber/tree/master/tag-expressions/java) – ported from Java to Swift
 
-## Todo
+## License
 
-- [x] Prototype
-- [x] Xcode integration
-- [x] Match Cucumber feature specification as closely as is reasonable
-    - [x] Step results (logging should also be at parity)
-    - [x] Other scenario types
-        - [x] Scenario Outlines
-        - [x] Backgrounds
-    - [x] Step arguments
-        - [x] Step transforms
-        - [x] Data Tables
-        - [x] Doc strings
-    - [x] Hooks
-        - [x] Before/After/Around Steps
-        - [x] Tagged hooks
-    - [x] Tags
-        - [x] Add to test/case names
-        - [x] Filter by tag
-        - [x] Tag inheritance
-        - [x] Tag expressions (for hooks and filtered runs)
-- [x] Link test failure to line in step **and** line in feature
-- [ ] Package Manager support
-    - [ ] Carthage
-    - [ ] SPM
-    - [ ] CocoaPods
-- [ ] Improve logging
-- [ ] "Code-only mode" – Brine without feature files
+Apache © [Aaron Sky](https://skyaaron.com)
