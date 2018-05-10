@@ -9,17 +9,16 @@ A [Cucumber](https://docs.cucumber.io/)-inspired BDD testing framework intended 
 * :computer: Integration with Xcode Test Navigator
 * :iphone: Full support for Xcode UI Testing without additional runtime requirements
 * :dango: Designed for Gherkin features
-* :eggplant: Parity with the Cucumber API reference and specification
-    * Filtered runs for tags
-    * Implementation of Data Tables using Codable
-    * Scenario Outlines
-    * Before, After, Around Scenario Hooks
-    * Tagged Hooks
-    * Swift reimplementation of the Cucumber Tag Expression parser
+* :eggplant: Parity with the [Cucumber API specification](https://docs.cucumber.io/cucumber/api/)
+* :bookmark: Swift reimplementation of the [Cucumber Tag Expression](https://github.com/cucumber/cucumber/tree/master/tag-expressions) parser
+
+### Coming Soon
+
+* :package: Supports Carthage, Swift PM and CocoaPods!
 
 ## Install
 
-Package manager support coming soon, stay tuned for v0.8!
+Package manager support coming soon. Please stay tuned for the first tagged release!
 
 ## Usage
 
