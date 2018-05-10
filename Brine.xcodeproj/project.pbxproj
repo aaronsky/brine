@@ -64,8 +64,6 @@
 		6618E18020A36A2500CE49A1 /* TagExpressions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6618E16120A368A600CE49A1 /* TagExpressions.h */; };
 		6618E18220A3E1FC00CE49A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E18120A3E1FC00CE49A1 /* Location.swift */; };
 		6618E18320A3E1FC00CE49A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E18120A3E1FC00CE49A1 /* Location.swift */; };
-		6618E18420A3E1FC00CE49A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E18120A3E1FC00CE49A1 /* Location.swift */; };
-		6618E18520A3E1FC00CE49A1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6618E18120A3E1FC00CE49A1 /* Location.swift */; };
 		66CFC97920A1E00D000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D9943F2095563900300AF4 /* libGherkin.a */; };
 		66CFC97A20A1E014000A0E1D /* libGherkin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E64CE620A0C15B003CA74F /* libGherkin.a */; };
 		66CFC9AC20A20632000A0E1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CFC9AA20A20632000A0E1D /* DetailViewController.swift */; };
@@ -1233,7 +1231,6 @@
 			files = (
 				6618E16B20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */,
 				6618E17720A36A0400CE49A1 /* True.swift in Sources */,
-				6618E18420A3E1FC00CE49A1 /* Location.swift in Sources */,
 				6618E17920A36A0400CE49A1 /* Literal.swift in Sources */,
 				6618E17B20A36A0400CE49A1 /* And.swift in Sources */,
 				6618E17320A36A0400CE49A1 /* Not.swift in Sources */,
@@ -1248,7 +1245,6 @@
 			files = (
 				6618E16C20A369AA00CE49A1 /* TagExpressionParser.swift in Sources */,
 				6618E17820A36A0400CE49A1 /* True.swift in Sources */,
-				6618E18520A3E1FC00CE49A1 /* Location.swift in Sources */,
 				6618E17A20A36A0400CE49A1 /* Literal.swift in Sources */,
 				6618E17C20A36A0400CE49A1 /* And.swift in Sources */,
 				6618E17420A36A0400CE49A1 /* Not.swift in Sources */,

@@ -35,7 +35,7 @@ public struct CodableArgument: Argument {
         self.data = data
         self.name = name
     }
-    
+
     init?(_ table: GHDataTable) {
         let data: Data?
         if table.rows.first?.cells.count == 1 {
@@ -66,7 +66,7 @@ public struct CodableArgument: Argument {
 public struct StringArgument: Argument, CustomStringConvertible {
     public let name: String? = nil
     private let gherkin: GHDocString
-    
+
     public var description: String {
         return gherkin.content
     }
@@ -76,7 +76,7 @@ public struct StringArgument: Argument, CustomStringConvertible {
     public var contentType: String? {
         return gherkin.contentType
     }
-    
+
     init(_ docString: GHDocString) {
         gherkin = docString
     }
