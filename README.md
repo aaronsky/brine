@@ -8,8 +8,8 @@ A [Cucumber](https://docs.cucumber.io/)-inspired BDD testing framework intended 
 
 * :computer: Integration with Xcode Test Navigator
 * :iphone: Full support for Xcode UI Testing without additional runtime requirements
-* :dango: Designed for Gherkin features
-* :eggplant: Parity with the [Cucumber API specification](https://docs.cucumber.io/cucumber/api/)
+* :fast_forward: Designed for Gherkin features
+* :cucumber: Parity with the [Cucumber API specification](https://docs.cucumber.io/cucumber/api/)
 * :bookmark: Swift reimplementation of the [Cucumber Tag Expression](https://github.com/cucumber/cucumber/tree/master/tag-expressions) parser
 
 ### Coming Soon
