@@ -1,4 +1,4 @@
-﻿#import "GHAstNode.h"
+#import "GHAstNode.h"
 
 #import "GHToken.h"
 #import "GHParser.h"
@@ -26,7 +26,7 @@
     return self;
 }
 
-- (GHToken *)tokenWithType:(GHTokenType)theTokenType
+- (nullable GHToken *)tokenWithType:(GHTokenType)theTokenType
 {
     return [self singleWithRuleType: (GHRuleType)theTokenType];
 }
@@ -36,7 +36,7 @@
     return (NSArray<GHToken *> *)[self itemsWithRuleType: (GHRuleType)theTokenType];
 }
 
-- (id)singleWithRuleType:(GHRuleType)theRuleType
+- (nullable id)singleWithRuleType:(GHRuleType)theRuleType
 {
     return [[self itemsWithRuleType: theRuleType] firstObject];
 }

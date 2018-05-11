@@ -1,4 +1,4 @@
-﻿#import "GHStep.h"
+#import "GHStep.h"
 
 #import "GHLocation.h"
 #import "GHStepArgument.h"
@@ -8,7 +8,7 @@
 @property (nonatomic, strong) GHLocation        * location;
 @property (nonatomic, strong) NSString          * keyword;
 @property (nonatomic, strong) NSString          * text;
-@property (nonatomic, strong) GHStepArgument    * argument;
+@property (nullable, nonatomic, strong) GHStepArgument    * argument;
 
 @end
 

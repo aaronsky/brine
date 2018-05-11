@@ -18,23 +18,39 @@
 
 import XCTest
 
+/// Closure type for all step definitions
 public typealias BrineStepBlock = (StepContext) throws -> Void
 
+/// The context model passed to all step definition handlers
 public struct StepContext {
+    /// A reference to the active XCUIApplication instance.
+    /// It isn't required to activate it in code as it should
+    /// already be launched and active by the time the step is running.
     public let application: XCUIApplication
+    /// A list of all matches produced from matching the Gherkin
+    /// step to the current step definition.
     public let matches: [Regex.Match]
+    /// A list of all arguments produced from either associated
+    /// data tables, doc strings, or step argument transforms
+    /// present in the step.
     public let arguments: [Argument]
+    /// Internal reference to the active `World` instance
     let world: World
+    /// Internal reference to the active `XCTestCase` instance
     let testCase: XCTestCase
 
+    /// Mark current step's `Step.status` as `StepStatus.pending` and skip all subsequent steps.
+    /// Use in place of a `notYetImplemented` throw.
     public func pending() {
         world.setCurrentStepPending()
     }
 
+    /// Call a step directly by pattern (not yet implemented)
     public func step(_ pattern: String) {
         // not yet implemented
     }
 
+    /// Call a step directly by pattern (not yet implemented)
     public func step(_ pattern: Regex) {
         // not yet implemented
     }

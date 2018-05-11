@@ -23,9 +23,9 @@
 
 @implementation GHTokenMatcher
 {
-    id<GHGherkinDialectProviderProtocol>    dialectProvider;
-    GHGherkinDialect                        * currentDialect;
-    NSString                                * activeDocStringSeparator;
+    id<GHGherkinDialectProviderProtocol>   dialectProvider;
+    GHGherkinDialect                      * currentDialect;
+    NSString          * _Nullable activeDocStringSeparator;
     NSInteger                               indentToRemove;
 }
 
@@ -70,7 +70,7 @@
         currentDialect = [dialectProvider defaultDialect];
 }
 
-- (void)setTokenMatched:(GHToken *)theToken tokenType:(GHTokenType)theMatchedType text:(NSString *)theText keyword:(NSString *)theKeyword indent:(NSNumber *)theIndent items:(NSArray<GHGherkinLineSpan *> *)theItems
+- (void)setTokenMatched:(GHToken *)theToken tokenType:(GHTokenType)theMatchedType text:(nullable NSString *)theText keyword:(nullable NSString *)theKeyword indent:(nullable NSNumber *)theIndent items:(nullable NSArray<GHGherkinLineSpan *> *)theItems
 {
     [theToken setMatchedType: theMatchedType];
     [theToken setMatchedKeyword: theKeyword];

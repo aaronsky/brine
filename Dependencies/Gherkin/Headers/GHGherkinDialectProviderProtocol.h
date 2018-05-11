@@ -5,6 +5,6 @@
 @protocol GHGherkinDialectProviderProtocol <NSObject>
 
 @property (nonatomic, readonly) GHGherkinDialect    * defaultDialect;
-- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage location:(GHLocation *)theLocation;
+- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage location:(nullable GHLocation *)theLocation;
 
 @end

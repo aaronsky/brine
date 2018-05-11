@@ -5,7 +5,7 @@
 
 @interface GHParserException ()
 
-@property (nonatomic, strong) GHLocation    * location;
+@property (nonnull, nonatomic, strong) GHLocation    * location;
 
 - (id)initWithMessage:(NSString *)theMessage location:(GHLocation *)theLocation;
 
@@ -20,7 +20,7 @@
     return [super initWithName: NSParseErrorException reason: theMessage userInfo: nil];
 }
 
-- (id)initWithMessage:(NSString *)theMessage location:(GHLocation *)theLocation
+- (id)initWithMessage:(NSString *)theMessage location:(nonnull GHLocation *)theLocation
 {
     NSAssert(theLocation != nil, @"Location should not be nil");
     
@@ -32,7 +32,7 @@
     return self;
 }
 
-+ (NSString *)message:(NSString *)theMessage withLocation:(GHLocation *)theLocation
++ (NSString *)message:(NSString *)theMessage withLocation:(nonnull GHLocation *)theLocation
 {
     NSAssert(theLocation != nil, @"Location should not be nil");
     
@@ -43,14 +43,14 @@
 
 @implementation GHAstBuilderException
 
-- (id)initWithMessage:(NSString *)theMessage
+- (id)initWithMessage:(nonnull NSString *)theMessage
 {
     NSAssert(theMessage != nil, @"Message should not be nil");
     
     return [super initWithMessage: theMessage];
 }
 
-- (id)initWithMessage:(NSString *)theMessage location:(GHLocation *)theLocation
+- (id)initWithMessage:(nonnull NSString *)theMessage location:(nonnull GHLocation *)theLocation
 {
     NSAssert(theLocation != nil, @"Location should not be nil");
     NSAssert(theMessage != nil, @"Location should not be nil");
@@ -62,7 +62,7 @@
 
 @implementation GHNoSuchLanguageException
 
-- (id)initWithLanguage:(NSString *)theLanguage location:(GHLocation *)theLocation
+- (id)initWithLanguage:(nonnull NSString *)theLanguage location:(nonnull GHLocation *)theLocation
 {
     return [super initWithMessage: [@"Language not supported: " stringByAppendingString: theLanguage] location: theLocation];
 }
@@ -71,12 +71,12 @@
 
 @implementation GHTokenParserException
 
-- (id)initWithMessage:(NSString *)theMessage token:(GHToken *)theToken
+- (id)initWithMessage:(nonnull NSString *)theMessage token:(GHToken *)theToken
 {
     return [super initWithMessage: theMessage location: [[self class] locationWithToken: theToken]];
 }
 
-+ (GHLocation *)locationWithToken:(GHToken *)theReceivedToken
++ (nonnull GHLocation *)locationWithToken:(GHToken *)theReceivedToken
 {
     return [theReceivedToken isEOF] || [[theReceivedToken location] column] > 1
  ? [theReceivedToken location]
@@ -99,7 +99,7 @@
 @synthesize receivedToken;
 @synthesize expectedTokenTypes;
 
-- (id)initWithToken:(GHToken *)theReceivedToken expectedTokenTypes:(NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment
+- (id)initWithToken:(nonnull GHToken *)theReceivedToken expectedTokenTypes:(nonnull NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment
 {
     NSAssert(theReceivedToken != nil, @"receivedToken should not be nil");
     NSAssert(theExpectedTokenTypes != nil, @"expectedTokenTypes should not be nil");
@@ -114,7 +114,7 @@
     return self;
 }
 
-+ (NSString *)messageWithToken:(GHToken *)theReceivedToken expectedTokenTypes:(NSArray<NSString *> *)theExpectedTokenTypes
++ (NSString *)messageWithToken:(nonnull GHToken *)theReceivedToken expectedTokenTypes:(nonnull NSArray<NSString *> *)theExpectedTokenTypes
 {
     NSAssert(theReceivedToken != nil, @"receivedToken");
     NSAssert(theExpectedTokenTypes != nil, @"expectedTokenTypes");
@@ -136,7 +136,7 @@
 @synthesize stateComment;
 @synthesize expectedTokenTypes;
 
-- (id)initWithToken:(GHToken *)theReceivedToken expectedTokenTypes:(NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment
+- (id)initWithToken:(GHToken *)theReceivedToken expectedTokenTypes:(nonnull NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment
 {
     NSAssert(theExpectedTokenTypes != nil, @"expectedTokenTypes should not be nil");
     
@@ -149,7 +149,7 @@
     return self;
 }
 
-+ (NSString *)messageWithExpectedTokenTypes:(NSArray<NSString *> *)theExpectedTokenTypes
++ (NSString *)messageWithExpectedTokenTypes:(nonnull NSArray<NSString *> *)theExpectedTokenTypes
 {
     NSAssert(theExpectedTokenTypes != nil, @"expectedTokenTypes should not be nil");
 

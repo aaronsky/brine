@@ -1,9 +1,9 @@
-﻿#import "GHDocString.h"
+#import "GHDocString.h"
 
 @interface GHDocString ()
 
 @property (nonatomic, strong) GHLocation    * location;
-@property (nonatomic, strong) NSString      * contentType;
+@property (nullable, nonatomic, strong) NSString      * contentType;
 @property (nonatomic, strong) NSString      * content;
 
 @end

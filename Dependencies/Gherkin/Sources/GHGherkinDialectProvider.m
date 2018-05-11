@@ -1,4 +1,4 @@
-﻿#import "GHGherkinDialectProvider.h"
+#import "GHGherkinDialectProvider.h"
 
 #import "GHGherkinDialect.h"
 #import "GHGherkinLanguageSetting.h"
@@ -43,7 +43,7 @@
     return self;
 }
 
-- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage location:(GHLocation *)theLocation
+- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage location:(nullable GHLocation *)theLocation
 {
     NSDictionary<NSString *, GHGherkinLanguageSetting *> * languagesSetting = [self languagesSetting];
     
@@ -87,7 +87,7 @@
     return languagesSetting;
 }
 
-- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage languagesSetting:(NSDictionary<NSString *, GHGherkinLanguageSetting *> *)theLanguagesSetting location:(GHLocation *)theLocation
+- (GHGherkinDialect *)dialectWithLanguage:(NSString *)theLanguage languagesSetting:(NSDictionary<NSString *, GHGherkinLanguageSetting *> *)theLanguagesSetting location:(nullable GHLocation *)theLocation
 {
     GHGherkinLanguageSetting * languageSetting = nil;
     if ((languageSetting = theLanguagesSetting[theLanguage]) == nil)

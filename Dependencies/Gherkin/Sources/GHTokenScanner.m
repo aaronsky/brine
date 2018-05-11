@@ -49,9 +49,9 @@
 /// </summary>
 - (GHToken *)read
 {
-    NSString * line = (lineNumber < [lines count] ? lines[lineNumber] : nil);
+    NSString * _Nullable line = (lineNumber < [lines count] ? lines[lineNumber] : nil);
     GHLocation * location = [[GHLocation alloc] initWithLine: ++lineNumber];
-    GHGherkinLine * gherkinLine = line ? [[GHGherkinLine alloc] initWithLine: line lineNumber: lineNumber] : nil;
+    GHGherkinLine * _Nullable gherkinLine = line ? [[GHGherkinLine alloc] initWithLine: line lineNumber: lineNumber] : nil;
     
     return [[GHToken alloc] initWithGherkinLine: gherkinLine location: location];
 }

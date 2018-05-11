@@ -1,4 +1,4 @@
-﻿#import "GHToken.h"
+#import "GHToken.h"
 
 #import "GHGherkinLineProtocol.h"
 
@@ -16,7 +16,7 @@
 @synthesize matchedGherkinDialect;
 @synthesize location;
 
-- (id)initWithGherkinLine:(id<GHGherkinLineProtocol>)theGherkinLine location:(GHLocation *)theLocation
+- (id)initWithGherkinLine:(nullable id<GHGherkinLineProtocol>)theGherkinLine location:(GHLocation *)theLocation
 {
     if (self = [super init])
     {

@@ -1,4 +1,4 @@
-﻿#import "GHExamples.h"
+#import "GHExamples.h"
 
 #import "GHTag.h"
 #import "GHTableRow.h"
@@ -10,7 +10,7 @@
 @property (nonatomic, strong) NSString                * keyword;
 @property (nonatomic, strong) NSString                * name;
 @property (nonatomic, strong) NSString                * desc;
-@property (nonatomic, strong) GHTableRow              * tableHeader;
+@property (nullable, nonatomic, strong) GHTableRow              * tableHeader;
 @property (nonatomic, strong) NSArray<GHTableRow *>   * tableBody;
 
 @end

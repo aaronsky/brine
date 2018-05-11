@@ -10,14 +10,14 @@
 
 @interface GHAstBuilderException : GHParserException
 
-- (id)initWithMessage:(NSString *)theMessage;
-- (id)initWithMessage:(NSString *)theMessage location:(GHLocation *)theLocation;
+- (id)initWithMessage:(nonnull NSString *)theMessage;
+- (id)initWithMessage:(nonnull NSString *)theMessage location:(nonnull GHLocation *)theLocation;
 
 @end
 
 @interface GHNoSuchLanguageException : GHParserException
 
-- (id)initWithLanguage:(NSString *)theLanguage location:(GHLocation *)theLocation;
+- (id)initWithLanguage:(nonnull NSString *)theLanguage location:(nonnull GHLocation *)theLocation;
 
 @end
 
@@ -33,7 +33,7 @@
 @property (nonatomic, readonly) GHToken             * receivedToken;
 @property (nonatomic, readonly) NSArray<NSString *> * expectedTokenTypes;
 
-- (id)initWithToken:(GHToken *)theReceivedToken expectedTokenTypes:(NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment;
+- (id)initWithToken:(nonnull GHToken *)theReceivedToken expectedTokenTypes:(nonnull NSArray<NSString *> *)theExpectedTokenTypes stateComment:(NSString *)theStateComment;
 
 @end
 

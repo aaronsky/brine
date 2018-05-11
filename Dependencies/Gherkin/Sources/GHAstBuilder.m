@@ -87,7 +87,7 @@
     return [[stack lastObject] singleWithRuleType: GHRuleTypeGherkinDocument];
 }
 
-- (id)transformNode:(GHAstNode *)theNode
+- (nullable id)transformNode:(GHAstNode *)theNode
 {
     switch ([theNode ruleType])
     {

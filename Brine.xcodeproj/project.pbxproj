@@ -11,7 +11,8 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 3321467C2099481A00C89615 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
 			buildPhases = (
-				3321467D2099482200C89615 /* ShellScript */,
+				66B91D7E20A53007005D6678 /* Autocorrect */,
+				3321467D2099482200C89615 /* Lint */,
 			);
 			dependencies = (
 			);
@@ -1215,18 +1216,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3321467D2099482200C89615 /* ShellScript */ = {
+		3321467D2099482200C89615 /* Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = Lint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		66B91D7E20A53007005D6678 /* Autocorrect */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Autocorrect;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
