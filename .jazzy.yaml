@@ -1,0 +1,14 @@
+module: Brine
+module_version: 1.0
+author: aaronsky
+author_url: https://skyaaron.com/
+github_url: https://github.com/aaronsky/brine
+
+clean: true
+sdk: iphonesimulator
+xcodebuild_arguments:
+  - -scheme
+  - Brine-iOS
+
+exclude:
+  - "**/BrineTestCase.*"

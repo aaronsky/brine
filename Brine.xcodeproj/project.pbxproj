@@ -336,6 +336,9 @@
 		6618E17120A36A0400CE49A1 /* And.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = And.swift; sourceTree = "<group>"; };
 		6618E17220A36A0400CE49A1 /* Expression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		6618E18120A3E1FC00CE49A1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		6695E59420A5F2940029C8A4 /* .jazzy.yaml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .jazzy.yaml; sourceTree = "<group>"; };
+		6695E59520A5F2940029C8A4 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		6695E59620A5F2950029C8A4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		66CFC9AA20A20632000A0E1D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		66CFC9AB20A20632000A0E1D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		66CFC9AF20A21C63000A0E1D /* Reporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reporter.swift; sourceTree = "<group>"; };
@@ -624,8 +627,11 @@
 				33E0ADD520A4751600B61B87 /* CONTRIBUTING.md */,
 				33E0ADD420A4751600B61B87 /* CODE_OF_CONDUCT.md */,
 				33E0ADD620A4751600B61B87 /* LICENSE */,
+				6695E59620A5F2950029C8A4 /* .gitignore */,
+				6695E59520A5F2940029C8A4 /* .swift-version */,
 				66E64CF620A0D78A003CA74F /* .swiftlint.yml */,
 				66E64CF720A0D78B003CA74F /* .travis.yml */,
+				6695E59420A5F2940029C8A4 /* .jazzy.yaml */,
 				66D9938D2095544100300AF4 /* Brine */,
 				66D993982095544100300AF4 /* BrineTests */,
 				66D993A52095559500300AF4 /* Dependencies */,

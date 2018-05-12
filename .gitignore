@@ -3,8 +3,7 @@ DerivedData/
 
 .build/
 Packages/
-Carthage/Checkouts
-Carthage/Build
+Carthage/
 
 *.pbxuser
 !default.pbxuser

@@ -1,726 +1,684 @@
 {
   "warnings": [
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": null,
       "symbol": "Brine",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 23,
       "symbol": "Brine",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 28,
       "symbol": "Brine.world",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 30,
       "symbol": "Brine.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 35,
       "symbol": "Brine.configure(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 39,
       "symbol": "Brine.configure(with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 44,
       "symbol": "Brine.start()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 86,
       "symbol": "Brine.feature(forFeatureClass:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Brine.swift",
       "line": 90,
       "symbol": "Brine.scenarioShouldBeTested(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 25,
       "symbol": "World.given(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 29,
       "symbol": "World.given(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 33,
       "symbol": "World.when(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 37,
       "symbol": "World.when(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 41,
       "symbol": "World.then(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 45,
       "symbol": "World.then(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 56,
       "symbol": "World.before(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 61,
       "symbol": "World.after(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 66,
       "symbol": "World.around(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 71,
       "symbol": "World.onExit(block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 76,
       "symbol": "World.afterConfiguration(block:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL+World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL+World.swift",
       "line": 83,
       "symbol": "World.transform(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 23,
       "symbol": "given(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 27,
       "symbol": "given(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 31,
       "symbol": "when(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 35,
       "symbol": "when(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 39,
       "symbol": "then(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 43,
       "symbol": "then(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 54,
       "symbol": "before(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 59,
       "symbol": "after(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 64,
       "symbol": "around(_:block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 69,
       "symbol": "onExit(block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 74,
       "symbol": "afterConfiguration(block:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/DSL/DSL.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/DSL/DSL.swift",
       "line": 81,
       "symbol": "transform(_:)",
       "symbol_kind": "source.lang.swift.decl.function.free",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 23,
-      "symbol": "BrineTestCaseDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 24,
-      "symbol": "BrineTestCaseDelegate.world",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 25,
-      "symbol": "BrineTestCaseDelegate.feature(forFeatureClass:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 26,
-      "symbol": "BrineTestCaseDelegate.scenarioShouldBeTested(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 32,
-      "symbol": "BrineTestCase.recordFailure(withDescription:inFile:atLine:expected:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Dynamics/BrineTestCase.swift",
-      "line": 74,
-      "symbol": "BrineTestCase.addMethod(for:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Extensions/NSString+Brine.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Extensions/NSString+Brine.swift",
       "line": 42,
       "symbol": "NSString.pascalcased",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Example.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Example.swift",
       "line": 23,
       "symbol": "Example",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Example.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Example.swift",
       "line": 24,
       "symbol": "Example.data",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Example.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Example.swift",
       "line": 29,
       "symbol": "Example.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Example.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Example.swift",
       "line": 33,
       "symbol": "Example.tags",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Example.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Example.swift",
       "line": 37,
       "symbol": "Example.init(from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Feature.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Feature.swift",
       "line": 23,
       "symbol": "Feature",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Feature.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Feature.swift",
       "line": 24,
       "symbol": "Feature.scenarios",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Feature.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Feature.swift",
       "line": 25,
       "symbol": "Feature.location",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Feature.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Feature.swift",
       "line": 26,
       "symbol": "Feature.tags",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Feature.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Feature.swift",
       "line": 27,
       "symbol": "Feature.background",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Location.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Location.swift",
       "line": 21,
       "symbol": "Location",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Location.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Location.swift",
       "line": 23,
       "symbol": "Location.filePath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Location.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Location.swift",
       "line": 25,
       "symbol": "Location.line",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Location.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Location.swift",
       "line": 29,
       "symbol": "Location.column",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": null,
       "symbol": "Regex",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": null,
       "symbol": "Regex",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": null,
       "symbol": "Regex",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 21,
       "symbol": "Regex",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 24,
       "symbol": "Regex.nsRegularExpression",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 28,
       "symbol": "Regex.init(_:options:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 36,
       "symbol": "Regex.matches(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 41,
       "symbol": "Regex.any(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 45,
       "symbol": "Regex.Option",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 46,
       "symbol": "Regex.Option.ignoreCase",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 47,
       "symbol": "Regex.Option.ignoreMetacharacters",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 48,
       "symbol": "Regex.Option.anchorsMatchLines",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 49,
       "symbol": "Regex.Option.dotMatchesLineSeparators",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 52,
       "symbol": "Regex.CaptureGroup",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 54,
       "symbol": "Regex.Match",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 55,
       "symbol": "Regex.Match.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Regex.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Regex.swift",
       "line": 77,
       "symbol": "Regex.Match.subscript(_:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 22,
       "symbol": "ScenarioKind",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 23,
       "symbol": "ScenarioKind.unknown",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 24,
       "symbol": "ScenarioKind.scenario",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 25,
       "symbol": "ScenarioKind.scenarioOutline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 26,
       "symbol": "ScenarioKind.background",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 52,
       "symbol": "Scenario",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 53,
       "symbol": "Scenario.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 54,
       "symbol": "Scenario.location",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 55,
       "symbol": "Scenario.kind",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 56,
       "symbol": "Scenario.examples",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 57,
       "symbol": "Scenario.running",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 66,
       "symbol": "Scenario.tags",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 70,
       "symbol": "Scenario.testName",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 77,
       "symbol": "Scenario.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 81,
       "symbol": "Scenario.init(from:filePath:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Scenario.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Scenario.swift",
       "line": 93,
       "symbol": "Scenario.init(copy:asOutlineWithExample:index:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/Models/Tag.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/Models/Tag.swift",
       "line": 21,
       "symbol": "Tag",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 21,
       "symbol": "Configuration",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 22,
       "symbol": "Configuration.featuresPath",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 23,
       "symbol": "Configuration.strict",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 24,
       "symbol": "Configuration.tags",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 25,
       "symbol": "Configuration.tagExpression",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 27,
       "symbol": "Configuration.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Configuration.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Configuration.swift",
       "line": 32,
       "symbol": "Configuration.init(featuresPath:strict:tags:tagExpression:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Hook.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Hook.swift",
       "line": 22,
       "symbol": "BrineScenarioHookBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Hook.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Hook.swift",
       "line": 23,
       "symbol": "BrineAroundHookBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Hook.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Hook.swift",
       "line": 24,
       "symbol": "BrineExitingHookBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/Hook.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/Hook.swift",
       "line": 25,
       "symbol": "BrineAfterConfigurationBlock",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/World.swift",
       "line": null,
       "symbol": "World",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/World.swift",
       "line": 38,
       "symbol": "World",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/World.swift",
       "line": 41,
       "symbol": "World.userInfo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/asky/Repos/extra/brine/Sources/Brine/World/World.swift",
+      "file": "/Users/asky/Repos/ios/brine/Sources/Brine/World/World.swift",
       "line": 57,
       "symbol": "World.subscript(_:)",
       "symbol_kind": "source.lang.swift.decl.function.subscript",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/asky/Repos/extra/brine"
+  "source_directory": "/Users/asky/Repos/ios/brine"
 }
