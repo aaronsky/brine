@@ -100,6 +100,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "66E64C8820A0C062003CA74F"
+            BuildableName = "Brine.framework"
+            BlueprintName = "Brine-macOS"
+            ReferencedContainer = "container:Brine.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
