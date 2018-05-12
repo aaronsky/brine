@@ -25,11 +25,16 @@ import TagExpressions
     var finalizeConfig = false
 
     var features: [Feature] = []
+    /// The `World` instance used by Brine. Defaults to a singleton instance
+    /// unless overridden at initialization
     public var world: World
 
     public init(_ world: World? = nil) {
         self.configuration = Configuration()
         self.world = world ?? World.shared
+        if self.world !== World.shared {
+            World.shared.transferResponsibility(to: self.world)
+        }
     }
 
     public func configure(with configuration: Configuration) {
@@ -74,11 +79,12 @@ import TagExpressions
 
     func loadFeature(from path: URL) -> Feature? {
         let parser = GHParser()
-        guard let result = parser.parse(path.path) else {
+        guard let document = parser.parse(path.path),
+            let feature = document.feature else {
             return nil
         }
-        let testClass: AnyClass? = BrineTestCase.createClass(for: result.feature)
-        return Feature(from: result.feature, filePath: path, testClass: testClass)
+        let testClass: AnyClass? = BrineTestCase.createClass(for: feature.name)
+        return Feature(from: feature, filePath: path, testClass: testClass)
     }
 }
 

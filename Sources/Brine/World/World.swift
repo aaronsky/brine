@@ -69,6 +69,15 @@ private class WorldHook {
 //        }
     }
 
+    func transferResponsibility(to world: World) {
+        world.userInfo = userInfo
+        world.application = application
+        world.hooks = hooks
+        world.steps = steps
+        world.transformableTypes = transformableTypes
+        world.setPendingHook = setPendingHook
+    }
+
     func registerStep(_ step: StepDefinition) {
         steps.append(step)
     }

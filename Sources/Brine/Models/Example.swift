@@ -34,7 +34,7 @@ public class Example: NSObject {
         return (parentTagsProvider?.parentTags ?? []) + exampleTags
     }
 
-    public init(from example: GHExamples) {
+    init(from example: GHExamples) {
         gherkin = example
         data = gherkin.tableBody.toTable(headers: example.tableHeader)
         exampleTags = gherkin.tags.map(Tag.init)

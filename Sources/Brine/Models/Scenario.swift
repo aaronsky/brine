@@ -78,7 +78,7 @@ public class Scenario: NSObject {
         return gherkin.desc
     }
 
-    public init(from scenario: GHScenarioDefinition, filePath: URL) {
+    init(from scenario: GHScenarioDefinition, filePath: URL) {
         gherkin = scenario
         name = gherkin.name
         location = Location(from: scenario.location, filePath: filePath)
