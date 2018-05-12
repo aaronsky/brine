@@ -1,6 +1,7 @@
 # Brine
 
 [![Build Status](https://travis-ci.org/aaronsky/brine.svg?branch=master)](https://travis-ci.org/aaronsky/brine)
+[![Documentation Coverage](docs/badge.svg)](https://aaronsky.github.io/brine/)
 
 A [Cucumber](https://docs.cucumber.io/)-inspired BDD testing framework intended for use with Swift and Xcode UI Testing. Uses [Gherkin feature syntax](https://docs.cucumber.io/gherkin/reference/) for associating plain language to reusable step definitions.
 
