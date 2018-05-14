@@ -18,7 +18,7 @@
 
 import Gherkin
 
-public struct Location: CustomStringConvertible {
+struct Location: CustomStringConvertible {
     private let gherkin: GHLocation
     public let filePath: URL
 

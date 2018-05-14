@@ -23,24 +23,28 @@ public typealias BrineStepBlock = (StepContext) throws -> Void
 
 /// The context model passed to all step definition handlers
 public struct StepContext {
-    /// A reference to the active XCUIApplication instance.
-    /// It isn't required to activate it in code as it should
-    /// already be launched and active by the time the step is running.
+    /// A reference to the active XCUIApplication instance. It isn't required to activate it in code as it should already be launched and active by the time the step is running.
     public let application: XCUIApplication
-    /// A list of all matches produced from matching the Gherkin
-    /// step to the current step definition.
+    /// A list of all matches produced from matching the Gherkin step to the current step definition.
     public let matches: [Regex.Match]
-    /// A list of all arguments produced from either associated
-    /// data tables, doc strings, or step argument transforms
-    /// present in the step.
+    /// A list of all arguments produced from either associated data tables, doc strings, or step argument transforms present in the step.
     public let arguments: [Argument]
+    /// Pending expectations to wait for before continuing
+    public var expectations: [XCTestExpectation] = []
     /// Internal reference to the active `World` instance
     let world: World
     /// Internal reference to the active `XCTestCase` instance
     let testCase: XCTestCase
 
-    /// Mark current step's `Step.status` as `StepStatus.pending` and skip all subsequent steps.
-    /// Use in place of a `notYetImplemented` throw.
+    init(application: XCUIApplication, matches: [Regex.Match], arguments: [Argument], world: World, testCase: XCTestCase) {
+        self.application = application
+        self.matches = matches
+        self.arguments = arguments
+        self.world = world
+        self.testCase = testCase
+    }
+
+    /// Mark current step's `Step.status` as `StepStatus.pending` and skip all subsequent steps. Use in place of a `notYetImplemented` throw.
     public func pending() {
         world.setCurrentStepPending()
     }

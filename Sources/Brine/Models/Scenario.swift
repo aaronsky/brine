@@ -51,10 +51,10 @@ protocol ParentTagsProvider: class {
 @objcMembers
 public class Scenario: NSObject {
     public let name: String
-    public let location: Location
     public let kind: ScenarioKind
     public let examples: [Example]
     public var running: Bool = false
+    let location: Location
     let steps: [Step]
     private let scenarioTags: [Tag]
     private let gherkin: GHScenarioDefinition

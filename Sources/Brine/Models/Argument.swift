@@ -19,13 +19,11 @@
 import XCTest
 import Gherkin
 
-/// Protocol type for types that can provide step argument transformation
-/// capabilities
+/// Protocol type for types that can provide step argument transformation capabilities
 public protocol MatchTransformable {
     /// List of patterns that should be associated with this transform
     static var patterns: [String] { get }
-    /// Given a match, transform the `String` match into this type.
-    /// Should return `nil` if the transform should fail.
+    /// Given a match, transform the `String` match into this type. Should return `nil` if the transform should fail.
     static func transform(_ match: Regex.Match) -> Self?
 }
 
@@ -35,8 +33,7 @@ public protocol Argument {
     var name: String? { get }
 }
 
-/// Argument type to hold `MatchTransformable` content. Currently
-/// intended for use with Gherkin step argument transforms.
+/// Argument type to hold `MatchTransformable` content. Currently intended for use with Gherkin step argument transforms.
 public struct MatchArgument: Argument {
     /// Name of the argument
     public let name: String?
@@ -50,15 +47,13 @@ public struct MatchArgument: Argument {
         self.name = nil
     }
 
-    /// Attempts to transform the match using the given transform.
-    /// If the transform fails, it will return `nil`.
+    /// Attempts to transform the match using the given transform. If the transform fails, it will return `nil`.
     public func get<T: MatchTransformable>(as type: T.Type) -> T? {
         return type.transform(match)
     }
 }
 
-/// Argument type to hold `Codable` content. Currently intended
-/// for use with Gherkin data tables and data lists (unkeyed tables)
+/// Argument type to hold `Codable` content. Currently intended for use with Gherkin data tables and data lists (unkeyed tables)
 public struct CodableArgument: Argument {
     /// Name of the argument
     public let name: String?
@@ -75,7 +70,7 @@ public struct CodableArgument: Argument {
             let list = table.rows.flatMap { $0.cells.map { $0.value ?? "" } }
             data = try? JSONSerialization.data(withJSONObject: list)
         } else if let headers = table.rows.first {
-            let table = Array(table.rows.dropFirst()).toTable(headers: headers)
+            let table = Array(rows: Array(table.rows.dropFirst()), headers: headers)
             data = try? JSONSerialization.data(withJSONObject: table)
         } else {
             data = nil
@@ -86,9 +81,7 @@ public struct CodableArgument: Argument {
         self.init(data: unwrappedData)
     }
 
-    /// Attempts to decode the data table as a `Decodable` type. This is a destructive method that
-    /// will short-circuit if it fails to decode. Optionally will take a decoder with overridden
-    /// decoding strategies.
+    /// Attempts to decode the data table as a `Decodable` type. This is a destructive method that will short-circuit if it fails to decode. Optionally will take a decoder with overridden decoding strategies.
     public func get<T: Decodable>(_ type: T.Type, using decoder: JSONDecoder = JSONDecoder()) -> T {
         do {
             return try decoder.decode(T.self, from: data)
@@ -99,8 +92,7 @@ public struct CodableArgument: Argument {
     }
 }
 
-/// Argument type to hold `String` content. Currently intended
-/// only for use with Gherkin doc strings.
+/// Argument type to hold `String` content. Currently intended only for use with Gherkin doc strings.
 public struct StringArgument: Argument, CustomStringConvertible {
     /// Name of the argument
     public let name: String? = nil
@@ -127,9 +119,7 @@ public struct StringArgument: Argument, CustomStringConvertible {
 }
 
 public extension Array where Element: Argument {
-    /// If the `Array` is an `Array` of `Argument`s, this is a way
-    /// to conveniently retrieve the argument by its `Argument.name`
-    /// identifier.
+    /// If the `Array` is an `Array` of `Argument`s, this is a way to conveniently retrieve the argument by its `Argument.name` identifier.
     public func named(_ name: String) -> Argument? {
         return self.first { $0.name == name }
     }

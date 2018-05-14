@@ -14,7 +14,7 @@
     <a title="Brine Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Brine Docs</a> (25% documented)</p>
+        <p><a href="../index.html">Brine Docs</a> (33% documented)</p>
         <p class="header-right"><a href="https://github.com/aaronsky/brine"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -62,9 +62,6 @@
               <li class="nav-group-task">
                 <a href="../Extensions/Array.html">Array</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/NSString.html">NSString</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -86,25 +83,16 @@
                 <a href="../Functions.html#/s:5Brine5givenyAA5RegexV_yAA11StepContextVKc5blocktF">given(_:block:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Brine5givenySS_yAA11StepContextVKc5blocktF">given(_:block:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Brine6onExityyyc5block_tF">onExit(block:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Brine4thenyAA5RegexV_yAA11StepContextVKc5blocktF">then(_:block:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Brine4thenySS_yAA11StepContextVKc5blocktF">then(_:block:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Brine9transformyxmAA18MatchTransformableRzlF">transform(_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:5Brine4whenyAA5RegexV_yAA11StepContextVKc5blocktF">when(_:block:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:5Brine4whenySS_yAA11StepContextVKc5blocktF">when(_:block:)</a>
               </li>
             </ul>
           </li>
@@ -127,9 +115,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Configuration.html">Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/Location.html">Location</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/MatchArgument.html">MatchArgument</a>
@@ -206,7 +191,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The <code><a href="../Classes/World.html">World</a></code> instance used by Brine. Defaults to a singleton instance unless overridden at initialization</p>
 
                       </div>
                       <div class="declaration">
@@ -260,7 +245,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Configure the <code>Brine</code> instance with a single <code><a href="../Structs/Configuration.html">Configuration</a></code>s</p>
 
                       </div>
                       <div class="declaration">
@@ -270,6 +255,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">with</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code><a href="../Structs/Configuration.html">Configuration</a></code> to apply</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -287,7 +291,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Configure the <code>Brine</code> instance with a collection of <code><a href="../Structs/Configuration.html">Configuration</a></code>s</p>
 
                       </div>
                       <div class="declaration">
@@ -297,6 +301,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="n">with</span> <span class="nv">configurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">])</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configurations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>Array</code> of <code><a href="../Structs/Configuration.html">Configuration</a></code>s to apply</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -314,7 +337,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Starts the Brine test run</p>
 
                       </div>
                       <div class="declaration">
@@ -391,7 +414,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://skyaaron.com/" target="_blank" rel="external">aaronsky</a>. All rights reserved. (Last updated: 2018-05-11)</p>
+          <p>&copy; 2018 <a class="link" href="https://skyaaron.com/" target="_blank" rel="external">aaronsky</a>. All rights reserved. (Last updated: 2018-05-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

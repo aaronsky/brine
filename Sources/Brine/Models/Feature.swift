@@ -22,10 +22,10 @@ import ObjectiveC
 @objcMembers
 public class Feature: NSObject {
     public let scenarios: [Scenario]
-    public let location: Location
-    public let tags: [Tag]
     public weak var background: Scenario?
+    public let tags: [Tag]
     let testClass: AnyClass?
+    let location: Location
     private let gherkin: GHFeature
 
     init(from feature: GHFeature, filePath: URL, testClass: AnyClass? = nil) {

@@ -30,21 +30,22 @@ public class Example: NSObject {
         return gherkin.desc
     }
 
-    public var tags: [Tag] {
+    var tags: [Tag] {
         return (parentTagsProvider?.parentTags ?? []) + exampleTags
     }
 
     init(from example: GHExamples) {
         gherkin = example
-        data = gherkin.tableBody.toTable(headers: example.tableHeader)
+        data = Array(rows: gherkin.tableBody, headers: example.tableHeader)
         exampleTags = gherkin.tags.map(Tag.init)
     }
 }
 
-extension Array where Element == GHTableRow {
-    func toTable(headers: GHTableRow) -> [[String: String]] {
-        return map { zip(headers.cells, $0.cells)
-                .reduce(into: [String: String]()) { $0[$1.0.value] = $1.1.value }
+extension Array where Element == [String: String] {
+    init(rows: [GHTableRow], headers: GHTableRow) {
+        self = rows.map { row in
+            zip(headers.cells, row.cells)
+                .reduce(into: Element()) { $0[$1.0.value] = $1.1.value }
         }
     }
 }
