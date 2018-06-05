@@ -116,16 +116,16 @@ import TagExpressions
 extension Brine: BrineTestCaseDelegate {
     /**
      Delegate method that returns the `Feature` instance for a given test class
-     - parameter class: A test class
+     - parameter featureClass: A test class
      - returns: A `Feature` with a corresponding test class
     */
-    public func feature(forFeatureClass class: AnyClass) -> Feature? {
-        return features.first(where: { $0.testClass == `class` })
+    public func feature(forFeatureClass featureClass: AnyClass) -> Feature? {
+        return features.first(where: { $0.testClass == featureClass })
     }
 
     /**
      Delegate method that returns whether or not a given scenario should be tested, based on its tags.
-     - parameter path scenario: The scenario
+     - parameter scenario: The scenario
      - returns: Whether or not the scenario should be tested
     */
     public func scenarioShouldBeTested(_ scenario: Scenario) -> Bool {

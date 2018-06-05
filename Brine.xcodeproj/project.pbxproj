@@ -35,8 +35,6 @@
 		33FD471F2099DC0A00768220 /* Brine.h in Headers */ = {isa = PBXBuildFile; fileRef = 66D9938E2095544100300AF4 /* Brine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		660E9EBD20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */; };
 		660E9EBE20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */; };
-		660E9EC020A2603800B9A73F /* EnumExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */; };
-		660E9EC120A2603800B9A73F /* EnumExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */; };
 		660E9EC320A263A900B9A73F /* NSStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */; };
 		660E9EC420A263A900B9A73F /* NSStringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */; };
 		660E9EC620A268E700B9A73F /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E9EC520A268E700B9A73F /* URLExtensionTests.swift */; };
@@ -111,7 +109,6 @@
 		66D994A1209560FE00300AF4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A0209560FE00300AF4 /* Configuration.swift */; };
 		66D994A52095627C00300AF4 /* StepDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A42095627C00300AF4 /* StepDefinition.swift */; };
 		66D994A72095642C00300AF4 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A62095642C00300AF4 /* Regex.swift */; };
-		66D994AC20956E5300300AF4 /* Enum+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */; };
 		66D994AD20956E5300300AF4 /* Bundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */; };
 		66D994AE20956E5300300AF4 /* String+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AA20956E5300300AF4 /* String+Brine.swift */; };
 		66D994AF20956E5300300AF4 /* URL+Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994AB20956E5300300AF4 /* URL+Brine.swift */; };
@@ -137,7 +134,6 @@
 		66E64C8F20A0C062003CA74F /* StepDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A42095627C00300AF4 /* StepDefinition.swift */; };
 		66E64C9020A0C062003CA74F /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A62095642C00300AF4 /* Regex.swift */; };
 		66E64C9120A0C062003CA74F /* Brine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9950C2095F27400300AF4 /* Brine.swift */; };
-		66E64C9220A0C062003CA74F /* Enum+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */; };
 		66E64C9320A0C062003CA74F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D994A0209560FE00300AF4 /* Configuration.swift */; };
 		66E64C9420A0C062003CA74F /* DSL+World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949B209560D700300AF4 /* DSL+World.swift */; };
 		66E64C9520A0C062003CA74F /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D9949D209560E100300AF4 /* World.swift */; };
@@ -320,7 +316,6 @@
 		33FD47142099C65A00768220 /* BrineTestCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrineTestCase.h; sourceTree = "<group>"; };
 		33FD47152099C65A00768220 /* BrineTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrineTestCase.m; sourceTree = "<group>"; };
 		660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionTests.swift; sourceTree = "<group>"; };
-		660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumExtensionTests.swift; sourceTree = "<group>"; };
 		660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStringExtensionTests.swift; sourceTree = "<group>"; };
 		660E9EC520A268E700B9A73F /* URLExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensionTests.swift; sourceTree = "<group>"; };
 		6618E14420A26DFE00CE49A1 /* ArgumentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentTests.swift; sourceTree = "<group>"; };
@@ -428,7 +423,6 @@
 		66D994A0209560FE00300AF4 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		66D994A42095627C00300AF4 /* StepDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDefinition.swift; sourceTree = "<group>"; };
 		66D994A62095642C00300AF4 /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
-		66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Enum+CaseIterable.swift"; sourceTree = "<group>"; };
 		66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+CurrentTestBundle.swift"; sourceTree = "<group>"; };
 		66D994AA20956E5300300AF4 /* String+Brine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Brine.swift"; sourceTree = "<group>"; };
 		66D994AB20956E5300300AF4 /* URL+Brine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Brine.swift"; sourceTree = "<group>"; };
@@ -555,7 +549,6 @@
 			isa = PBXGroup;
 			children = (
 				660E9EBC20A25E8B00B9A73F /* BundleExtensionTests.swift */,
-				660E9EBF20A2603800B9A73F /* EnumExtensionTests.swift */,
 				660E9EC220A263A900B9A73F /* NSStringExtensionTests.swift */,
 				660E9EC520A268E700B9A73F /* URLExtensionTests.swift */,
 			);
@@ -746,7 +739,6 @@
 			isa = PBXGroup;
 			children = (
 				66D994A920956E5300300AF4 /* Bundle+CurrentTestBundle.swift */,
-				66D994A820956E5300300AF4 /* Enum+CaseIterable.swift */,
 				66D994AA20956E5300300AF4 /* String+Brine.swift */,
 				66D994AB20956E5300300AF4 /* URL+Brine.swift */,
 				333F8F53209FC6FC00FC1404 /* XCTest+Brine.swift */,
@@ -1121,24 +1113,36 @@
 					};
 					6618E14E20A3681700CE49A1 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
+					};
+					6618E15620A3683B00CE49A1 = {
+						LastSwiftMigration = 1000;
 					};
 					66D9938A2095544100300AF4 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 					};
 					66D993932095544100300AF4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					66D9943E2095563900300AF4 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 					66D9957220960B9500300AF4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					66D9958520960B9600300AF4 = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 						TestTargetID = 66D9957220960B9500300AF4;
+					};
+					66E64C8820A0C062003CA74F = {
+						LastSwiftMigration = 1000;
+					};
+					66E64CB020A0C0B7003CA74F = {
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -1293,7 +1297,6 @@
 				66D9950D2095F27400300AF4 /* Brine.swift in Sources */,
 				6618E18220A3E1FC00CE49A1 /* Location.swift in Sources */,
 				66CFC9B020A21C63000A0E1D /* Reporter.swift in Sources */,
-				66D994AC20956E5300300AF4 /* Enum+CaseIterable.swift in Sources */,
 				66D994A1209560FE00300AF4 /* Configuration.swift in Sources */,
 				66D9949C209560D700300AF4 /* DSL+World.swift in Sources */,
 				66D9949E209560E100300AF4 /* World.swift in Sources */,
@@ -1321,7 +1324,6 @@
 				66D9939A2095544100300AF4 /* BrineTests.swift in Sources */,
 				660E9EC620A268E700B9A73F /* URLExtensionTests.swift in Sources */,
 				6618E14520A26DFE00CE49A1 /* ArgumentTests.swift in Sources */,
-				660E9EC020A2603800B9A73F /* EnumExtensionTests.swift in Sources */,
 				660E9EBD20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */,
 				660E9EC320A263A900B9A73F /* NSStringExtensionTests.swift in Sources */,
 			);
@@ -1399,7 +1401,6 @@
 				66E64C9120A0C062003CA74F /* Brine.swift in Sources */,
 				6618E18320A3E1FC00CE49A1 /* Location.swift in Sources */,
 				66CFC9B120A21C63000A0E1D /* Reporter.swift in Sources */,
-				66E64C9220A0C062003CA74F /* Enum+CaseIterable.swift in Sources */,
 				66E64C9320A0C062003CA74F /* Configuration.swift in Sources */,
 				66E64C9420A0C062003CA74F /* DSL+World.swift in Sources */,
 				66E64C9520A0C062003CA74F /* World.swift in Sources */,
@@ -1427,7 +1428,6 @@
 				66E64CB420A0C0B7003CA74F /* BrineTests.swift in Sources */,
 				660E9EC720A268E700B9A73F /* URLExtensionTests.swift in Sources */,
 				6618E14620A26DFE00CE49A1 /* ArgumentTests.swift in Sources */,
-				660E9EC120A2603800B9A73F /* EnumExtensionTests.swift in Sources */,
 				660E9EBE20A25E8B00B9A73F /* BundleExtensionTests.swift in Sources */,
 				660E9EC420A263A900B9A73F /* NSStringExtensionTests.swift in Sources */,
 			);
@@ -1567,6 +1567,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TagExpressions;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1581,6 +1582,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TagExpressions;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1596,6 +1598,7 @@
 				PRODUCT_NAME = TagExpressions;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1611,6 +1614,7 @@
 				PRODUCT_NAME = TagExpressions;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1766,6 +1770,7 @@
 				PRODUCT_NAME = Brine;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1796,6 +1801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.Brine;
 				PRODUCT_NAME = Brine;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1815,6 +1821,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1834,6 +1841,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1881,6 +1889,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1898,6 +1907,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1920,6 +1930,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/BrineExampleUITests-BridgingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BrineExample;
 			};
@@ -1942,6 +1953,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Example/BrineExampleUITests/Supporting Files/BrineExampleUITests-BridgingHeader.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BrineExample;
 			};
@@ -1974,6 +1986,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2004,6 +2017,7 @@
 				PRODUCT_NAME = Brine;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2024,6 +2038,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2044,6 +2059,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skyapps.BrineTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

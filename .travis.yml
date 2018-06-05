@@ -3,12 +3,12 @@ os: osx
 env:
   global:
   - PROJECT="Brine.xcodeproj"
-  - IOS_SDK=iphonesimulator11.3
-  - MACOS_SDK=macosx10.13
+  - IOS_SDK=iphonesimulator12.0
+  - MACOS_SDK=macosx10.14
 
 matrix:
   include:
-    - osx_image: xcode9.3
+    - osx_image: xcode10.0beta
       env:
         - DESTINATION="OS=11.3,name=iPhone 8 Plus"
         - SCHEME="Brine-iOS"

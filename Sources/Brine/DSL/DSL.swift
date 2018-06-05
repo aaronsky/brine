@@ -20,7 +20,6 @@ import Foundation
 
 // MARK: Steps
 
-
 public func given(_ pattern: Regex, block: @escaping BrineStepBlock) {
     registerStep(with: pattern, block: block)
 }
